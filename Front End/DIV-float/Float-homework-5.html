@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        padding: 0;
+        margin: 0;
+    }
+    main{
+        width: 100%;
+        height: auto;
+        padding: 50px;
+    }
+    .rowTop{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: space-between;
+    }
+        .rowTop .colL{
+            width: 40%;
+            height: 100%;
+            background-color: pink;
+        }
+        .rowTop .colR{
+            width: 40%;
+            height: 100%;
+            background-color: lightskyblue;
+        }
+    .rowMid{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+    }
+        .rowMid .col{
+            width: 40%;
+            height: 100%;
+            background-color: yellow;
+        }
+    .rowBot{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: space-between;
+    }
+        .rowBot .colL{
+            width: 40%;
+            height: 100%;
+            background-color: green;
+        }
+        .rowBot .colR{
+            width: 40%;
+            height: 100%;
+            background-color: plum;
+        }
+    </style>
+
+</head>
+<body>
+    <main>
+        <div class="rowTop">
+            <div class="colL"></div>
+            <div class="colR"></div>
+        </div>
+        <div class="rowMid">
+            <div class="col"></div>
+        </div>
+        <div class="rowBot">
+            <div class="colL"></div>
+            <div class="colR"></div>
+        </div>
+    </main>
+</body>
+</html>
