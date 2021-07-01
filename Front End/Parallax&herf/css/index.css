@@ -1,0 +1,167 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+}
+
+header nav {
+  width: 140px;
+  height: auto;
+  background-color: lightgoldenrodyellow;
+  border-radius: 20px;
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  z-index: 1;
+}
+
+header nav ul {
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+}
+
+header nav ul li {
+  font-size: 20px;
+  line-height: 2;
+  text-align: center;
+}
+
+header nav ul li:hover {
+  background-color: #86e286;
+}
+
+header nav ul a {
+  text-decoration: none;
+}
+
+header nav ul a:visited {
+  color: blue;
+}
+
+header .banner {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/banner.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header h1 {
+  margin: auto;
+  font-size: 100px;
+  color: fuchsia;
+}
+
+section {
+  width: 1024px;
+  margin: 0 auto 10px;
+}
+
+section .intro h2 {
+  font-size: 40px;
+  text-align: center;
+  color: green;
+}
+
+section .intro p {
+  font-size: 20px;
+  line-height: 2;
+  text-align: justify;
+}
+
+section .shiba h3 {
+  font-size: 32px;
+  color: blue;
+}
+
+section .shiba .img_shiba {
+  width: 100%;
+  height: 80vh;
+  background-image: url(../img/柴犬.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.8;
+}
+
+section .shiba p {
+  font-size: 20px;
+  line-height: 2;
+  text-align: justify;
+}
+
+section .bulldog h3 {
+  font-size: 32px;
+  color: blue;
+}
+
+section .bulldog .img_bulldog {
+  width: 100%;
+  height: 80vh;
+  background-image: url(../img/法鬥.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.8;
+}
+
+section .bulldog p {
+  font-size: 20px;
+  line-height: 2;
+  text-align: justify;
+}
+
+section .corgi h3 {
+  font-size: 32px;
+  color: blue;
+}
+
+section .corgi .img_corgi {
+  width: 100%;
+  height: 80vh;
+  background-image: url(../img/柯基.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.8;
+}
+
+section .corgi p {
+  font-size: 20px;
+  line-height: 2;
+  text-align: justify;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  background-color: lightgray;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+/*# sourceMappingURL=index.css.map */

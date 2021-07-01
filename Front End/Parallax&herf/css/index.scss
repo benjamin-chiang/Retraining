@@ -1,0 +1,150 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+header{
+    width: 100%;
+    nav{
+        width: 140px;
+        height: auto;
+        background-color: lightgoldenrodyellow;
+        border-radius: 20px;
+        position: fixed;
+        right: 5px;
+        bottom: 5px;
+        z-index: 1;
+        
+        ul{
+            padding:10px;
+            margin: 0;
+            list-style: none;
+            li{
+                font-size: 20px;
+                line-height: 2;
+                text-align: center;                
+            }
+            li:hover{
+                background-color: rgb(134, 226, 134);
+            }
+            a{
+                text-decoration: none;
+            }
+            a:visited{
+                color:blue;
+            }
+        }
+    }
+    .banner{
+        width: 100%;
+        height: 100vh;
+        background-image: url(../img/banner.jpg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        opacity: 0.6;
+        display: flex;        
+    }
+        h1{
+            margin: auto;
+            font-size: 100px;
+            color: fuchsia;
+        }
+}
+section{
+    width: 1024px;
+    margin: 0 auto 10px;
+    .intro {
+        h2{        
+            font-size: 40px;
+            text-align: center;
+            color: green;
+        }
+        p{
+            font-size: 20px;
+            line-height: 2;
+            text-align: justify;
+        }
+    }
+    .shiba{
+        h3{
+            font-size: 32px;
+            // text-align: center;
+            color: blue;
+        }
+        .img_shiba{
+            width: 100%;
+            height: 80vh;
+            background-image: url(../img/柴犬.jpg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            opacity: 0.8;
+        }
+        p{
+            font-size: 20px;
+            line-height: 2;
+            text-align: justify;
+        }
+    }   
+    .bulldog{
+        h3{
+            font-size: 32px;
+            // text-align: center;
+            color: blue;
+        }
+        .img_bulldog{
+            width: 100%;
+            height: 80vh;
+            background-image: url(../img/法鬥.jpg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            opacity: 0.8;
+        }
+        p{
+            font-size: 20px;
+            line-height: 2;
+            text-align: justify;
+        }
+    }
+    .corgi{
+        h3{
+            font-size: 32px;
+            // text-align: center;
+            color: blue;
+        }
+        .img_corgi{
+            width: 100%;
+            height: 80vh;
+            background-image: url(../img/柯基.jpg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            opacity: 0.8;
+        }
+        p{
+            font-size: 20px;
+            line-height: 2;
+            text-align: justify;
+        }
+    }
+}
+footer{
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+    background-color: lightgray;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
