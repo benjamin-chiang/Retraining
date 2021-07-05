@@ -27,13 +27,18 @@ header{
         justify-content: space-between;
         img{
             height: 26px;
+            cursor: pointer;
         }
         .nav-left{            
             width: 900px;
+            
             ul{
                 display: flex;
                 li{
                     margin: 0 40px 0 0;
+                    &:hover{
+                        text-decoration: underline;
+                    }
                 }
             }
         }
@@ -42,6 +47,9 @@ header{
                 display: flex;
                 li{
                     margin: 0 2px 0 40px;
+                    &:hover{
+                        text-decoration: underline;
+                    }
                 }
             }
         }
@@ -95,6 +103,9 @@ main{
                 li{
                     text-align: center;
                     margin: 0 50px;
+                    &:hover{
+                        text-decoration: underline;
+                    }
                 }
             }
         }
@@ -249,6 +260,14 @@ footer{
         margin: auto;
         display: flex;
         justify-content: space-between;
+        .earth{
+            font-size: 14px;
+            line-height: 16px;
+            i{
+                font-size: 20px;
+                margin-right: 10px;
+            }
+        }
         ul{
             display: flex;
             li{

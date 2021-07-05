@@ -42,6 +42,7 @@ header nav {
 
 header nav img {
   height: 26px;
+  cursor: pointer;
 }
 
 header nav .nav-left {
@@ -58,6 +59,10 @@ header nav .nav-left ul li {
   margin: 0 40px 0 0;
 }
 
+header nav .nav-left ul li:hover {
+  text-decoration: underline;
+}
+
 header nav .nav-right ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -66,6 +71,10 @@ header nav .nav-right ul {
 
 header nav .nav-right ul li {
   margin: 0 2px 0 40px;
+}
+
+header nav .nav-right ul li:hover {
+  text-decoration: underline;
 }
 
 main .primy {
@@ -129,6 +138,10 @@ main .promote .container ul {
 main .promote .container ul li {
   text-align: center;
   margin: 0 50px;
+}
+
+main .promote .container ul li:hover {
+  text-decoration: underline;
 }
 
 main .service-home {
@@ -330,6 +343,16 @@ footer .copyright {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+footer .copyright .earth {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+footer .copyright .earth i {
+  font-size: 20px;
+  margin-right: 10px;
 }
 
 footer .copyright ul {
