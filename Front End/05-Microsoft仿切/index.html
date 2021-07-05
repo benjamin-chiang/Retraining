@@ -16,7 +16,9 @@
 <body>
     <header>
         <nav>
-            <img src="./img/logo.png" alt="">
+            <div class="logo">
+                <img src="./img/logo.png" alt="">
+            </div>
             <div class="nav-left">
                 <ul>
                     <li><a href="">Microsoft 365</a></li>
@@ -30,39 +32,45 @@
             <div class="nav-right">
                 <ul>
                     <li><a href="">所有Microsoft<i class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="">搜尋<i class="fas fa-search"></i></a></li>
-                    <li><a href="">購物車<i class="fas fa-shopping-cart"></i></a></li>
-                    <li><a href="">登入<i class="far fa-user-circle"></i></a></li>
+                    <li><a href="">搜尋</a></li>
+                    <!-- <li><a href=""><i class="fas fa-search"></i></a></li> -->
+                    <li><a href="">購物車</a></li>
+                    <!-- <li><a href=""><i class="fas fa-shopping-cart"></i></a></li> -->
+                    <li><a href="">登入</a></li>
+                    <!-- <li><a href=""><i class="far fa-user-circle"></i></a></li> -->
                 </ul>
             </div>
         </nav>
     </header>
 
-    <main>
+    <main>        
+        <!-- section就純section -->
         <section class="primy">
-            <div class="banner-img"></div>
-            <div class="text">
-                <h1>新上市的Surface Laptop4</h1>
-                <p>運用完美結合時尚外型、超薄設計、多工速度和增強效能的裝置，一手包辦</p>
-                <button>立即選購 ＞</button>
-            </div>
+            <a href="">
+                <div class="banner-img"></div>
+                <div class="text">
+                    <h1>新上市的Surface Laptop4</h1>
+                    <p>運用完美結合時尚外型、超薄設計、多工速度和增強效能的裝置，一手包辦</p>                    
+                    <span class="btn">立即選購 ＞</span>                    
+                </div>
+            </a>
         </section>
         <section class="promote">
             <div class="container">
                 <ul>
                     <li><a href="">
-                            <img src="./img/icon/Microsoft 365.png" alt=""><br>
-                        <span>選擇您的<br>Microsoft 365</span>
+                            <img src="./img/icon/Microsoft 365.png" alt="">
+                            <span>選擇您的Microsoft 365</span>
                         </a>
                     </li>
                     <li><a href="">
-                            <img src="./img/icon/surface.png" alt=""><br>
-                        <span>選購Surface裝置</span>
+                            <img src="./img/icon/surface.png" alt="">
+                            <span>選購Surface裝置</span>
                         </a>
                     </li>
                     <li><a href="">
-                            <img src="./img/icon/windows.png" alt=""><br>
-                        <span>Windows 10</span>
+                            <img src="./img/icon/windows.png" alt="">
+                            <span>Windows 10</span>
                         </a>
                     </li>
                 </ul>
@@ -127,7 +135,7 @@
                     <p>透過功能強大的應用程式提高生產力、聯繫和安全，始終領先一步。</p>
                     <span>立即選購＞</span>
                 </div>
-            </a>            
+            </a>
             <a href="">
                 <div class="card business-win10">
                     <img src="./img/business ad/png/business windows 10.png" alt="">
@@ -159,10 +167,13 @@
     <footer>
         <div class="container">
             <div class="card-news">
+                <!-- 多包了title，可以直接寫在ul後面 -->
+
                 <div class="title">
                     最新動向
                 </div>
                 <ul>
+                    <!-- a包進所有a -->
                     <li>Microsoft 365</li>
                     <li>Surface Go</li>
                     <li>Surface Book 2</li>
