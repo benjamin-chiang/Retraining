@@ -11,11 +11,32 @@
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+
+
 </head>
 
 <body>
-    <header>
+    <header>        
         <nav>
+            <div class="btn-burger">
+                <label for="burger">☰</label>
+                <input type="checkbox" id="burger">
+                <ul>
+                    <li><a href="">Microsoft 365</a></li>
+                    <li><a href="">Office</a></li>
+                    <li><a href="">Windows</a></li>
+                    <li><a href="">Surface</a></li>
+                    <li><a href="">Xbox</a></li>
+                    <li><a href="">支援</a></li>
+                    <li><a href="">軟體</a></li>
+                    <li><a href="">個人電腦和設備</a></li>
+                    <li><a href="">娛樂</a></li>
+                    <li><a href="">商務適用</a></li>
+                    <li><a href="">Developer & IT</a></li>
+                    <li><a href="">其他</a></li>
+                    <li><a href="">檢視網站地圖</a></li>                    
+                </ul>
+            </div>            
             <div class="logo">
                 <img src="./img/logo.png" alt="">
             </div>
@@ -30,29 +51,24 @@
                 </ul>
             </div>
             <div class="nav-right">
-                <ul>
-                    <li><a href="">所有Microsoft<i class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="">搜尋</a></li>
-                    <!-- <li><a href=""><i class="fas fa-search"></i></a></li> -->
-                    <li><a href="">購物車</a></li>
-                    <!-- <li><a href=""><i class="fas fa-shopping-cart"></i></a></li> -->
-                    <li><a href="">登入</a></li>
-                    <!-- <li><a href=""><i class="far fa-user-circle"></i></a></li> -->
+                <ul>                    
+                    <li><a href=""><span>所有Microsoft<i class="fas fa-chevron-down"></i></span></a></li>
+                    <li><a href=""></a><span>搜尋<i class="fas fa-search"></i></span></li>
+                    <li><a href=""><span>購物車</span></a></li>
+                    <li><a href=""><span>登入</span></a></li>                
                 </ul>
             </div>
         </nav>
     </header>
 
-    <main>                
+    <main>
         <section class="primy">
             <a href="">
-                <div class="banner-img">
-                    <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWAn3f?ver=86c9&q=0&m=8&h=600&w=1600&b=%23FFFFFFFF&l=f&x=0&y=279&s=3000&d=1125&aim=true" alt="">
-                </div>
+                <div class="banner-img"></div>
                 <div class="text">
                     <h1>新上市的Surface Laptop4</h1>
-                    <p>運用完美結合時尚外型、超薄設計、多工速度和增強效能的裝置，一手包辦</p>                    
-                    <span class="btn">立即選購 ＞</span>                    
+                    <p>運用完美結合時尚外型、超薄設計、多工速度和增強效能的裝置，一手包辦</p>
+                    <button>立即選購 ＞</button>                    
                 </div>
             </a>
         </section>
@@ -167,14 +183,13 @@
 
     <footer>
         <div class="container">
-            <div class="card-news">
+            <div class="card news">
                 <!-- 多包了title，可以直接寫在ul後面 -->
 
                 <div class="title">
                     最新動向
                 </div>
                 <ul>
-                    <!-- a包進所有a -->
                     <li>Microsoft 365</li>
                     <li>Surface Go</li>
                     <li>Surface Book 2</li>
@@ -182,7 +197,7 @@
                     <li>Windows 10 應用程式</li>
                 </ul>
             </div>
-            <div class="card-store">
+            <div class="card store">
                 <div class="title">
                     Microsoft Store
                 </div>
@@ -194,7 +209,7 @@
                     <li>訂單追蹤</li>
                 </ul>
             </div>
-            <div class="card-education">
+            <div class="card education">
                 <div class="title">
                     教育
                 </div>
@@ -205,7 +220,7 @@
                     <li>Microsoft Azure 在教育領域的應用</li>
                 </ul>
             </div>
-            <div class="card-enterprise">
+            <div class="card enterprise">
                 <div class="title">
                     企業
                 </div>
@@ -220,7 +235,7 @@
                     <li>零售</li>
                 </ul>
             </div>
-            <div class="card-devperson">
+            <div class="card devperson">
                 <div class="title">
                     開發人員
                 </div>
@@ -234,7 +249,7 @@
                     <li>Microsoft 365 開發人員計畫</li>
                 </ul>
             </div>
-            <div class="card-company">
+            <div class="card company">
                 <div class="title">
                     公司
                 </div>
@@ -261,6 +276,8 @@
             </div>
         </div>
     </footer>
+
+
 </body>
 
 </html>
