@@ -68,6 +68,13 @@ header nav .btn-burger {
     display: block;
     position: absolute;
     z-index: 1;
+    width: 100vw;
+    background-color: #e6e6e6;
+  }
+  header nav .btn-burger #burger:checked + ul li {
+    padding: 15px;
+    font-size: 15px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
   }
   header nav .btn-burger::after {
     font-family: "Font Awesome\ 5 Free";
@@ -174,6 +181,13 @@ main .primy {
   }
 }
 
+@media (max-width: 539px) {
+  main .primy {
+    height: 32vh;
+    margin-bottom: 0px;
+  }
+}
+
 main .primy .banner-img {
   width: 100%;
   height: 100%;
@@ -190,6 +204,13 @@ main .primy .banner-img {
   }
 }
 
+@media (max-width: 539px) {
+  main .primy .banner-img {
+    background-image: url(../img/banner/539.png);
+    background-size: cover;
+  }
+}
+
 main .primy .text {
   position: absolute;
   bottom: calc(50% - 70px);
@@ -199,6 +220,20 @@ main .primy .text {
 @media (max-width: 859px) {
   main .primy .text {
     left: 50px;
+  }
+}
+
+@media (max-width: 539px) {
+  main .primy .text {
+    bottom: calc(-50% - 60px);
+    left: calc(50% - 205px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -215,6 +250,14 @@ main .primy .text h1 {
   }
 }
 
+@media (max-width: 539px) {
+  main .primy .text h1 {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
 main .primy .text p {
   font-size: 15px;
   font-weight: 400;
@@ -228,16 +271,12 @@ main .primy .text p {
   }
 }
 
-main .primy .text .btn {
-  padding: 8px 20px;
-  background-color: black;
-  color: white;
-  font-size: 15px;
-  display: inline-block;
-}
-
-main .primy .text .btn:hover {
-  text-decoration: underline;
+@media (max-width: 539px) {
+  main .primy .text p {
+    width: 410px;
+    text-align: center;
+    margin: 5px 0;
+  }
 }
 
 main .primy .text button {
@@ -248,11 +287,38 @@ main .primy .text button {
   cursor: pointer;
 }
 
+@media (max-width: 539px) {
+  main .primy .text button {
+    width: 125px;
+    margin: auto;
+  }
+}
+
+main .mobile-primy {
+  display: none;
+}
+
+@media (max-width: 539px) {
+  main .mobile-primy {
+    display: block;
+    width: 100%;
+    height: 32vh;
+    background-color: #e6e6e6;
+    margin-bottom: 50px;
+  }
+}
+
 main .promote {
   max-width: calc(1600px + 10%);
   padding: 0 5%;
   margin: auto;
   margin-bottom: 50px;
+}
+
+@media (max-width: 539px) {
+  main .promote {
+    margin-bottom: 20px;
+  }
 }
 
 main .promote .container {
@@ -264,6 +330,15 @@ main .promote .container ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 539px) {
+  main .promote .container ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 main .promote .container ul li {
@@ -279,6 +354,21 @@ main .promote .container ul li:nth-child(2) {
 
 main .promote .container ul li:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 539px) {
+  main .promote .container ul li {
+    width: 100%;
+    text-align: unset;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  main .promote .container ul li img {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-right: 10px;
+  }
 }
 
 main .service-home {
@@ -300,6 +390,14 @@ main .service-home {
   main .service-home {
     padding: 0 2%;
     margin-bottom: 0;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (max-width: 539px) {
+  main .service-home {
+    padding: 0 5%;
   }
 }
 
@@ -309,12 +407,19 @@ main .service-home .card {
 
 @media (max-width: 859px) {
   main .service-home .card {
+    width: 350px;
     margin-bottom: 50px;
   }
 }
 
+@media (max-width: 539px) {
+  main .service-home .card {
+    width: 100%;
+  }
+}
+
 main .service-home img {
-  width: 380px;
+  width: 100%;
 }
 
 main .service-home h3 {
@@ -360,6 +465,13 @@ main .secondary {
   }
 }
 
+@media (max-width: 539px) {
+  main .secondary {
+    height: 32vh;
+    margin-bottom: 0px;
+  }
+}
+
 main .secondary .banner-img {
   width: 100%;
   height: 100%;
@@ -372,6 +484,13 @@ main .secondary .banner-img {
 @media (max-width: 859px) {
   main .secondary .banner-img {
     background-image: url(../img/banner-2/1083.jfif);
+    background-size: cover;
+  }
+}
+
+@media (max-width: 539px) {
+  main .secondary .banner-img {
+    background-image: url(../img/banner-2/539.jfif);
     background-size: cover;
   }
 }
@@ -390,6 +509,22 @@ main .secondary .text {
   }
 }
 
+@media (max-width: 539px) {
+  main .secondary .text {
+    height: 120px;
+    top: unset;
+    bottom: calc(-50% - 60px);
+    left: calc(50% - 205px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 main .secondary .text h2 {
   font-size: 34px;
   font-weight: 600;
@@ -400,6 +535,15 @@ main .secondary .text h2 {
 @media (max-width: 859px) {
   main .secondary .text h2 {
     font-size: 24px;
+  }
+}
+
+@media (max-width: 539px) {
+  main .secondary .text h2 {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 0;
   }
 }
 
@@ -414,12 +558,42 @@ main .secondary .text p {
   }
 }
 
+@media (max-width: 539px) {
+  main .secondary .text p {
+    width: 410px;
+    font-size: 15px;
+    text-align: center;
+    margin: 8px 0;
+  }
+}
+
 main .secondary .text button {
   padding: 8px 20px;
   background-color: black;
   color: white;
   font-size: 15px;
   cursor: pointer;
+}
+
+@media (max-width: 539px) {
+  main .secondary .text button {
+    width: 125px;
+    margin: 0 auto;
+  }
+}
+
+main .mobile-secondary {
+  display: none;
+}
+
+@media (max-width: 539px) {
+  main .mobile-secondary {
+    display: block;
+    width: 100%;
+    height: 32vh;
+    background-color: #e6e6e6;
+    margin-bottom: 50px;
+  }
 }
 
 main .title {
@@ -448,6 +622,14 @@ main .service-business {
   main .service-business {
     padding: 0 2%;
     margin-bottom: 0;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (max-width: 539px) {
+  main .service-business {
+    padding: 0 5%;
   }
 }
 
@@ -457,12 +639,25 @@ main .service-business .card {
 
 @media (max-width: 859px) {
   main .service-business .card {
+    width: 350px;
     margin-bottom: 50px;
   }
 }
 
+@media (max-width: 539px) {
+  main .service-business .card {
+    width: 100%;
+  }
+}
+
 main .service-business img {
-  width: 380px;
+  width: 100%;
+}
+
+@media (max-width: 539px) {
+  main .service-business img {
+    width: 100%;
+  }
 }
 
 main .service-business h3 {
@@ -575,8 +770,22 @@ footer .copyright {
           align-items: center;
 }
 
+@media (max-width: 539px) {
+  footer .copyright {
+    margin: unset;
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 footer .copyright .earth {
   font-size: 14px;
+  margin-bottom: 20px;
 }
 
 footer .copyright .earth i {
@@ -584,13 +793,36 @@ footer .copyright .earth i {
   margin-right: 10px;
 }
 
-footer .copyright ul {
+@media (max-width: 539px) {
+  footer .copyright .earth {
+    margin-bottom: 24px;
+  }
+}
+
+footer .copyright .contact {
+  margin-bottom: 20px;
+}
+
+footer .copyright .contact ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-footer .copyright ul li {
+@media (max-width: 539px) {
+  footer .copyright .contact ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+footer .copyright .contact ul li {
   margin-left: 40px;
+}
+
+@media (max-width: 539px) {
+  footer .copyright .contact ul li {
+    margin: 0 20px 5px 0;
+  }
 }
 /*# sourceMappingURL=index.css.map */

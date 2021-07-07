@@ -30,7 +30,7 @@ header {
             padding: 10px;
             position: relative;
         }
-        .btn-burger {
+        .btn-burger {            
             display: none;
             @media (max-width: 859px) {
                 display: block;
@@ -50,6 +50,13 @@ header {
                     display: block;                    
                     position: absolute;
                     z-index: 1;
+                    width: 100vw;
+                    background-color: #e6e6e6;
+                    li{
+                        padding: 15px;
+                        font-size: 15px;
+                        border-bottom: 0.5px solid rgba(0,0,0,.1);;
+                    }
                 }
                 &::after {
                     font-family: "Font Awesome\ 5 Free";
@@ -116,9 +123,7 @@ header {
                     li {
                         span {
                             display: none;
-                        }
-                        &:nth-child(3) {
-                        }
+                        }                        
                     }
                 }
             }
@@ -138,6 +143,10 @@ main {
             height: 45vh;
             padding: 0px;
         }
+        @media (max-width: 539px) {
+            height: 32vh;
+            margin-bottom: 0px;
+        }
         .banner-img {
             width: 100%;
             height: 100%;
@@ -149,6 +158,10 @@ main {
                 background-image: url(../img/banner/1083.png);
                 background-size: cover;
             }
+            @media (max-width: 539px) {
+                background-image: url(../img/banner/539.png);
+                background-size: cover;
+            }
         }
         .text {
             position: absolute;
@@ -157,6 +170,12 @@ main {
             @media (max-width: 859px) {
                 left: 50px;
             }
+            @media (max-width: 539px) {
+                bottom: calc(-50% - 60px);
+                left: calc(50% - 205px);
+                display: flex;                
+                flex-direction: column;
+            }
             h1 {
                 font-size: 34px;
                 font-weight: 600;
@@ -164,6 +183,11 @@ main {
                 margin: 0;
                 @media (max-width: 859px) {
                     font-size: 24px;
+                }
+                @media (max-width: 539px) {
+                    font-size: 20px;
+                    line-height: 24px;
+                    text-align: center;
                 }
             }
             p {
@@ -174,24 +198,33 @@ main {
                 @media (max-width: 859px) {
                     width: 340px;
                 }
-            }
-            .btn {
-                padding: 8px 20px;
-                background-color: black;
-                color: white;
-                font-size: 15px;
-                display: inline-block;
-                &:hover {
-                    text-decoration: underline;
+                @media (max-width: 539px) {
+                    width: 410px;
+                    text-align: center;
+                    margin: 5px 0;
                 }
-            }
+            }            
             button {
                 padding: 8px 20px;
                 background-color: black;
                 color: white;
                 font-size: 15px;
                 cursor: pointer;
+                @media (max-width: 539px) {
+                    width: 125px;                                     
+                    margin: auto;
+                }
             }
+        }        
+    }
+    .mobile-primy{
+        display: none;            
+        @media (max-width: 539px) {
+            display: block;
+            width: 100%;
+            height: 32vh;
+            background-color: #e6e6e6;
+            margin-bottom: 50px;
         }
     }
     .promote {
@@ -199,11 +232,17 @@ main {
         padding: 0 5%;
         margin: auto;
         margin-bottom: 50px;
+        @media (max-width: 539px) {
+            margin-bottom: 20px;
+        }
         .container {
             max-width: 650px;
             margin: auto;
             ul {
                 display: flex;
+                @media (max-width: 539px) {
+                    flex-direction: column;
+                }
                 li {
                     width: 110px;
                     font-weight: 600;
@@ -214,6 +253,18 @@ main {
                     }
                     &:hover {
                         text-decoration: underline;
+                    }
+                    @media (max-width: 539px) {
+                        width: 100%;
+                        text-align: unset;  
+                        margin: 0;                      
+                        margin-bottom: 30px;                        
+                        img{
+                            width: 20px;
+                            height: 20px;
+                            float: left;
+                            margin-right: 10px;
+                        }
                     }
                 }
             }
@@ -230,15 +281,23 @@ main {
         @media (max-width: 859px) {
             padding: 0 2%;
             margin-bottom: 0;
+            justify-content: space-around;
+        }
+        @media (max-width: 539px){
+            padding: 0 5%;
         }
         .card {
             width: 380px;
             @media (max-width: 859px) {
+                width: 350px;
                 margin-bottom: 50px;
+            }
+            @media (max-width: 539px){
+                width: 100%;
             }
         }
         img {
-            width: 380px;
+            width: 100%;            
         }
         h3 {
             font-size: 20px;
@@ -273,6 +332,10 @@ main {
             height: 45vh;
             padding: 0px;
         }
+        @media (max-width: 539px) {
+            height: 32vh;
+            margin-bottom: 0px;
+        }
         .banner-img {
             width: 100%;
             height: 100%;
@@ -282,6 +345,10 @@ main {
             background-repeat: no-repeat;
             @media (max-width: 859px) {
                 background-image: url(../img/banner-2/1083.jfif);
+                background-size: cover;
+            }
+            @media (max-width: 539px) {
+                background-image: url(../img/banner-2/539.jfif);
                 background-size: cover;
             }
         }
@@ -294,6 +361,14 @@ main {
                 top: 6%;
                 left: calc(50% - 197.5px);
             }
+            @media (max-width: 539px) {
+                height: 120px;
+                top: unset;
+                bottom: calc(-50% - 60px);
+                left: calc(50% - 205px);
+                display: flex;                
+                flex-direction: column;
+            }
             h2 {
                 font-size: 34px;
                 font-weight: 600;
@@ -302,12 +377,24 @@ main {
                 @media (max-width: 859px) {
                     font-size: 24px;
                 }
+                @media (max-width: 539px) {
+                    font-size: 20px;
+                    line-height: 24px;
+                    text-align: center;
+                    margin-bottom: 0;
+                }
             }
             p {
                 margin: 0px;
                 margin-bottom: 20px;
                 @media (max-width: 859px) {
                     width: 395px;
+                }
+                @media (max-width: 539px) {
+                    width: 410px;
+                    font-size: 15px;
+                    text-align: center;
+                    margin: 8px 0;
                 }
             }
             button {
@@ -316,7 +403,21 @@ main {
                 color: white;
                 font-size: 15px;
                 cursor: pointer;
+                @media (max-width: 539px) {
+                    width: 125px;                                     
+                    margin: 0 auto;
+                }
             }
+        }
+    }
+    .mobile-secondary{
+        display: none;            
+        @media (max-width: 539px) {
+            display: block;
+            width: 100%;
+            height: 32vh;
+            background-color: #e6e6e6;
+            margin-bottom: 50px;
         }
     }
     .title {
@@ -336,15 +437,26 @@ main {
         @media (max-width: 859px) {
             padding: 0 2%;
             margin-bottom: 0;
+            justify-content: space-around;
+        }
+        @media (max-width: 539px){
+            padding: 0 5%;
         }
         .card {
             width: 380px;
             @media (max-width: 859px) {
+                width: 350px;
                 margin-bottom: 50px;
+            }
+            @media (max-width: 539px){
+                width: 100%;
             }
         }
         img {
-            width: 380px;
+            width: 100%;
+            @media (max-width: 539px) {
+                width: 100%;
+            }
         }
         h3 {
             font-size: 20px;
@@ -418,8 +530,7 @@ footer {
                 margin: 16px 0;
             }
         }
-    }
-    
+    }    
     .copyright {
         max-width: calc(1600px + 10%);
         padding: 0 5%;
@@ -427,18 +538,36 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media (max-width: 539px) {
+            margin: unset;
+            align-items: unset;
+            flex-direction: column;
+        }
         .earth {
             font-size: 14px;
+            margin-bottom: 20px;
             i {
                 font-size: 20px;
                 margin-right: 10px;
             }
-        }
-        ul {
-            display: flex;
-            li {
-                margin-left: 40px;
+            @media (max-width: 539px) {
+                margin-bottom: 24px;
             }
         }
+        .contact{
+            margin-bottom: 20px;
+            ul {
+                display: flex;
+                @media (max-width: 539px) {
+                    flex-wrap: wrap;
+                }
+                li {
+                    margin-left: 40px;
+                    @media (max-width: 539px) {
+                        margin: 0 20px 5px 0;
+                    }
+                }
+            }
+        }        
     }
 }
