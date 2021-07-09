@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        .dropdown{
+            max-width: 1000px;
+            width: 100%;
+            background-color: lightgrey;
+            display: none;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .sitemap{
+            width: 100%;
+        }
+        #list{
+            display: none;
+        }
+        #list:checked + .dropdown{
+            display: flex;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <div class="all-list">
+        <label for="list">
+            <span>所有Microsoft</span>
+            <span><i class="fas fa-chevron-down"></i></span>
+        </label>
+        <input type="checkbox" id="list">
+        <div class="dropdown">
+            <ul>軟體
+                <li><a href="" class="">Windows應用程式</a></li>
+                <li><a href="" class="">OneDrive</a></li>
+                <li><a href="" class="">Outlook</a></li>
+                <li><a href="" class="">Skype</a></li>
+                <li><a href="" class="">OneNote</a></li>
+                <li><a href="" class="">Microsoft Teams</a></li>
+            </ul>
+            <ul>個人電腦和設備
+                <li><a href="" class="">選購Xbox</a></li>
+                <li><a href="" class="">電腦配件</a></li>
+            </ul>
+            <ul>娛樂
+                <li><a href="" class="">Xbox Game Pass Ultimate</a></li>
+                <li><a href="" class="">Xbox Live Gold</a></li>
+                <li><a href="" class="">Xbox與遊戲</a></li>
+                <li><a href="" class="">電腦遊戲</a></li>
+                <li><a href="" class="">Windows遊戲</a></li>
+            </ul>
+            <ul>商務適用
+                <li><a href="" class="">Microsoft Azure</a></li>
+                <li><a href="" class="">Microsoft Dynamics 365</a></li>
+                <li><a href="" class="">Microsoft 365</a></li>
+                <li><a href="" class="">Microsoft Industry</a></li>
+                <li><a href="" class="">資料平台</a></li>
+                <li><a href="" class="">Power Platform</a></li>
+                <li><a href="" class="">選購商務版</a></li>
+            </ul>
+            <ul>Developer & IT
+                <li><a href="" class="">.NET</a></li>
+                <li><a href="" class="">Visual Code</a></li>
+                <li><a href="" class="">Windows Server</a></li>
+                <li><a href="" class="">開發Windows應用程式</a></li>
+                <li><a href="" class="">文件</a></li>
+                <li><a href="" class="">POWER Apps</a></li>
+            </ul>
+            <ul>其他
+                <li><a href="" class="">Microsoft Rewards</a></li>
+                <li><a href="" class="">免費下載與安全性</a></li>
+                <li><a href="" class="">教育</a></li>
+                <li><a href="" class="">禮品卡</a></li>
+                <li><a href="" class="">Licensing</a></li>
+            </ul>
+            <div class="sitemap">
+                <a href="">檢視網站地圖</a>                
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
