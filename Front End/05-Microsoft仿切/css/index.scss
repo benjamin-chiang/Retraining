@@ -87,7 +87,7 @@ header {
                     margin: 0px 10px;
                     &:hover {
                         border-bottom: 2px solid black;
-                    }
+                    }       
                 }
             }
             @media (max-width: 859px) {
@@ -98,47 +98,11 @@ header {
             margin-left: auto;
             letter-spacing: 1px;
             position: relative;
-            .dropdown {
-                width: 68vw;
-                background-color: #f2f2f2;
-                font-size: 13px;                
-                border: 1px solid gray;
-                display: none;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                position: absolute;
-                z-index: 1;
-                top: 40px;
-                right: 0px;
-                > ul {
-                    color: black;                    
-                    font-weight: 600;
-                    padding: 20px;
-                    margin-right: 20px;
-                    > li {
-                        font-weight: 400;
-                        margin: 24px 0;
-                    }
-                }
-            }
-            .sitemap{
-                width: 100%;
-                background-color: #e6e6e6;                                
-                font-weight: 400;
-                text-align: center;
-                padding: 18px;
-            }
-            #list{
-                display: none;
-            }
-            #list:checked + .dropdown{
-                display: flex;
-            }
             > ul {
                 display: flex;
                 align-items: center;
                 > li {
-                    margin-left: 35px;
+                    margin-left: 35px;                    
                     &:hover {
                         border-bottom: 2px solid black;
                     }
@@ -165,6 +129,42 @@ header {
                     }
                 }
             }
+            #list{
+                display: none;
+            }
+            #list:checked + .dropdown{
+                display: flex;
+            }
+            .dropdown {
+                width: 66vw;
+                background-color: #f2f2f2;
+                font-size: 13px;                
+                border: 0.8px solid rgb(235, 229, 229);
+                display: none;
+                flex-wrap: wrap;
+                position: absolute;
+                z-index: 1;
+                top: 36px;
+                right: 80px;
+                > ul {
+                    font-weight: 600;                    
+                    padding: 15px 56px 15px 10px;                    
+                    > li {
+                        font-weight: 400;
+                        margin: 20px 0px;
+                    }
+                }
+                .sitemap{
+                    width: 100%;
+                    background-color:#e6e6e6;                                
+                    font-weight: 400;
+                    text-align: center;
+                    padding: 10px;
+                }
+            }
+            
+            
+            
         }
     }
 }
@@ -242,12 +242,20 @@ main {
                     margin: 5px 0;
                 }
             }            
-            button {
+            .btn {
+                width: 120px;
                 padding: 8px 20px;
                 background-color: black;
                 color: white;
                 font-size: 15px;
                 cursor: pointer;
+                .under:hover{
+                    border-bottom: 2px solid white;
+                }
+                .arrow:hover{
+                    transform: translateX(100px);
+                }
+                
                 @media (max-width: 539px) {
                     width: 125px;                                     
                     margin: auto;
@@ -282,15 +290,15 @@ main {
                     flex-direction: column;
                 }
                 li {
-                    width: 110px;
+                    width: 140px;
                     font-weight: 600;
                     text-align: center;
                     margin: 0 40px;
-                    &:nth-child(2) {
-                        width: 150px;
-                    }
+                    // &:nth-child(2) {
+                    //     width: 150px;
+                    // }
                     &:hover {
-                        text-decoration: underline;
+                        border-bottom: 2px solid black;
                     }
                     @media (max-width: 539px) {
                         width: 100%;
@@ -529,11 +537,19 @@ main {
                     i {
                         color: blue;
                     }
+                    &:hover{
+                        background-image: black;
+                        opacity: 0.5;
+                    }
                 }
                 li:nth-child(3) {
                     font-size: 30px;
                     i {
                         color: red;
+                    }
+                    &:hover{
+                        background-image: black;
+                        opacity: 0.5;
                     }
                 }
             }
