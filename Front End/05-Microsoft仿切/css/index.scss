@@ -309,13 +309,30 @@ main {
         padding: 0 5%;
         margin: auto;
         margin-bottom: 50px;
-        display: flex;
-        // flex-wrap: wrap;        
+        display: flex;      
+        @media (max-width: 1083px) {
+            flex-wrap: wrap;
+        }  
         .card {
-            width: calc(25% -24px);
+            width: 25%;
             padding: 0 12px;            
+            @media (max-width: 1083px) {
+                width: 50%;
+                &:nth-child(1){
+                    margin-bottom: 50px;
+                }
+                &:nth-child(2){                    
+                    margin-bottom: 50px;
+                }
+            }
+            @media (max-width: 539px) {
+                width: 100%;
+                &:nth-child(3){                    
+                    margin-bottom: 50px;
+                }
+            }
             img {
-                width: 100%;                
+                width: 100%;
             }
             h3 {
                 font-size: 20px;
@@ -343,7 +360,7 @@ main {
                 }
             }            
         }
-        .home-m365 > span {
+        .home-m365 span {
             margin-right: 60px;
         }
     }
