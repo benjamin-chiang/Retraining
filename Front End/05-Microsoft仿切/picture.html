@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: calc(1600px + 10%);            
+            padding: 0 5%;
+            margin: auto;
+
+        }
+
+        .container>img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .banner {
+            width: 100%;
+            height: 600px;
+            background-image: url(./img/banner/1600.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-bottom: 20px;
+        }
+
+        .container>picture>img{
+            width: 100%;
+            height: 100%;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="./img/banner/1600.png" alt="">
+        <div class="banner"></div>
+    </div>
+
+    <div class="container">
+        <picture>
+            <source media="(max-width:539px)" srcset="./img/business-ad/business_office.png">
+            <source media="(max-width:767px)" srcset="./img/business-ad/business_solution.png">
+            <source media="(max-width:1083px)" srcset="./img/business-ad/business_surface.png">
+            <source media="(max-width:1399px )" srcset="./img/business-ad/business_windows10.png">
+            <img src="./img/banner-2/1600.jfif" alt="">                        
+        </picture>
+    </div>
+</body>
+
+</html>
