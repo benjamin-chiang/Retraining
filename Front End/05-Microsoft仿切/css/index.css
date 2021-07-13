@@ -114,7 +114,9 @@ header nav .nav-left ul li {
 }
 
 header nav .nav-left ul li:hover {
-  border-bottom: 2px solid black;
+  -webkit-text-decoration: 2px underline;
+          text-decoration: 2px underline;
+  text-underline-offset: 5px;
 }
 
 @media (max-width: 1083px) {
@@ -155,7 +157,9 @@ header nav .nav-right > ul > li {
 }
 
 header nav .nav-right > ul > li:hover {
-  border-bottom: 2px solid black;
+  -webkit-text-decoration: 2px underline;
+          text-decoration: 2px underline;
+  text-underline-offset: 5px;
 }
 
 header nav .nav-right > ul > li:nth-child(3) > a::after {
@@ -189,11 +193,11 @@ header nav .nav-right #list:checked + .dropdown {
 }
 
 header nav .nav-right .dropdown {
+  display: none;
   width: 66vw;
   background-color: #f2f2f2;
   font-size: 13px;
   border: 0.8px solid #ebe5e5;
-  display: none;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: absolute;
@@ -238,6 +242,10 @@ main .primy {
   main .primy {
     margin: 0px;
   }
+}
+
+main .primy .banner-img {
+  line-height: 0;
 }
 
 main .primy .banner-img img {
@@ -340,15 +348,31 @@ main .primy .text .btn .under::after {
   content: "\f054";
   font-size: 14px;
   font-weight: 900;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  left: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+main .primy .text .btn .under {
+  position: relative;
+  left: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 main .primy .text .btn .under:hover {
-  border-bottom: 2px solid white;
+  -webkit-text-decoration: 2px underline;
+          text-decoration: 2px underline;
+  position: relative;
+  left: -10px;
 }
 
 main .primy .text .btn .under:hover::after {
   position: relative;
-  left: 10px;
+  left: 20px;
 }
 
 @media (max-width: 767px) {
@@ -439,6 +463,9 @@ main .service-home {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media (max-width: 1083px) {
@@ -449,13 +476,17 @@ main .service-home {
 }
 
 main .service-home .card {
-  width: 25%;
-  padding: 0 12px;
+  width: calc(25% - 18px);
+}
+
+main .service-home .card img:hover {
+  background-color: white;
+  opacity: 0.6;
 }
 
 @media (max-width: 1083px) {
   main .service-home .card {
-    width: 50%;
+    width: calc(50% - 12px);
   }
   main .service-home .card:nth-child(1) {
     margin-bottom: 50px;
@@ -497,10 +528,18 @@ main .service-home .card span {
 main .service-home .card span::after {
   font-family: "Font Awesome\ 5 Free";
   content: "\f054";
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  left: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 main .service-home .card span:hover {
-  border-bottom: 2px solid;
+  -webkit-text-decoration: 2px underline;
+          text-decoration: 2px underline;
+  text-underline-offset: 3px;
 }
 
 main .service-home .card span:hover::after {
@@ -532,6 +571,10 @@ main .secondary {
   main .secondary {
     margin: 0px;
   }
+}
+
+main .secondary .banner-img {
+  line-height: 0;
 }
 
 main .secondary .banner-img img {
@@ -641,15 +684,31 @@ main .secondary .text .btn .under::after {
   content: "\f054";
   font-size: 14px;
   font-weight: 900;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  left: 0px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+main .secondary .text .btn .under {
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  left: 0px;
 }
 
 main .secondary .text .btn .under:hover {
-  border-bottom: 2px solid white;
+  -webkit-text-decoration: 2px underline;
+          text-decoration: 2px underline;
+  text-underline-offset: 3px;
+  left: -10px;
 }
 
 main .secondary .text .btn .under:hover::after {
   position: relative;
-  left: 10px;
+  left: 20px;
 }
 
 @media (max-width: 767px) {
@@ -688,6 +747,9 @@ main .service-business {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media (max-width: 1083px) {
@@ -698,13 +760,17 @@ main .service-business {
 }
 
 main .service-business .card {
-  width: 25%;
-  padding: 0 12px;
+  width: calc(25% - 18px);
+}
+
+main .service-business .card img:hover {
+  background-color: white;
+  opacity: 0.6;
 }
 
 @media (max-width: 1083px) {
   main .service-business .card {
-    width: 50%;
+    width: calc(50% - 12px);
   }
   main .service-business .card:nth-child(1) {
     margin-bottom: 50px;
@@ -746,10 +812,18 @@ main .service-business .card span {
 main .service-business .card span::after {
   font-family: "Font Awesome\ 5 Free";
   content: "\f054";
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  left: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 main .service-business .card span:hover {
-  border-bottom: 2px solid;
+  -webkit-text-decoration: 2px underline;
+          text-decoration: 2px underline;
+  text-underline-offset: 3px;
 }
 
 main .service-business .card span:hover::after {
@@ -863,6 +937,11 @@ footer .container .card ul li {
   margin: 16px 0;
 }
 
+footer .container .card ul li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 footer .copyright {
   max-width: calc(1600px + 10%);
   padding: 0 5%;
@@ -894,6 +973,11 @@ footer .copyright {
 footer .copyright .earth {
   font-size: 14px;
   margin-bottom: 20px;
+}
+
+footer .copyright .earth:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 footer .copyright .earth i {
@@ -928,9 +1012,20 @@ footer .copyright .contact ul li {
   margin-left: 40px;
 }
 
+footer .copyright .contact ul li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 @media (max-width: 767px) {
   footer .copyright .contact ul li {
     margin: 0 12px 0 0;
   }
+}
+
+footer .copyright .contact ul li:nth-child(6) {
+  display: inline-block;
+  text-decoration: none;
+  cursor: auto;
 }
 /*# sourceMappingURL=index.css.map */
