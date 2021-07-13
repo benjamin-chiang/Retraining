@@ -552,6 +552,14 @@ main .service-home .home-m365 span {
   margin-right: 60px;
 }
 
+@media (max-width: 1400px) {
+  main .service-home .home-m365 span {
+    width: 100%;
+    display: block;
+    margin-bottom: 12px;
+  }
+}
+
 main .secondary {
   max-width: calc(1600px + 10%);
   padding: 0 5%;
