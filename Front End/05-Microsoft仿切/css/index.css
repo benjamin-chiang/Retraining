@@ -479,11 +479,6 @@ main .service-home .card {
   width: calc(25% - 18px);
 }
 
-main .service-home .card img:hover {
-  background-color: white;
-  opacity: 0.6;
-}
-
 @media (max-width: 1083px) {
   main .service-home .card {
     width: calc(50% - 12px);
@@ -507,6 +502,11 @@ main .service-home .card img:hover {
 
 main .service-home .card img {
   width: 100%;
+}
+
+main .service-home .card img:hover {
+  background-color: white;
+  opacity: 0.6;
 }
 
 main .service-home .card h3 {
@@ -771,11 +771,6 @@ main .service-business .card {
   width: calc(25% - 18px);
 }
 
-main .service-business .card img:hover {
-  background-color: white;
-  opacity: 0.6;
-}
-
 @media (max-width: 1083px) {
   main .service-business .card {
     width: calc(50% - 12px);
@@ -799,6 +794,11 @@ main .service-business .card img:hover {
 
 main .service-business .card img {
   width: 100%;
+}
+
+main .service-business .card img:hover {
+  background-color: white;
+  opacity: 0.6;
 }
 
 main .service-business .card h3 {

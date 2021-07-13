@@ -250,7 +250,7 @@ main {
                     font-family: "Font Awesome\ 5 Free";
                     content: "\f054";
                     font-size: 14px;
-                    font-weight: 900;                    
+                    font-weight: 900;
                     display: inline-block;
                     text-decoration: none;
                     position: relative;
@@ -263,7 +263,7 @@ main {
                     transition: 0.3s;
                 }
                 .under:hover {
-                    text-decoration: 2px underline;                    
+                    text-decoration: 2px underline;
                     position: relative;
                     left: -10px;
                 }
@@ -340,10 +340,6 @@ main {
         }
         .card {
             width: calc(25% - 18px);
-            img:hover{
-                background-color: white;
-                opacity: 0.6;
-            }
             @media (max-width: 1083px) {
                 width: calc(50% - 12px);
                 &:nth-child(1) {
@@ -361,6 +357,10 @@ main {
             }
             img {
                 width: 100%;
+                &:hover {
+                    background-color: white;
+                    opacity: 0.6;
+                }
             }
             h3 {
                 font-size: 20px;
@@ -394,16 +394,16 @@ main {
                 }
             }
         }
-        .home-m365{
+        .home-m365 {
             span {
                 margin-right: 60px;
                 @media (max-width: 1400px) {
                     width: 100%;
                     display: block;
                     margin-bottom: 12px;
-                }                                
-            }            
-        } 
+                }
+            }
+        }
     }
     .secondary {
         max-width: calc(1600px + 10%);
@@ -544,11 +544,7 @@ main {
             flex-wrap: wrap;
         }
         .card {
-            width: calc(25% - 18px);
-            img:hover{
-                background-color: white;
-                opacity: 0.6;
-            }
+            width: calc(25% - 18px);            
             @media (max-width: 1083px) {
                 width: calc(50% - 12px);
                 &:nth-child(1) {
@@ -566,6 +562,10 @@ main {
             }
             img {
                 width: 100%;
+                &:hover {
+                    background-color: white;
+                    opacity: 0.6;
+                }
             }
             h3 {
                 font-size: 20px;
@@ -672,7 +672,7 @@ footer {
             ul {
                 li {
                     margin: 16px 0;
-                    &:hover{
+                    &:hover {
                         text-decoration: underline;
                         cursor: pointer;
                     }
@@ -695,7 +695,7 @@ footer {
         .earth {
             font-size: 14px;
             margin-bottom: 20px;
-            &:hover{
+            &:hover {
                 text-decoration: underline;
                 cursor: pointer;
             }
@@ -716,14 +716,14 @@ footer {
                 }
                 li {
                     margin-left: 40px;
-                    &:hover{
+                    &:hover {
                         text-decoration: underline;
                         cursor: pointer;
                     }
                     @media (max-width: 767px) {
                         margin: 0 12px 0 0;
                     }
-                    &:nth-child(6){
+                    &:nth-child(6) {
                         display: inline-block;
                         text-decoration: none;
                         cursor: auto;
