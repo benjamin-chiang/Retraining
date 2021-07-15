@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[name="gender"]:checked{
+            width: 100px;
+            height: 100px;
+        }
+        #result{
+            color: red;
+            font-size: 36px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        年齡：<br>
+        <select id="age_option" name="age">
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+        </select>
+    </div>
+    <div class="middle">
+        性別：<br>
+        男：<input type="radio" name="gender" value="男">
+        女：<input type="radio" name="gender" value="女">
+    </div>
+    <div class="bottom">
+        結果：<br>
+        <div id="result"></div>
+        <button id="calc">查詢</button>
+    </div>
+
+    <script src="./military.js"></script>
+</body>
+
+</html>

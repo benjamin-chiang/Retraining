@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    國文：<input type="text" name="" id="chinese">
+    英文：<input type="text" name="" id="english">
+    數學：<input type="text" name="" id="math">
+    結果：<div id="output"></div>
+    <button id="calc">計算</button>
+
+    <script>
+        var calcBtn = document.querySelector('#calc');
+        calcBtn.addEventListener('click', function () {
+            var chScore = Number(document.querySelector('#chinese').value);
+            var enScore = Number(document.querySelector('#english').value);
+            var maScore = Number(document.querySelector('#math').value);
+            var avg = (chScore + enScore + maScore) / 3;
+            var output = document.querySelector('#output');
+            
+            // if (avg>=60) {
+            //     output.innerHTML = avg + '分，及格'                
+            // }else {
+            //     output.innerHTML = avg + '分，不及格'
+            // };
+
+            if (avg>=90) {
+                output.innerHTML = Math.round(avg) + '分，優異'
+            } else if (avg>=80) {
+                output.innerHTML = Math.round(avg) + '分，認真'
+            } else if (avg>=70) {
+                output.innerHTML = Math.round(avg) + '分，普通'
+            } else if (avg>=60) {
+                output.innerHTML = Math.round(avg) + '分，危險'
+            } else {
+                output.innerHTML = Math.round(avg) + '分，明年再來'
+            };
+
+            // switch (true) {
+            //     case avg >= 90:
+            //         output.innerHTML = Math.round(avg) + '分，優異'
+            //         break;
+            //     case avg >= 80:
+            //         output.innerHTML = Math.round(avg) + '分，認真'
+            //         break;
+            //     case avg >= 70:
+            //         output.innerHTML = Math.round(avg)+ '分，普通'
+            //         break;
+            //     case avg >= 60:
+            //         output.innerHTML = Math.round(avg)+ '分，危險'
+            //         break;
+            //     default:
+            //         output.innerHTML = Math.round(avg)+ '分，明年再來'
+            //         break;
+            // };
+        });
+
+    </script>
+
+</body>
+
+</html>
