@@ -41,20 +41,46 @@
 // })
 
 //! 三、使用while +  break
+// let start = document.querySelector('#start');
+// start.addEventListener('click', function () {
+//     let list = document.querySelector('.list');
+//     list.innerHTML = '';
+//     let count = 0;
+//     while (true) {
+//         count++;
+//         let dice1 = Math.floor(Math.random() * 6) + 1;
+//         let dice2 = Math.floor(Math.random() * 6) + 1;
+//         let dice3 = Math.floor(Math.random() * 6) + 1;
+//         list.innerHTML = `第${count}次骰子結果：${dice1}、${dice2}、${dice3}<br>${list.innerHTML}`;
+
+//         if ((dice1 === dice2 && dice2 === dice3)) {
+//             break;
+//         };
+//     };
+// });
+
+//! 四、使用function呼叫的方式
+function getNum() {
+    return Math.floor(Math.random() * 6 ) + 1;    
+};
+// 限制範圍亂數
+function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
 let start = document.querySelector('#start');
 start.addEventListener('click', function () {
     let list = document.querySelector('.list');
     list.innerHTML = '';
     let count = 0;
     while (true) {
-        count++;
-        let dice1 = Math.floor(Math.random() * 6) + 1;
-        let dice2 = Math.floor(Math.random() * 6) + 1;
-        let dice3 = Math.floor(Math.random() * 6) + 1;
-        list.innerHTML = `第${count}次骰子結果：${dice1}、${dice2}、${dice3}<br>${list.innerHTML}`;
-
-        if ((dice1 === dice2 && dice2 === dice3)) {
+        count++
+        let dice1 = getNum();
+        let dice2 = getNum();
+        let dice3 = getNum();
+        list.innerHTML = `<div>第${count}次骰子結果：${dice1}、${dice2}、${dice3}</div>${list.innerHTML}`;
+        if (dice1 === dice2 && dice2 === dice3) {
             break;
-        }
-    };
+        };        
+    }    
 });
