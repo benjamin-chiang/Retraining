@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: lightgray;
+            margin-bottom: 50px;
+        }
+        .box:focus{
+            border-radius: 100px;
+        }
+        .box:active{
+            border: 1px solid red;
+        }
+        a{
+            font-size: 32px;
+            font-weight: 600;
+        }
+        a:link{
+            text-decoration:none;
+        }
+        a:visited{
+            color: lightcoral;
+        }
+        a:focus{
+            border: 1px solid green;
+        }
+        
+        a:hover{
+            background-color: yellow;
+        }
+        a:active{
+            background-color: indigo;
+        }
+        li{
+            
+            list-style: none;
+        }
+        input{
+            height: 50px;
+        }
+        input:focus{
+            background-color: greenyellow;
+        }
+        input:active{
+            border: 1px solid red;
+
+        }
+        #ok:checked{
+            width: 50px;
+            height: 50px;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            position: relative;
+        }
+        .box2 .line{
+            width: 80px;
+            height: 10px;
+            border: 1px solid black;
+            position: absolute;
+            top: calc(50% - 5px);
+            right: calc(50% - 40px);
+            transition: 0.5s;
+        }
+        .box2:hover .line:nth-child(1){
+            transform: rotate(45deg);
+        }        
+        .box2:hover .line:nth-child(2){
+            transform: rotate(-45deg);
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            position: relative;            
+        }
+       
+        .box3 .row{
+            width: 80px;
+            height: 10px;
+            border: 1px solid black;
+            position: absolute;
+            top: calc(50% - 5px);
+            right: calc(50% - 40px);
+            transition: 0.5s;
+        }
+        .box3 .row:nth-child(1){
+            top: calc(25% - 5px);
+        }
+        .box3 .row:nth-child(3){
+            top: calc(75% - 5px);
+        }
+        .box3:focus .row:nth-child(2){
+            opacity: 0;
+        }
+        .box3:focus .row:nth-child(1){
+            /* transform-origin: left; */
+            transform: rotate(45deg);
+            top: 50%;
+            
+        }
+        .box3:focus .row:nth-child(3){
+            /* transform-origin: left; */
+            transform: rotate(-45deg);
+            top: 50%;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="box" tabindex="1"></div>
+    <ul>
+        <li><a href="#">點我啊！笨蛋</a></li>
+    </ul>
+    say something：<input type="text" name="" id="">
+    都給你勾就好啦！<input type="checkbox" name="" id="ok">
+    
+    <div class="box2">
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <div class="box3" tabindex="1">
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+    </div>
+</body>
+</html>
