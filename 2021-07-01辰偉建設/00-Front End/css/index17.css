@@ -1,0 +1,284 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.color-dark {
+  width: 100px;
+  height: 100px;
+  background-color: #125d4a;
+}
+
+.color-light {
+  width: 100px;
+  height: 100px;
+  background-color: #006450;
+}
+
+header {
+  background-color: #125d4a;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .container .slogan {
+  width: 35%;
+  padding: 135px 140px 300px 100px;
+}
+
+header .container .slogan .card .img-17 {
+  max-width: 423px;
+  min-height: 180px;
+  margin-bottom: 20px;
+}
+
+header .container .slogan .card .img-17 img {
+  width: 100%;
+  height: 100%;
+}
+
+header .container .slogan .card .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+header .container .slogan .card .title .bar {
+  width: 11px;
+  height: 84px;
+  background-color: #f2db2a;
+  margin: 0 20px;
+}
+
+header .container .slogan .card .title h1 {
+  color: #f2db2a;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 500;
+  letter-spacing: 6px;
+}
+
+header .container .slogan .card p {
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+header .container .banner {
+  max-width: 65%;
+  max-height: 100vh;
+}
+
+header .container .banner .banner-img {
+  width: 100%;
+  height: 100%;
+}
+
+header .container .banner .banner-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.intro {
+  background-image: url(./01-17素材/波浪材質背景-01.png);
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.intro .container {
+  padding: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.intro .container .bg {
+  width: 720px;
+  height: 540px;
+  background-color: #006450;
+  position: relative;
+  z-index: 1;
+}
+
+.intro .container .bg .pic {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.intro .container .bg .pic img {
+  width: 100%;
+  height: 100%;
+}
+
+.intro .container .text {
+  width: 584px;
+}
+
+.intro .container .text .border {
+  width: 100%;
+  border-bottom: 2px solid #125d4a;
+  padding: 5px 0;
+  margin-bottom: 60px;
+}
+
+.intro .container .text .border h2 {
+  color: #125d4a;
+  font-size: 40px;
+}
+
+.intro .container .text p {
+  color: #125d4a;
+  font-size: 22px;
+  font-weight: bold;
+  padding-bottom: 22px;
+}
+
+.environ {
+  position: relative;
+}
+
+.environ .block-top {
+  width: 100%;
+  height: 125px;
+  background-color: #006450;
+  opacity: 0.65;
+  padding-left: 180px;
+  position: absolute;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.environ .block-top h2 {
+  color: white;
+  font-size: 40px;
+}
+
+.environ .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.environ .container .card {
+  width: calc(100% / 3);
+  position: relative;
+}
+
+.environ .container .card img {
+  width: 100%;
+  display: block;
+}
+
+.environ .container .card .text {
+  width: 100%;
+  height: 90px;
+  color: white;
+  background-color: #006450;
+  opacity: 0.65;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 90px;
+  position: absolute;
+  bottom: 0;
+}
+
+.environ .block-buttom {
+  width: 100%;
+  height: 125px;
+  background-color: #125d4a;
+  padding-left: 180px;
+  position: absolute;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.environ .block-buttom h2 {
+  color: white;
+  font-size: 40px;
+}
+
+.view {
+  background-image: url(./01-17素材/波浪材質背景-01.png);
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.view .container {
+  padding: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.view .container .text {
+  width: 584px;
+}
+
+.view .container .text .border {
+  width: 100%;
+  border-bottom: 2px solid #125d4a;
+  padding: 5px 0;
+  margin-bottom: 60px;
+}
+
+.view .container .text .border h2 {
+  color: #125d4a;
+  font-size: 40px;
+}
+
+.view .container .text p {
+  color: #125d4a;
+  font-size: 22px;
+  font-weight: bold;
+  padding-bottom: 22px;
+}
+
+.view .container .bg {
+  width: 829px;
+  height: 560px;
+}
+
+.view .container .bg img {
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=index17.css.map */
