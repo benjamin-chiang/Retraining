@@ -9,7 +9,7 @@
 .color-dark {
   width: 100px;
   height: 100px;
-  background-color: #125d4a;
+  background-color: #006450;
 }
 
 .color-light {
@@ -19,7 +19,7 @@
 }
 
 header {
-  background-color: #125d4a;
+  background-color: #006450;
 }
 
 header .container {
@@ -91,7 +91,7 @@ header .container .banner .banner-img img {
 }
 
 .intro {
-  background-image: url(./01-17素材/波浪材質背景-01.png);
+  background-image: url(../../01-素材17/波浪材質背景-01.png);
   background-size: 100%;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -137,18 +137,18 @@ header .container .banner .banner-img img {
 
 .intro .container .text .border {
   width: 100%;
-  border-bottom: 2px solid #125d4a;
+  border-bottom: 2px solid #006450;
   padding: 5px 0;
   margin-bottom: 60px;
 }
 
 .intro .container .text .border h2 {
-  color: #125d4a;
+  color: #006450;
   font-size: 40px;
 }
 
 .intro .container .text p {
-  color: #125d4a;
+  color: #006450;
   font-size: 22px;
   font-weight: bold;
   padding-bottom: 22px;
@@ -212,7 +212,7 @@ header .container .banner .banner-img img {
 .environ .block-buttom {
   width: 100%;
   height: 125px;
-  background-color: #125d4a;
+  background-color: #006450;
   padding-left: 180px;
   position: absolute;
   z-index: 1;
@@ -230,7 +230,7 @@ header .container .banner .banner-img img {
 }
 
 .view {
-  background-image: url(./01-17素材/波浪材質背景-01.png);
+  background-image: url(../../01-素材17/波浪材質背景-01.png);
   background-size: 100%;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -255,18 +255,18 @@ header .container .banner .banner-img img {
 
 .view .container .text .border {
   width: 100%;
-  border-bottom: 2px solid #125d4a;
+  border-bottom: 2px solid #006450;
   padding: 5px 0;
   margin-bottom: 60px;
 }
 
 .view .container .text .border h2 {
-  color: #125d4a;
+  color: #006450;
   font-size: 40px;
 }
 
 .view .container .text p {
-  color: #125d4a;
+  color: #006450;
   font-size: 22px;
   font-weight: bold;
   padding-bottom: 22px;
@@ -280,5 +280,260 @@ header .container .banner .banner-img img {
 .view .container .bg img {
   width: 100%;
   height: 100%;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner .block-top {
+  width: 100%;
+  height: 125px;
+  background-color: #006450;
+  opacity: 0.65;
+  padding-left: 180px;
+  position: absolute;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner .block-top h2 {
+  color: white;
+  font-size: 40px;
+}
+
+.banner .swiper-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.banner .swiper-container .swiper-slide {
+  height: 955px;
+}
+
+.banner .swiper-container .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.banner .block-buttom {
+  width: 100%;
+  height: 92px;
+  background-color: #006450;
+  opacity: 0.65;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.banner .block-buttom p {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+}
+
+.material {
+  background-image: url(../../01-素材17/紋路底圖.png);
+  padding: 90px 180px;
+}
+
+.material .container .title {
+  width: 100%;
+  height: 64px;
+  border-bottom: 2px solid #006450;
+  padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.material .container .title h2 {
+  color: #006450;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.material .container .title span {
+  color: #006450;
+  font-size: 24px;
+}
+
+.material .container .brand {
+  max-width: 758px;
+  margin: 180px auto;
+}
+
+.material .container .brand .brand-top .row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.material .container .brand .brand-top .row .icon {
+  max-width: 230px;
+  max-height: 230px;
+  margin-bottom: 30px;
+}
+
+.material .container .brand .brand-top .row .icon:nth-child(2) {
+  margin: 0 30px 30px 30px;
+}
+
+.material .container .brand .brand-top .row .icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.material .container .brand .swiper-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.material .container .brand .swiper-container .swiper-slide {
+  height: 487px;
+}
+
+.material .container .brand .swiper-container .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.yt {
+  height: 885px;
+  background-image: url(../../01-素材17/YT影片區塊背景.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.yt .container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 100px 100px 100px 180px;
+  margin: auto;
+}
+
+.yt .container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.yt .container .row .videos {
+  width: 628px;
+  padding-bottom: 34%;
+  margin-right: 100px;
+  position: relative;
+}
+
+.yt .container .row .videos iframe {
+  width: 100%;
+  height: 100%;
+  border: 0 none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.yt .container .row .text .logo img {
+  width: 300px;
+  height: 67px;
+}
+
+.yt .container .row .text p {
+  color: white;
+  font-size: 25px;
+  line-height: 50px;
+}
+
+.google-form {
+  background-image: url(../../01-素材17/紋路底圖.png);
+  background-size: cover;
+  padding: 90px 120px 0 120px;
+}
+
+.google-form .container {
+  position: relative;
+}
+
+.google-form .container .title {
+  width: 100%;
+  height: 64px;
+  border-bottom: 2px solid #006450;
+  padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.google-form .container .title h2 {
+  color: #006450;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.google-form .container .title span {
+  color: #006450;
+  font-size: 24px;
+}
+
+.google-form .container .title span:nth-child(3) {
+  color: #006450;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.google-form .container .content {
+  padding: 80px 240px;
+}
+
+.google-form .container .content .floor-plan {
+  padding-bottom: 57%;
+  background-image: url(../../01-素材17/預約了解格局圖.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.google-form .container .home-btn {
+  position: absolute;
+  right: 90px;
+  bottom: 80px;
 }
 /*# sourceMappingURL=index17.css.map */

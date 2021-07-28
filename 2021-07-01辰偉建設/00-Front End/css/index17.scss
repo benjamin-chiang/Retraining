@@ -6,7 +6,7 @@
 .color-dark {
     width: 100px;
     height: 100px;
-    background-color: #125d4a;
+    background-color: #006450;
 }
 .color-light {
     width: 100px;
@@ -14,7 +14,7 @@
     background-color: #006450;
 }
 header {
-    background-color: #125d4a;
+    background-color: #006450;
     .container {
         display: flex;
         justify-content: space-between;
@@ -70,7 +70,7 @@ header {
     }
 }
 .intro {
-    background-image: url(./01-17素材/波浪材質背景-01.png);
+    background-image: url(../../01-素材17/波浪材質背景-01.png);
     background-size: 100%;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -101,16 +101,16 @@ header {
             width: 584px;
             .border {
                 width: 100%;
-                border-bottom: 2px solid #125d4a;
+                border-bottom: 2px solid #006450;
                 padding: 5px 0;
                 margin-bottom: 60px;
                 h2 {
-                    color: #125d4a;
+                    color: #006450;
                     font-size: 40px;
                 }
             }
             p {
-                color: #125d4a;
+                color: #006450;
                 font-size: 22px;
                 font-weight: bold;
                 padding-bottom: 22px;
@@ -157,12 +157,12 @@ header {
                 position: absolute;
                 bottom: 0;
             }
-        }        
+        }
     }
     .block-buttom {
         width: 100%;
         height: 125px;
-        background-color: #125d4a;
+        background-color: #006450;
         padding-left: 180px;
         position: absolute;
         z-index: 1;
@@ -175,7 +175,7 @@ header {
     }
 }
 .view {
-    background-image: url(./01-17素材/波浪材質背景-01.png);
+    background-image: url(../../01-素材17/波浪材質背景-01.png);
     background-size: 100%;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -183,21 +183,21 @@ header {
         padding: 180px;
         display: flex;
         justify-content: space-between;
-        align-items: center;       
+        align-items: center;
         .text {
             width: 584px;
             .border {
                 width: 100%;
-                border-bottom: 2px solid #125d4a;
+                border-bottom: 2px solid #006450;
                 padding: 5px 0;
                 margin-bottom: 60px;
                 h2 {
-                    color: #125d4a;
+                    color: #006450;
                     font-size: 40px;
                 }
             }
             p {
-                color: #125d4a;
+                color: #006450;
                 font-size: 22px;
                 font-weight: bold;
                 padding-bottom: 22px;
@@ -205,11 +205,214 @@ header {
         }
         .bg {
             width: 829px;
-            height: 560px;                           
-                img {
+            height: 560px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+.banner {
+    position: relative;
+    .block-top {
+        width: 100%;
+        height: 125px;
+        background-color: #006450;
+        opacity: 0.65;
+        padding-left: 180px;
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        h2 {
+            color: white;
+            font-size: 40px;
+        }
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .swiper-slide {
+            height: 955px;
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .block-buttom {
+        width: 100%;
+        height: 92px;
+        background-color: #006450;
+        opacity: 0.65;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        display: flex;
+        p {
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            margin: auto;
+        }
+    }
+}
+.material {
+    background-image: url(../../01-素材17/紋路底圖.png);
+    padding: 90px 180px;
+    .container {
+        .title {
+            width: 100%;
+            height: 64px;
+            border-bottom: 2px solid #006450;
+            padding-bottom: 20px;
+            display: flex;
+            align-items: center;
+            h2 {
+                color: #006450;
+                font-size: 35px;
+                font-weight: bold;
+            }
+            span {
+                color: #006450;
+                font-size: 24px;
+            }
+        }
+        .brand {
+            max-width: 758px;
+            margin: 180px auto;
+            .brand-top {
+                .row {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    .icon {
+                        max-width: 230px;
+                        max-height: 230px;
+                        margin-bottom: 30px;
+                        &:nth-child(2) {
+                            margin: 0 30px 30px 30px;
+                        }
+                        img {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+            .swiper-container {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                .swiper-slide {
+                    height: 487px;
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}
+.yt {
+    height: 885px;
+    background-image: url(../../01-素材17/YT影片區塊背景.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 120px;
+    display: flex;
+    .container {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 100px 100px 100px 180px;
+        margin: auto;
+        .row {            
+            display: flex;
+
+            .videos {
+                width: 628px;
+                padding-bottom: 34%;
+                margin-right: 100px;
+                position: relative;
+                iframe {
                     width: 100%;
                     height: 100%;
-                }            
+                    border: 0 none;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+            .text {
+                .logo {
+                    img {
+                        width: 300px;
+                        height: 67px;
+                    }
+                }
+                p {
+                    color: white;
+                    font-size: 25px;
+                    line-height: 50px;
+                }
+            }
+        }
+    }
+}
+.google-form {
+    background-image: url(../../01-素材17/紋路底圖.png);
+    background-size: cover;
+    padding: 90px 120px 0 120px;
+    .container {
+        position: relative;        
+        .title {
+            width: 100%;
+            height: 64px;
+            border-bottom: 2px solid #006450;
+            padding-bottom: 20px;
+            display: flex;
+            align-items: center;
+            h2 {
+                color: #006450;
+                font-size: 35px;
+                font-weight: bold;
+            }
+            span {
+                color: #006450;
+                font-size: 24px;                
+            }
+            span:nth-child(3){
+                color: #006450;
+                font-size: 35px;
+                font-weight: bold;                
+            }
+        }
+        .content {
+            padding: 80px 240px;
+            .floor-plan{
+                padding-bottom: 57%;
+                background-image: url(../../01-素材17/預約了解格局圖.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+        .home-btn{
+            position: absolute;
+            right: 90px;
+            bottom: 80px;
         }
     }
 }

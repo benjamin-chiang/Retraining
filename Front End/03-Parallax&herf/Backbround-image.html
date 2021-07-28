@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .container{            
+            max-width: 1600px;
+            margin: 0 auto;
+            
+        }
+        .box {
+            width: 100%;
+            padding-bottom: 50%;
+            background-image: url("https://static.toiimg.com/photo/msid-67586673/67586673.jpg?3918697");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;            
+            position: relative;
+        }
+       
+        .box::before{
+            content: '';
+            display: block;
+            background-color: gray;
+            opacity: 0.5;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        h1{
+            position: absolute;
+            
+        }
+       
+    </style>
+</head>
+
+<body>
+    <!-- Swiper -->
+    <!-- <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1
+              <img src="" alt="">
+          </div>
+          <div class="swiper-slide">Slide 2
+              <img src="" alt="">
+          </div>
+          <div class="swiper-slide">Slide 3
+              <img src="" alt="">
+          </div>
+          <div class="swiper-slide">Slide 4
+              <img src="" alt="">
+          </div>
+          <div class="swiper-slide">Slide 5
+            <img src="" alt="">
+        </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div> -->
+
+    <!-- Swiper JS -->
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+
+    <!-- Initialize Swiper -->
+    <!-- <script>
+        var swiper = new Swiper(".mySwiper", {
+            cssMode: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            mousewheel: true,
+            keyboard: true,
+            loop: true,
+        });
+    </script> -->
+    <div class="container">
+        <div class="box">
+            <h1>say some thing</h1>
+        </div>
+    </div>
+</body>
+
+</html>
