@@ -3,37 +3,38 @@
     margin: 0;
     box-sizing: border-box;
 }
-.color-dark {
-    width: 100px;
-    height: 100px;
-    background-color: #006450;
-}
-.color-light {
-    width: 100px;
-    height: 100px;
-    background-color: #006450;
+body {
+    overflow-x: hidden;
 }
 header {
-    background-color: #006450;
+    background-image: url(../../01-素材17/綠色紋底.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     .container {
+        width: 100%;
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        height: auto;
         .slogan {
-            width: 35%;
-            padding: 135px 140px 300px 100px;
+            max-width: 35%;
+            padding-left: 110px;
             .card {
                 .img-17 {
                     max-width: 423px;
-                    min-height: 180px;
+                    
                     margin-bottom: 20px;
                     img {
                         width: 100%;
                         height: 100%;
+                        object-fit: cover;
                     }
                 }
                 .title {
-                    display: flex;
                     margin-bottom: 50px;
+                    display: flex;
+                    align-items: center;
                     .bar {
                         width: 11px;
                         height: 84px;
@@ -42,28 +43,29 @@ header {
                     }
                     h1 {
                         color: #f2db2a;
-                        font-family: "Noto Sans TC", sans-serif;
-                        font-weight: 500;
+                        font-size: 35px;
+                        font-weight: bold;
                         letter-spacing: 6px;
                     }
                 }
                 p {
                     color: white;
                     padding: 20px;
-                    font-size: 20px;
+                    font-size: 25px;
                     font-weight: bold;
                 }
             }
         }
         .banner {
             max-width: 65%;
-            max-height: 100vh;
             .banner-img {
                 width: 100%;
-                height: 100%;
+                // height: 100%;
                 img {
+                    display: block;
                     width: 100%;
-                    height: 100%;
+                    // height: 100%;
+                    object-fit: contain;
                 }
             }
         }
@@ -74,11 +76,14 @@ header {
     background-size: 100%;
     background-position: bottom;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+
     .container {
         padding: 180px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         .bg {
             width: 720px;
             height: 540px;
@@ -107,11 +112,12 @@ header {
                 h2 {
                     color: #006450;
                     font-size: 40px;
+                    font-weight: bold;
                 }
             }
             p {
                 color: #006450;
-                font-size: 22px;
+                font-size: 25px;
                 font-weight: bold;
                 padding-bottom: 22px;
             }
@@ -123,9 +129,8 @@ header {
     .block-top {
         width: 100%;
         height: 125px;
-        background-color: #006450;
-        opacity: 0.65;
-        padding-left: 180px;
+        background-color: rgba(0, 100, 80, 0.65);
+        padding-left: 110px;
         position: absolute;
         z-index: 1;
         display: flex;
@@ -133,6 +138,7 @@ header {
         h2 {
             color: white;
             font-size: 40px;
+            font-weight: bold;
         }
     }
     .container {
@@ -148,9 +154,8 @@ header {
                 width: 100%;
                 height: 90px;
                 color: white;
-                background-color: #006450;
-                opacity: 0.65;
-                font-size: 22px;
+                background-color: rgba(0, 100, 80, 0.65);
+                font-size: 25px;
                 font-weight: bold;
                 text-align: center;
                 line-height: 90px;
@@ -163,7 +168,7 @@ header {
         width: 100%;
         height: 125px;
         background-color: #006450;
-        padding-left: 180px;
+        padding-left: 110px;
         position: absolute;
         z-index: 1;
         display: flex;
@@ -171,6 +176,7 @@ header {
         h2 {
             color: white;
             font-size: 40px;
+            font-weight: bold;
         }
     }
 }
@@ -179,6 +185,7 @@ header {
     background-size: 100%;
     background-position: bottom;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     .container {
         padding: 180px;
         display: flex;
@@ -194,11 +201,12 @@ header {
                 h2 {
                     color: #006450;
                     font-size: 40px;
+                    font-weight: bold;
                 }
             }
             p {
                 color: #006450;
-                font-size: 22px;
+                font-size: 25px;
                 font-weight: bold;
                 padding-bottom: 22px;
             }
@@ -209,6 +217,7 @@ header {
             img {
                 width: 100%;
                 height: 100%;
+                object-fit: cover;
             }
         }
     }
@@ -218,8 +227,7 @@ header {
     .block-top {
         width: 100%;
         height: 125px;
-        background-color: #006450;
-        opacity: 0.65;
+        background-color: rgba(0, 100, 80, 0.65);
         padding-left: 180px;
         position: absolute;
         z-index: 2;
@@ -228,6 +236,7 @@ header {
         h2 {
             color: white;
             font-size: 40px;
+            font-weight: bold;
         }
     }
     .swiper-container {
@@ -243,12 +252,15 @@ header {
                 object-fit: cover;
             }
         }
+        .swiper-pagination-bullet{
+            height: 14px;
+            width: 14px;
+        }     
     }
     .block-buttom {
         width: 100%;
         height: 92px;
-        background-color: #006450;
-        opacity: 0.65;
+        background-color: rgba(0, 100, 80, 0.65);
         position: absolute;
         bottom: 0;
         z-index: 1;
@@ -320,6 +332,10 @@ header {
                         object-fit: cover;
                     }
                 }
+                .swiper-pagination-bullet{
+                    height: 14px;
+                    width: 14px;
+                } 
             }
         }
     }
@@ -338,7 +354,7 @@ header {
         background-color: rgba(0, 0, 0, 0.7);
         padding: 100px 100px 100px 180px;
         margin: auto;
-        .row {            
+        .row {
             display: flex;
 
             .videos {
@@ -376,7 +392,7 @@ header {
     background-size: cover;
     padding: 90px 120px 0 120px;
     .container {
-        position: relative;        
+        position: relative;
         .title {
             width: 100%;
             height: 64px;
@@ -391,17 +407,17 @@ header {
             }
             span {
                 color: #006450;
-                font-size: 24px;                
+                font-size: 24px;
             }
-            span:nth-child(3){
+            span:nth-child(3) {
                 color: #006450;
                 font-size: 35px;
-                font-weight: bold;                
+                font-weight: bold;
             }
         }
         .content {
             padding: 80px 240px;
-            .floor-plan{
+            .floor-plan {
                 padding-bottom: 57%;
                 background-image: url(../../01-素材17/預約了解格局圖.jpg);
                 background-size: cover;
@@ -409,7 +425,7 @@ header {
                 background-repeat: no-repeat;
             }
         }
-        .home-btn{
+        .home-btn {
             position: absolute;
             right: 90px;
             bottom: 80px;

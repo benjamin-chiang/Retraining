@@ -8,6 +8,8 @@
     <title>情定水蓮No17|親督水岸第一排</title>
     <link rel="stylesheet" href="./css/index17.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -38,7 +40,7 @@
     </header>
     <section class="intro">
         <div class="container">
-            <div class="bg">
+            <div class="bg" data-aos="fade-right">
                 <div class="pic">
                     <img src="../01-素材17/介紹圖1.jpg" alt="">
                 </div>
@@ -58,19 +60,19 @@
             <h2>砌築健康／握實幸福</h2>
         </div>
         <div class="container">
-            <div class="card park">
+            <div class="card park" data-aos="fade-right">
                 <img src="../01-素材17/特色圖-1.jpg" alt="">
                 <div class="text">
                     散步，有新都生態、廍⼦雙公園圍繞
                 </div>
             </div>
-            <div class="card bridge">
+            <div class="card bridge" data-aos="fade-up">
                 <img src="../01-素材17/特色圖-2.jpg" alt="">
                 <div class="text">
                     大坑吊橋，悅耳溪流
                 </div>
             </div>
-            <div class="card hiking">
+            <div class="card hiking" data-aos="fade-left">
                 <img src="../01-素材17/特色圖-3.jpg" alt="">
                 <div class="text">
                     健行，擁大坑登山步道環腰
@@ -83,7 +85,7 @@
     </section>
     <section class="view">
         <div class="container">
-            <div class="text">
+            <div class="text" data-aos="fade-right">
                 <div class="border">
                     <h2>遠眺天際／近賞愜意</h2>
                 </div>
@@ -121,8 +123,8 @@
                     <img src="../01-素材17/輪播圖-5.jpg" alt="">
                 </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next" style="color:white;"></div>
+            <div class="swiper-button-prev" style="color:white;"></div>
             <div class="swiper-pagination"></div>
         </div>
         <div class="block-buttom">
@@ -170,8 +172,8 @@
                                 <img src="../01-素材17/精品建材輪播-6.jpg" alt="">
                             </div>
                         </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next" style="color:white;"></div>
+                        <div class="swiper-button-prev" style="color:white;"></div>
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
@@ -221,14 +223,14 @@
             </div>
             <div class="home-btn">
                 <a href="https://cw-team.com.tw/zh-tw/">
-                    <img src="../01-素材17/回首頁-29.png" alt="" style="width: 130px;height: 130px">            
+                    <img src="../01-素材17/回首頁-29.png" alt="" style="width: 130px;height: 130px">
                 </a>
             </div>
-            
+
         </div>
     </section>
 
-    
+
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -247,8 +249,20 @@
             mousewheel: true,
             keyboard: true,
             loop: true,
+            autoplay: true,
         });
     </script>
+    <style type="text/css">
+        .swiper-container {            
+            --swiper-pagination-color: black;            
+        }
+    </style>
+    <!-- AOS 動畫 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 
 </html>
