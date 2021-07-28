@@ -20,6 +20,9 @@ header {
         .slogan {
             max-width: 35%;
             padding-left: 110px;
+            @media (max-width: 1400px) {
+                padding-left: 50px;
+            }
             .card {
                 .img-17 {
                     max-width: 423px;
@@ -73,23 +76,23 @@ header {
 }
 .intro {
     background-image: url(../../01-素材17/波浪材質背景-01.png);
-    background-size: 100%;
+    background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
     .container {
         padding: 180px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-
+        
         .bg {
             width: 720px;
             height: 540px;
             background-color: #006450;
             position: relative;
-            z-index: 1;
+            margin-right: 30px;
+            
             .pic {
                 width: 100%;
                 height: 100%;
@@ -99,11 +102,12 @@ header {
                 img {
                     width: 100%;
                     height: 100%;
+                    object-fit: cover;
                 }
             }
         }
         .text {
-            width: 584px;
+            
             .border {
                 width: 100%;
                 border-bottom: 2px solid #006450;
