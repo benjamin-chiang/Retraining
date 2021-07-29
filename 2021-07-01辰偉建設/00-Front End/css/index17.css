@@ -31,20 +31,56 @@ header .container {
   height: auto;
 }
 
+@media (max-width: 1100px) {
+  header .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 header .container .slogan {
-  max-width: 35%;
+  width: 35%;
   padding-left: 110px;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1590px) {
   header .container .slogan {
     padding-left: 50px;
+  }
+}
+
+@media (max-width: 1100px) {
+  header .container .slogan {
+    width: 100%;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 1100px) {
+  header .container .slogan .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
 header .container .slogan .card .img-17 {
   max-width: 423px;
   margin-bottom: 20px;
+}
+
+@media (max-width: 1100px) {
+  header .container .slogan .card .img-17 {
+    margin-bottom: unset;
+  }
 }
 
 header .container .slogan .card .img-17 img {
@@ -64,6 +100,12 @@ header .container .slogan .card .title {
           align-items: center;
 }
 
+@media (max-width: 1320px) {
+  header .container .slogan .card .title {
+    margin-bottom: 20px;
+  }
+}
+
 header .container .slogan .card .title .bar {
   width: 11px;
   height: 84px;
@@ -78,6 +120,12 @@ header .container .slogan .card .title h1 {
   letter-spacing: 6px;
 }
 
+@media (max-width: 1320px) {
+  header .container .slogan .card .title h1 {
+    font-size: 28px;
+  }
+}
+
 header .container .slogan .card p {
   color: white;
   padding: 20px;
@@ -85,8 +133,21 @@ header .container .slogan .card p {
   font-weight: bold;
 }
 
+@media (max-width: 1320px) {
+  header .container .slogan .card p {
+    padding: 10px;
+    font-size: 20px;
+  }
+}
+
 header .container .banner {
-  max-width: 65%;
+  width: 65%;
+}
+
+@media (max-width: 1100px) {
+  header .container .banner {
+    width: 100%;
+  }
 }
 
 header .container .banner .banner-img {
@@ -96,8 +157,8 @@ header .container .banner .banner-img {
 header .container .banner .banner-img img {
   display: block;
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .intro {
@@ -121,27 +182,53 @@ header .container .banner .banner-img img {
           align-items: center;
 }
 
-.intro .container .bg {
+@media (max-width: 1740px) {
+  .intro .container {
+    padding: 150px;
+  }
+}
+
+@media (max-width: 1590px) {
+  .intro .container {
+    padding: 100px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .intro .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 30px;
+  }
+}
+
+.intro .container .pic {
   width: 720px;
-  height: 540px;
-  background-color: #006450;
   position: relative;
   margin-right: 30px;
 }
 
-.intro .container .bg .pic {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+@media (max-width: 1100px) {
+  .intro .container .pic {
+    margin: unset;
+  }
 }
 
-.intro .container .bg .pic img {
+.intro .container .pic img {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.intro .container .pic .bg {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  background-color: #006450;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
 .intro .container .text .border {
@@ -151,10 +238,22 @@ header .container .banner .banner-img img {
   margin-bottom: 60px;
 }
 
+@media (max-width: 1320px) {
+  .intro .container .text .border {
+    margin-bottom: 30px;
+  }
+}
+
 .intro .container .text .border h2 {
   color: #006450;
   font-size: 40px;
   font-weight: bold;
+}
+
+@media (max-width: 1320px) {
+  .intro .container .text .border h2 {
+    font-size: 28px;
+  }
 }
 
 .intro .container .text p {
@@ -162,6 +261,12 @@ header .container .banner .banner-img img {
   font-size: 25px;
   font-weight: bold;
   padding-bottom: 22px;
+}
+
+@media (max-width: 1320px) {
+  .intro .container .text p {
+    font-size: 22px;
+  }
 }
 
 .environ {
@@ -183,10 +288,35 @@ header .container .banner .banner-img img {
           align-items: center;
 }
 
+@media (max-width: 1320px) {
+  .environ .block-top {
+    height: 60px;
+    padding-left: 100px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .environ .block-top {
+    padding: unset;
+  }
+}
+
 .environ .block-top h2 {
   color: white;
   font-size: 40px;
   font-weight: bold;
+}
+
+@media (max-width: 1320px) {
+  .environ .block-top h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .environ .block-top h2 {
+    margin: 0px auto;
+  }
 }
 
 .environ .container {
@@ -195,9 +325,26 @@ header .container .banner .banner-img img {
   display: flex;
 }
 
+@media (max-width: 1100px) {
+  .environ .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .environ .container .card {
   width: calc(100% / 3);
   position: relative;
+}
+
+@media (max-width: 1100px) {
+  .environ .container .card {
+    width: 100%;
+  }
 }
 
 .environ .container .card img {
@@ -218,13 +365,19 @@ header .container .banner .banner-img img {
   bottom: 0;
 }
 
+@media (max-width: 1320px) {
+  .environ .container .card .text {
+    height: 60px;
+    font-size: 20px;
+    line-height: 60px;
+  }
+}
+
 .environ .block-buttom {
   width: 100%;
   height: 125px;
   background-color: #006450;
   padding-left: 110px;
-  position: absolute;
-  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -233,15 +386,40 @@ header .container .banner .banner-img img {
           align-items: center;
 }
 
+@media (max-width: 1320px) {
+  .environ .block-buttom {
+    height: 60px;
+    padding-left: 100px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .environ .block-buttom {
+    padding: unset;
+  }
+}
+
 .environ .block-buttom h2 {
   color: white;
   font-size: 40px;
   font-weight: bold;
 }
 
+@media (max-width: 1320px) {
+  .environ .block-buttom h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .environ .block-buttom h2 {
+    margin: 0px auto;
+  }
+}
+
 .view {
   background-image: url(../../01-素材17/波浪材質背景-01.png);
-  background-size: 100%;
+  background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -260,8 +438,21 @@ header .container .banner .banner-img img {
           align-items: center;
 }
 
+@media (max-width: 1740px) {
+  .view .container {
+    padding: 150px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .view .container {
+    padding: 30px;
+  }
+}
+
 .view .container .text {
   width: 584px;
+  margin-right: 30px;
 }
 
 .view .container .text .border {
@@ -271,10 +462,22 @@ header .container .banner .banner-img img {
   margin-bottom: 60px;
 }
 
+@media (max-width: 1320px) {
+  .view .container .text .border {
+    margin-bottom: 30px;
+  }
+}
+
 .view .container .text .border h2 {
   color: #006450;
   font-size: 40px;
   font-weight: bold;
+}
+
+@media (max-width: 1320px) {
+  .view .container .text .border h2 {
+    font-size: 28px;
+  }
 }
 
 .view .container .text p {
@@ -284,14 +487,24 @@ header .container .banner .banner-img img {
   padding-bottom: 22px;
 }
 
+@media (max-width: 1320px) {
+  .view .container .text p {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .view .container .text p {
+    font-size: 18px;
+  }
+}
+
 .view .container .bg {
   width: 829px;
-  height: 560px;
 }
 
 .view .container .bg img {
   width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -315,10 +528,35 @@ header .container .banner .banner-img img {
           align-items: center;
 }
 
+@media (max-width: 1320px) {
+  .banner .block-top {
+    height: 60px;
+    padding-left: 100px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .banner .block-top {
+    padding: unset;
+  }
+}
+
 .banner .block-top h2 {
   color: white;
   font-size: 40px;
   font-weight: bold;
+}
+
+@media (max-width: 1320px) {
+  .banner .block-top h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .banner .block-top h2 {
+    margin: 0px auto;
+  }
 }
 
 .banner .swiper-container {
@@ -356,6 +594,12 @@ header .container .banner .banner-img img {
   display: flex;
 }
 
+@media (max-width: 1320px) {
+  .banner .block-buttom {
+    height: 60px;
+  }
+}
+
 .banner .block-buttom p {
   color: white;
   font-size: 25px;
@@ -364,9 +608,21 @@ header .container .banner .banner-img img {
   margin: auto;
 }
 
+@media (max-width: 1320px) {
+  .banner .block-buttom p {
+    font-size: 22px;
+  }
+}
+
 .material {
   background-image: url(../../01-素材17/紋路底圖.png);
   padding: 90px 180px;
+}
+
+@media (max-width: 1590px) {
+  .material {
+    padding: 90px;
+  }
 }
 
 .material .container .title {
@@ -396,6 +652,12 @@ header .container .banner .banner-img img {
 .material .container .brand {
   max-width: 758px;
   margin: 180px auto;
+}
+
+@media (max-width: 1590px) {
+  .material .container .brand {
+    margin: 90px auto 0px;
+  }
 }
 
 .material .container .brand .brand-top .row {
@@ -450,6 +712,7 @@ header .container .banner .banner-img img {
 }
 
 .yt {
+  width: 100%;
   height: 885px;
   background-image: url(../../01-素材17/YT影片區塊背景.jpg);
   background-size: cover;
@@ -461,25 +724,89 @@ header .container .banner .banner-img img {
   display: flex;
 }
 
+@media (max-width: 1590px) {
+  .yt {
+    padding: 80px;
+  }
+}
+
+@media (max-width: 1320px) {
+  .yt {
+    height: 700px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .yt {
+    height: auto;
+  }
+}
+
 .yt .container {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 100px 100px 100px 180px;
+  padding: 100px;
   margin: auto;
 }
 
+@media (max-width: 1740px) {
+  .yt .container {
+    padding: 90px;
+  }
+}
+
+@media (max-width: 1590px) {
+  .yt .container {
+    padding: 60px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .yt .container {
+    padding: 30px;
+  }
+}
+
 .yt .container .row {
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1100px) {
+  .yt .container .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 
 .yt .container .row .videos {
   width: 628px;
   padding-bottom: 34%;
-  margin-right: 100px;
   position: relative;
+}
+
+@media (max-width: 1740px) {
+  .yt .container .row .videos {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .yt .container .row .videos {
+    margin: unset;
+  }
 }
 
 .yt .container .row .videos iframe {
@@ -502,10 +829,30 @@ header .container .banner .banner-img img {
   line-height: 50px;
 }
 
+@media (max-width: 1320px) {
+  .yt .container .row .text p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .yt .container .row .text p {
+    line-height: 40px;
+    margin-bottom: 30px;
+  }
+}
+
 .google-form {
   background-image: url(../../01-素材17/紋路底圖.png);
   background-size: cover;
   padding: 90px 120px 0 120px;
+}
+
+@media (max-width: 1100px) {
+  .google-form {
+    padding: 30px;
+  }
 }
 
 .google-form .container {
@@ -544,6 +891,18 @@ header .container .banner .banner-img img {
 
 .google-form .container .content {
   padding: 80px 240px;
+}
+
+@media (max-width: 1590px) {
+  .google-form .container .content {
+    padding: 80px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .google-form .container .content {
+    padding: 30px;
+  }
 }
 
 .google-form .container .content .floor-plan {
