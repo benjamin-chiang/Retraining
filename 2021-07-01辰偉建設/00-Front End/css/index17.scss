@@ -571,9 +571,9 @@ header {
         @media (max-width: 1590px) {
             padding: 60px;
         }
-        @media (max-width: 1100px) {
-            padding: 30px;    
-        }
+        @media (max-width: 1320px) {
+            padding: 30px;
+        }       
         @media (max-width: 900px) {
             padding: 20px 0px;        
         }
@@ -708,9 +708,16 @@ header {
             }
         }
         .home-btn {
+            height: 130px;
             position: absolute;
             right: 90px;
-            bottom: 80px;
+            bottom: 80px;            
+            &:hover{
+                border-radius: 130px;
+                background-color: #f2db2a;
+                
+                
+            }
         }
     }
 }

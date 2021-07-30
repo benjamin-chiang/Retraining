@@ -1,0 +1,87 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+}
+header {
+    .container-fluid {
+        padding: 0px;
+        .row {
+            background-image: url("./img/綠色紋底.png");
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
+            .col-xl-4 {
+                padding: 0px;
+
+                display: flex;
+                .card-c {
+                    padding-left: 100px;
+                    margin: auto;
+                    .logo {
+                        max-width: 423px;
+                        margin-bottom: 30px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .text {
+                        .title {
+                            margin-bottom: 30px;
+                            display: flex;
+                            .bar {
+                                width: 11px;
+                                height: 85px;
+                                background-color: #f2db2a;
+                                margin-right: 10px;
+                            }
+                            h1 {
+                                color: #f2db2a;
+                                font-size: 35px;
+                                font-weight: bold;
+                                letter-spacing: 6px;
+                            }
+                        }
+                        P {
+                            color: white;
+                            font-size: 25px;
+                            font-weight: bold;
+                            line-height: 50px;
+                        }
+                    }
+                }
+            }
+            .col-xl-8 {
+                padding: 0px;
+                .imagery {
+                    padding-bottom: 80%;
+                    background-image: url("./img/形象圖.jpg");
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+}
+main {
+    .intro {
+        .container-fluid {
+            .row {
+                background-image: url("./img/波浪材質背景-01.png");
+                background-size: cover;
+                background-position: bottom;
+                background-repeat: no-repeat;
+                .col-lg-6:nth-child(1) {
+                    height: 100px;
+                    background-color: red;
+                }
+            }
+        }
+    }
+}

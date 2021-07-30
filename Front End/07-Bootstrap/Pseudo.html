@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <style>
-        .col-md-6{
+        .col-md-6 {
             color: white;
-            padding: 100px;             
-            position: relative;         
-        }     
-        .pic1::before, .pic2::before{
+            padding: 100px;
+            position: relative;
+        }
+
+        .pic1::before,
+        .pic2::before {
             width: 100%;
             height: 100%;
             background-size: 100%;
@@ -21,25 +25,31 @@
             position: absolute;
             top: 0%;
             left: 0%;
-            z-index: -1;            
+            z-index: -1;
             transition: 0.5s;
-            
+
         }
-        .pic1:hover::before, .pic2:hover::before{
-            background-size: 120%;            
+
+        .pic1:hover::before,
+        .pic2:hover::before {
+            background-size: 120%;
         }
-        .pic1::before{
+
+        .pic1::before {
             content: '';
-            
+
             background-image: url(https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/00972EEB-244B-49C5-93E3-694B70EFA135/Derivates/00b9b4cb-91d9-4442-b622-9cd48b41609b.jpg);
-            
+
         }
-        .pic2::before{
+
+        .pic2::before {
             content: '';
             background-image: url(https://tw.sharp/sites/default/files/styles/crop_four_by_three_mid/public/uploads/recipes/2018-12/C583D401-28AD-40F4-8EF0-0C2B6A7679E3.jpeg?h=4021cd5e&itok=76c0mtFu);
-            
+
         }
-        .pic1::after, .pic2::after{
+
+        .pic1::after,
+        .pic2::after {
             content: '';
             background-color: rgba(0, 0, 0, 0.5);
             position: absolute;
@@ -47,15 +57,18 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;            
+            height: 100%;
             opacity: 0;
         }
-        .pic1:hover::after, .pic2:hover::after{
+
+        .pic1:hover::after,
+        .pic2:hover::after {
             opacity: 1;
         }
     </style>
 
 </head>
+
 <body>
     <div class="container">
         <div class="row">
@@ -70,8 +83,15 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

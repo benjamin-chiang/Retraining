@@ -899,7 +899,7 @@ header .container .banner .banner-img img {
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1320px) {
   .yt .container {
     padding: 30px;
   }
@@ -1113,8 +1113,14 @@ header .container .banner .banner-img img {
 }
 
 .google-form .container .home-btn {
+  height: 130px;
   position: absolute;
   right: 90px;
   bottom: 80px;
+}
+
+.google-form .container .home-btn:hover {
+  border-radius: 130px;
+  background-color: #f2db2a;
 }
 /*# sourceMappingURL=index17.css.map */
