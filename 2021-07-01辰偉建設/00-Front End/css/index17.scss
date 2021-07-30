@@ -32,7 +32,9 @@ header {
             }
             .card {
                 @media (max-width: 1100px) {
+                    width: 100%;
                     display: flex;
+                    flex-direction: column;
                     align-items: center;
                     justify-content: space-between;
                 }
@@ -40,6 +42,7 @@ header {
                     max-width: 423px;
                     margin-bottom: 20px;
                     @media (max-width: 1100px) {
+                        // width: calc(100% / 3);
                         margin-bottom: unset;
                     }
                     img {
@@ -60,6 +63,11 @@ header {
                         height: 84px;
                         background-color: #f2db2a;
                         margin: 0 20px;
+                        @media (max-width: 900px) {
+                            width: 4px;
+                            height: 50px;
+                            margin: 0px 5px;
+                        }
                     }
                     h1 {
                         color: #f2db2a;
@@ -68,6 +76,9 @@ header {
                         letter-spacing: 6px;
                         @media (max-width: 1320px) {
                             font-size: 28px;
+                        }
+                        @media (max-width: 900px) {
+                            font-size: 20px;    
                         }
                     }
                 }
@@ -79,6 +90,11 @@ header {
                     @media (max-width: 1320px) {
                         padding: 10px;
                         font-size: 20px;
+                    }
+                    @media (max-width: 900px) {
+                        font-size: 16px;        
+                        font-weight: unset;
+                        padding: 5px;
                     }
                 }
             }
@@ -116,21 +132,29 @@ header {
         @media (max-width: 1590px) {
             padding: 100px;
         }
-        @media (max-width: 1100px) {
-            flex-direction: column-reverse;
+        @media (max-width: 1100px) {            
             padding: 30px;
+        }
+        @media (max-width: 900px) {
+            padding: 0px;
+            flex-direction: column-reverse;
         }
         .pic {
             width: 720px;
             position: relative;
             margin-right: 30px;
             @media (max-width: 1100px) {
+                width: 50%;
                 margin: unset;
+            }
+            @media (max-width: 900px) {
+                width: 100%;
             }
             img {
                 width: 100%;
                 position: relative;
                 z-index: 1;
+                display: block;
             }
             .bg {
                 width: 100%;
@@ -139,9 +163,15 @@ header {
                 position: absolute;
                 top: 20px;
                 left: 20px;
+                @media (max-width: 1100px) {
+                    display: none;    
+                }
             }
         }
         .text {
+            @media (max-width: 900px) {
+                padding: 20px 0px;
+            }
             .border {
                 width: 100%;
                 border-bottom: 2px solid #006450;
@@ -156,7 +186,7 @@ header {
                     font-weight: bold;
                     @media (max-width: 1320px) {
                         font-size: 28px;
-                    }
+                    }                    
                 }
             }
             p {
@@ -166,6 +196,11 @@ header {
                 padding-bottom: 22px;
                 @media (max-width: 1320px) {
                     font-size: 22px;
+                }
+                @media (max-width: 900px) {
+                    width: 100%;
+                    padding: 5px;
+                    font-size: 16px;
                 }
             }
         }
@@ -204,6 +239,7 @@ header {
     .container {
         display: flex;
         @media (max-width: 1100px) {
+            width: 100%;
             flex-direction: column;
             flex-wrap: wrap;
         }
@@ -211,12 +247,14 @@ header {
             width: calc(100% / 3);
             position: relative;
             @media (max-width: 1100px) {
-                width: 100%;                
+                width: 100%;
+                height: 500px;                
                 
             }
             img {
                 width: 100%;
-                display: block;
+                height: 100%;
+                object-fit: cover;
             }
             .text {
                 width: 100%;
@@ -281,9 +319,17 @@ header {
         @media (max-width: 1100px) {
             padding: 30px;    
         }
-        .text {
-            width: 584px;
+        @media (max-width: 900px) {
+            width: 100%;            
+            padding: unset;
+            flex-direction: column;
+        }
+        .text {            
             margin-right: 30px;
+            @media (max-width: 900px) {
+                padding: 20px 0px;
+                margin: unset;
+            }
             .border {
                 width: 100%;
                 border-bottom: 2px solid #006450;
@@ -312,13 +358,23 @@ header {
                 @media (max-width: 1100px) {
                     font-size: 18px;
                 }
+                @media (max-width: 900px) {
+                    width: 100%;
+                    padding: 5px;
+                    font-size: 16px;
+                }
             }
         }
         .bg {
-            width: 829px;
+            width: 50%;
+            @media (max-width: 900px) {
+                width: 100%;    
+            }
             img {
                 width: 100%;
+                height: 100%;
                 object-fit: cover;
+                display: block;
             }
         }
     }
@@ -400,6 +456,9 @@ header {
     @media (max-width: 1590px) {
         padding: 90px;
     }
+    @media (max-width: 900px) {
+        padding: unset;            
+    }
     .container {
         .title {
             width: 100%;
@@ -408,14 +467,24 @@ header {
             padding-bottom: 20px;
             display: flex;
             align-items: center;
+            @media (max-width: 900px) {
+                padding: unset;    
+                justify-content: center;
+            }
             h2 {
                 color: #006450;
                 font-size: 35px;
                 font-weight: bold;
+                @media (max-width: 900px) {
+                    font-size: 22px;
+                }
             }
             span {
                 color: #006450;
                 font-size: 24px;
+                @media (max-width: 900px) {
+                    font-size: 16px;
+                }
             }
         }
         .brand {
@@ -423,6 +492,9 @@ header {
             margin: 180px auto;
             @media (max-width: 1590px) {
                 margin: 90px auto 0px;
+            }
+            @media (max-width: 900px) {
+                margin: 20px auto 0px;                
             }
             .brand-top {
                 .row {
@@ -484,6 +556,9 @@ header {
     @media (max-width: 1100px) {
         height: auto;        
     }
+    @media (max-width: 900px) {
+        padding: unset;            
+    }
     .container {
         width: 100%;
         height: 100%;
@@ -498,6 +573,9 @@ header {
         }
         @media (max-width: 1100px) {
             padding: 30px;    
+        }
+        @media (max-width: 900px) {
+            padding: 20px 0px;        
         }
         .row {
             width: 100%;
@@ -518,6 +596,10 @@ header {
                 }
                 @media (max-width: 1100px) {
                     margin: unset;
+                }
+                @media (max-width: 900px) {
+                    width: 100%;
+                    padding-bottom: 50%;
                 }
                 iframe {
                     width: 100%;
@@ -546,6 +628,12 @@ header {
                     @media (max-width: 1100px) {
                         line-height: 40px;
                         margin-bottom: 30px;
+                    }
+                    @media (max-width: 900px) {
+                        font-size: 16px;
+                        text-align: justify;
+                        padding: 0px 10px;
+                        
                     }                    
                 }
             }
@@ -559,6 +647,9 @@ header {
     @media (max-width: 1100px) {
         padding: 30px;        
     }
+    @media (max-width: 900px) {
+        padding: 0px;            
+    }
     .container {
         position: relative;
         .title {
@@ -568,19 +659,33 @@ header {
             padding-bottom: 20px;
             display: flex;
             align-items: center;
+            @media (max-width: 900px) {
+                padding: unset;    
+                justify-content: center;
+                flex-wrap: wrap;
+            }
             h2 {
                 color: #006450;
                 font-size: 35px;
                 font-weight: bold;
+                @media (max-width: 900px) {
+                    font-size: 22px;
+                }
             }
             span {
                 color: #006450;
                 font-size: 24px;
+                @media (max-width: 900px) {
+                    font-size: 16px;
+                }
             }
             span:nth-child(3) {
                 color: #006450;
                 font-size: 35px;
                 font-weight: bold;
+                @media (max-width: 900px) {
+                    font-size: 16px;
+                }
             }
         }
         .content {
@@ -590,6 +695,9 @@ header {
             }
             @media (max-width: 1100px) {
                 padding: 30px;
+            }
+            @media (max-width: 900px) {
+                padding: 30px 0px;    
             }
             .floor-plan {
                 padding-bottom: 57%;
