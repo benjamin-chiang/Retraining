@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 960px;
+            height: 100vh;
+            background-color: lightblue;
+            margin: auto;
+        }
+
+        .tab-btn-group {
+            width: 100%;
+            height: 120px;
+            background-color: lightcoral;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        .tab-btn {
+            padding: 20px 40px;
+            background-color: lightgoldenrodyellow;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .tab-btn:hover {
+            cursor: pointer;
+            border: 3px solid red;
+        }
+
+        .tab-btn.active {
+            color: white;
+            background-color: purple;
+            font-weight: bold;
+        }
+
+        .tab-content-group {
+            width: 100%;
+            background-color: lightgreen;
+        }
+
+        .tab-content {
+            width: 100%;
+            padding: 30px 50px;
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="tab-btn-group">
+            <div class="tab-btn">分頁一</div>
+            <div class="tab-btn">分頁二</div>
+            <div class="tab-btn">分頁三</div>
+
+        </div>
+        <div class="tab-content-group">
+            <div class="tab-content active">
+                <h2>分頁內容一</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis facere provident corrupti qui eligendi
+                    vero itaque id porro! Cum obcaecati explicabo ea quibusdam nostrum? Dolores facilis nulla reiciendis
+                    saepe asperiores.
+                    Amet corporis quia harum laudantium maiores atque alias mollitia! Doloremque exercitationem suscipit
+                    beatae alias consequatur doloribus fuga commodi ab, autem nam, maxime hic velit voluptate sapiente
+                    enim nobis error. Voluptatibus.
+                    Aliquam aspernatur fugiat aut exercitationem recusandae quod quas quo provident repudiandae quidem
+                    nam voluptatibus, corrupti dignissimos possimus minus amet, explicabo error ut magnam ipsa molestiae
+                    nemo. Laborum magni voluptatem unde?</p>
+            </div>
+            <div class="tab-content">
+                <h2>分頁內容二</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis facere provident corrupti qui eligendi
+                    vero itaque id porro! Cum obcaecati explicabo ea quibusdam nostrum? Dolores facilis nulla reiciendis
+                    saepe asperiores.
+                    Amet corporis quia harum laudantium maiores atque alias mollitia! Doloremque exercitationem suscipit
+                    beatae alias consequatur doloribus fuga commodi ab, autem nam, maxime hic velit voluptate sapiente
+                    enim nobis error. Voluptatibus.
+                    Aliquam aspernatur fugiat aut exercitationem recusandae quod quas quo provident repudiandae quidem
+                    nam voluptatibus, corrupti dignissimos possimus minus amet, explicabo error ut magnam ipsa molestiae
+                    nemo. Laborum magni voluptatem unde?</p>
+            </div>
+            <div class="tab-content">
+                <h2>分頁內容三</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis facere provident corrupti qui eligendi
+                    vero itaque id porro! Cum obcaecati explicabo ea quibusdam nostrum? Dolores facilis nulla reiciendis
+                    saepe asperiores.
+                    Amet corporis quia harum laudantium maiores atque alias mollitia! Doloremque exercitationem suscipit
+                    beatae alias consequatur doloribus fuga commodi ab, autem nam, maxime hic velit voluptate sapiente
+                    enim nobis error. Voluptatibus.
+                    Aliquam aspernatur fugiat aut exercitationem recusandae quod quas quo provident repudiandae quidem
+                    nam voluptatibus, corrupti dignissimos possimus minus amet, explicabo error ut magnam ipsa molestiae
+                    nemo. Laborum magni voluptatem unde?</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let btns = document.querySelectorAll('.tab-btn');
+        let contents = document.querySelectorAll('.tab-content');
+
+        // for迴圈寫
+        // for (let index = 0; index < btns.length; index++) {
+        //     const btn = btns[index];
+        //     const content = contents[index];
+
+        //     btn.addEventListener('click', function () {
+        //         clearAllActive();
+        //         btn.classList.add('active');
+        //         content.classList.add('active');
+        //     });
+        // }
+
+        // function clearAllActive() {
+        //     for (let index = 0; index < btns.length; index++) {
+        //         const btn = btns[index];
+        //         const content = contents[index];
+
+        //         btn.classList.remove('active');
+        //         content.classList.remove('active');
+
+        //     }
+        // }
+
+        // forEach寫法
+        btns.forEach((btn, index) => {            
+            btn.addEventListener('click', function () {
+                clearAllActive();
+                btn.classList.add('active');
+                // btns[index].classList.add('active');
+                contents[index].classList.add('active');
+            })
+        });
+
+        function clearAllActive() {
+            btns.forEach((btn, index) => {
+                btns[index].classList.remove('active');
+                contents[index].classList.remove('active');
+            });
+        }
+
+    </script>
+</body>
+
+</html>
