@@ -71,45 +71,66 @@ function innerAll() {
 
 innerAll()
 
-function foodList(item) {
-    contentView.innerHTML = ''
-    if (item === 'all') {
-        innerAll();
-    } else {
-        SY_goodgoodEat_Products.forEach(product => {
-            if (item === product.tag1 || item === product.tag2) {
-                contentView.innerHTML +=
-                `<div class="card">
-                    <div class="pic">
-                        <img src=${product.img} alt="">
-                    </div>
-                    <div class="text">
-                        <h2>${product.name}</h2>
-                        <p>${product.content}</p>
-                        <p>售價：${product.price}</p>
-                    </div>
-                </div>`        
-            }; 
-        });
-    }
-}
+// * 寫好onclick要用到的function，但onclick在html上控制 
+// function foodList(item) {
+//     contentView.innerHTML = ''
+//     if (item === 'all') {
+//         innerAll();
+//     } else {
+//         SY_goodgoodEat_Products.forEach(product => {
+//             if (item === product.tag1 || item === product.tag2) {
+//                 contentView.innerHTML +=
+//                 `<div class="card">
+//                     <div class="pic">
+//                         <img src=${product.img} alt="">
+//                     </div>
+//                     <div class="text">
+//                         <h2>${product.name}</h2>
+//                         <p>${product.content}</p>
+//                         <p>售價：${product.price}</p>
+//                     </div>
+//                 </div>`        
+//             }; 
+//         });
+//     }
+// }
 
 let navBtns = document.querySelectorAll('li')
 
 navBtns.forEach(btn => {            
+    let type = btn.getAttribute('data-type');
+        
     btn.addEventListener('click', function () {
-        clear()
+        contentView.innerHTML = ''
+        if (type === 'all') {
+            innerAll();
+        } else {
+            SY_goodgoodEat_Products.forEach(product => {
+                if (type === product.tag1 || type === product.tag2) {
+                    contentView.innerHTML +=
+                    `<div class="card">
+                        <div class="pic">
+                            <img src=${product.img} alt="">
+                        </div>
+                        <div class="text">
+                            <h2>${product.name}</h2>
+                            <p>${product.content}</p>
+                            <p>售價：${product.price}</p>
+                        </div>
+                    </div>`        
+                }; 
+            });
+        }
+        
+        clear()        
         btn.classList.add('active')
     })
 });
 
 function clear() {
-    navBtns.forEach(btn => {
+    navBtns.forEach(btn => {        
         btn.classList.remove('active')
     });
 }
-
-    
-
 
 

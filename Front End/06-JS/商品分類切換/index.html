@@ -6,17 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./index.css">
-
+    
 </head> 
 
 <body>
     <header>
         <div class="nav">
             <ul>
-                <li onclick="foodList('all')">全部</li>
+                <!-- *foodList這個function在js先寫好 -->
+                <!-- <li onclick="foodList('all')">全部</li>
                 <li onclick="foodList('drink')">飲料</li>
                 <li onclick="foodList('food')">主食</li>
-                <li onclick="foodList('dessert')">甜點</li>
+                <li onclick="foodList('dessert')">甜點</li> -->
+                
+                <!-- *data-* attribute的寫法 -->
+                <li data-type="all">全部</li>
+                <li data-type="drink">飲料</li>
+                <li data-type="food">主食</li>
+                <li data-type="dessert">甜點</li>
             </ul>
         </div>
     </header>
@@ -34,7 +41,7 @@
             </div>             -->
         </div>
     </main>
-
+    
     <script src="./index.js"></script>
     
 </body>
