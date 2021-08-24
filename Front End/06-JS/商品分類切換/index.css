@@ -1,0 +1,107 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+}
+
+header {
+  width: 100%;
+  background-color: lightpink;
+}
+
+header .nav {
+  max-width: 1140px;
+  background-color: lightpink;
+  padding: 15px 30px;
+  margin: auto;
+}
+
+header .nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .nav ul li {
+  color: white;
+  background-color: brown;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 15px 50px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header .nav ul li:hover {
+  background-color: limegreen;
+  cursor: pointer;
+}
+
+header .nav ul li.active {
+  border: 3px solid yellow;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: lightgoldenrodyellow;
+}
+
+main .content {
+  max-width: 1140px;
+  padding: 30px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 26px;
+          column-gap: 26px;
+  row-gap: 20px;
+}
+
+main .content .card {
+  width: 23%;
+  height: 400px;
+}
+
+main .content .card .pic {
+  width: 100%;
+  height: 60%;
+}
+
+main .content .card .pic img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+main .content .card .text {
+  background-color: lightsalmon;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+main .content .card .text h2 {
+  margin-bottom: 10px;
+}
+
+main .content .card .text p {
+  margin-bottom: 10px;
+}
+
+main .content .card .text p:nth-child(3) {
+  font-weight: bold;
+}
+/*# sourceMappingURL=index.css.map */
