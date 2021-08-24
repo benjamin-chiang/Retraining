@@ -48,13 +48,11 @@ main .content {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  row-gap: 20px;
 }
 main .content .card {
   width: 23%;
   height: 400px;
-}
-main .content .card:last-child {
-  margin-right: auto;
 }
 main .content .card .pic {
   width: 100%;
@@ -68,9 +66,13 @@ main .content .card .pic img {
   display: block;
 }
 main .content .card .text {
+  height: 40%;
   background-color: lightsalmon;
-  text-align: center;
   padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 main .content .card .text h2 {
   margin-bottom: 10px;
@@ -78,6 +80,7 @@ main .content .card .text h2 {
 main .content .card .text p {
   margin-bottom: 10px;
 }
-main .content .card .text p:nth-child(3) {
+main .content .card .text p:last-child {
   font-weight: bold;
+  margin-bottom: unset;
 }/*# sourceMappingURL=index.css.map */

@@ -44,15 +44,11 @@ main{
         margin: auto;
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
-        
+        flex-wrap: wrap;                
+        row-gap: 20px;
         .card{
             width: 23%;
             height: 400px;
-            // margin-right: 21px;
-            &:last-child{
-                margin-right: auto;
-            }            
             .pic{
                 width: 100%;
                 height: 60%;
@@ -64,16 +60,21 @@ main{
                 }
             }
             .text{
-                background-color: lightsalmon;
-                text-align: center;
+                height: 40%;
+                background-color: lightsalmon;                
                 padding: 20px 0px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
                 h2{
                     margin-bottom: 10px;
                 }
                 p{
-                    margin-bottom: 10px;
-                    &:nth-child(3){
+                    margin-bottom: 10px;                    
+                    &:last-child{
                         font-weight: bold;
+                        margin-bottom: unset;
                     }
                 }
             }
