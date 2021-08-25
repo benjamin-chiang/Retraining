@@ -123,7 +123,8 @@ navBtns.forEach(btn => {
         }
         
         clear()        
-        btn.classList.add('active')
+        btn.classList.add('active')        
+
     })
 });
 

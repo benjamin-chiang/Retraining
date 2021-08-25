@@ -1,0 +1,212 @@
+:root {
+  --color_white: rgb(243, 243, 243);
+  --color_yellow: #FFD633;
+  --color_black: #333;
+  --color_blue_start: #19283D;
+  --color_blue_end: #1D678F;
+  --color_rain: #4DACFF;
+  --color_white_cloud: rgb(242, 249, 254);
+  --color_grey_cloud: #ccc;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.sunny {
+  width: 150px;
+  height: 150px;
+  fill: #ffd633;
+  stroke: rgba(255, 214, 51, 0.5);
+  stroke-dasharray: 3px;
+  stroke-width: 15px;
+}
+
+#sun {
+  fill: #ffd633;
+  stroke: rgba(255, 214, 51, 0.5);
+  stroke-dasharray: 3px;
+  stroke-width: 15px;
+}
+
+.cloudy_sunny {
+  width: 150px;
+  height: 150px;
+}
+
+.cloudy {
+  width: 150px;
+  height: 150px;
+}
+
+#cloud {
+  fill: #f2f9fe;
+}
+
+#cloud2 {
+  fill: #e1f1fc;
+}
+
+.overcast {
+  width: 150px;
+  height: 150px;
+}
+
+#overcast_cloud {
+  fill: #d1d1d1;
+}
+
+#overcast_cloud2 {
+  fill: #969292;
+}
+
+.rainy {
+  width: 150px;
+  height: 150px;
+}
+
+.rainy_thunder {
+  width: 150px;
+  height: 150px;
+}
+
+#rain {
+  fill: #ddeaf7;
+}
+
+#thunder {
+  fill: #ffd633;
+  stroke: #ffd633;
+  stroke-width: 1;
+}
+
+header {
+  width: 100%;
+  background-color: skyblue;
+}
+
+header .nav {
+  max-width: 1320px;
+  padding: 20px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .nav h1 {
+  font-size: 40px;
+  margin: unset;
+}
+
+header .nav .btn {
+  width: 140px;
+  height: 60px;
+  background-color: green;
+  color: honeydew;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+}
+
+header .nav .btn:hover {
+  background-color: #a5138d;
+  border: 1px solid yellow;
+  cursor: pointer;
+}
+
+header .nav .btn.active {
+  background-color: #a5138d;
+  border: 1px solid yellow;
+}
+
+main {
+  width: 100%;
+  min-height: calc(100vh - 100px);
+  background-color: #FFE8E8;
+}
+
+main .container {
+  max-width: 1320px;
+  padding: 20px 20px 0px 20px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .container .card {
+  width: 23%;
+  height: 380px;
+  background-color: #FFFFE8;
+  border: 1px solid grey;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1200px) {
+  main .container .card {
+    width: calc(50% - 20px);
+  }
+}
+
+main .container .card .img {
+  height: 50%;
+}
+
+main .container .card .textbox {
+  width: 100%;
+  height: 50%;
+  background-color: #FFE6D9;
+  border-radius: 0px 0px 15px 15px;
+  padding: 0px 10px;
+}
+
+main .container .card .textbox h2 {
+  margin: 10px 0px;
+}
+
+main .container .card .textbox p {
+  margin: 10px 0px;
+}
+
+@media (max-width: 1200px) {
+  main .container .card .textbox {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=WeatherAPI.css.map */
