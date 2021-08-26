@@ -1,8 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 main {
@@ -11,7 +10,6 @@ main {
   background-color: lightseagreen;
   padding: 50px;
 }
-
 main button {
   width: 100px;
   height: 50px;
@@ -21,7 +19,6 @@ main button {
   margin: 0 auto 50px;
   display: block;
 }
-
 main .container {
   width: 620px;
   height: 620px;
@@ -29,13 +26,9 @@ main .container {
   border-radius: 10px;
   padding: 10px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-
 main .container .box {
   width: 50%;
   height: 50%;
@@ -43,8 +36,6 @@ main .container .box {
   border: 5px solid #ddd;
   border-radius: 10px;
 }
-
 main .container .answer {
   opacity: 0.5;
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

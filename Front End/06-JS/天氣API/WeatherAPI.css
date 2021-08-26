@@ -10,8 +10,7 @@
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -90,27 +89,18 @@ header {
   width: 100%;
   background-color: skyblue;
 }
-
 header .nav {
   max-width: 1320px;
   padding: 20px;
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
 header .nav h1 {
   font-size: 40px;
   margin: unset;
 }
-
 header .nav .btn {
   width: 140px;
   height: 60px;
@@ -121,13 +111,11 @@ header .nav .btn {
   text-align: center;
   line-height: 60px;
 }
-
 header .nav .btn:hover {
   background-color: #a5138d;
   border: 1px solid yellow;
   cursor: pointer;
 }
-
 header .nav .btn.active {
   background-color: #a5138d;
   border: 1px solid yellow;
@@ -138,24 +126,15 @@ main {
   min-height: calc(100vh - 100px);
   background-color: #FFE8E8;
 }
-
 main .container {
   max-width: 1320px;
   padding: 20px 20px 0px 20px;
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
-
 main .container .card {
   width: 23%;
   height: 380px;
@@ -163,31 +142,19 @@ main .container .card {
   border: 1px solid grey;
   border-radius: 15px;
   margin-bottom: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
 @media (max-width: 1200px) {
   main .container .card {
     width: calc(50% - 20px);
   }
 }
-
 main .container .card .img {
   height: 50%;
 }
-
 main .container .card .textbox {
   width: 100%;
   height: 50%;
@@ -195,18 +162,14 @@ main .container .card .textbox {
   border-radius: 0px 0px 15px 15px;
   padding: 0px 10px;
 }
-
 main .container .card .textbox h2 {
   margin: 10px 0px;
 }
-
 main .container .card .textbox p {
   margin: 10px 0px;
 }
-
 @media (max-width: 1200px) {
   main .container .card .textbox {
     text-align: center;
   }
-}
-/*# sourceMappingURL=WeatherAPI.css.map */
+}/*# sourceMappingURL=WeatherAPI.css.map */
