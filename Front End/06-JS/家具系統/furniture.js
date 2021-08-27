@@ -12,12 +12,13 @@ function clearBtn() {
         btn.classList.remove('active')
     });
 }
-// 點擊nav按鈕後，將倉庫
+// 點擊nav按鈕後，將選到的地區，利用city這個參數，傳到warehouseStock這個function有city的地方，
+// 用來到選到想要倉庫的存貨量
 btns.forEach(btn => {
-    btn.addEventListener('click', function () {
-        let city = btn.getAttribute('data-city');
+    btn.addEventListener('click', function () {        
         clearBtn();
         btn.classList.add('active');
+        let city = btn.getAttribute('data-city');
         warehouseStock(city);        
     })
 });

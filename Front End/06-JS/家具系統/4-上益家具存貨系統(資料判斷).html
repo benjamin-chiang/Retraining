@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上益家具存貨系統</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+        }
+
+        nav {
+            width: 300px;
+            height: 100vh;
+            background-color: bisque;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: space-around;
+        }
+
+        nav .btn {
+            width: 180px;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 32px;
+            font-weight: 900;
+            background-color: burlywood;
+            transition: 0.3s;
+        }
+
+        nav .btn:hover {
+            color: white;
+            background-color: chocolate;
+        }
+
+        main {
+            width: calc(100% - 300px);
+            height: 100vh;
+            background-color: blanchedalmond;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+            padding: 80px;
+        }
+
+        .card {
+            width: 300px;
+            height: 400px;
+            background-color: rgb(204, 245, 204);
+            margin-bottom: 20px;
+        }
+
+        .card-head {
+            padding: 15px 0;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 900;
+        }
+
+        .card-body {
+            width: 100%;
+            height: 280px;
+            background-color: hotpink;
+        }
+
+        .card-body img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .card-footer {
+            width: 100%;
+            height: 58px;
+            padding: 10px 20px;
+            background-color: ivory;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .card-footer span {
+            font-size: 18px;
+            font-weight: 900;
+        }
+
+        .card-footer .dicount_cover {
+            width: 100%;
+            height: 30px;
+            background-color: rgba(255, 0, 0, 0.5);
+            position: absolute;
+            top: -30px;
+            left: 0;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            font-size: 16px;
+        }
+
+        .card-footer span.fs-14 {
+            font-size: 14px;
+        }
+
+        .justify-content-center {
+            justify-content: center;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="btn" data-location="0">台中</div>
+        <div class="btn" data-location="1">高雄</div>
+        <div class="btn" data-location="2">台北</div>
+    </nav>
+    <main id="content">
+        <!-- <h1>上益家具存貨查詢系統</h1> -->
+        <!-- 一般狀態 -->
+        <!-- <div class="card">
+            <div class="card-head">商品名稱</div>
+            <div class="card-body">
+                <img src="" alt="">
+            </div>
+            <div class="card-footer">
+                <span>存貨:10個</span>
+                <span>售價:6000元</span>
+            </div>
+        </div> -->
+
+        <!-- 有優惠 -->
+        <!-- <div class="card">
+            <div class="card-head">商品名稱</div>
+            <div class="card-body">
+                <img src="" alt="">
+            </div>
+            <div class="card-footer">
+                <div class="dicount_cover">85折優惠中</div>
+                <span>存貨:10個</span>
+                <span>售價:6000元</span>
+            </div>
+        </div> -->
+
+        <!-- 少量存貨 -->
+        <!-- <div class="card">
+            <div class="card-head">商品名稱</div>
+            <div class="card-body">
+                <img src="" alt="">
+            </div>
+            <div class="card-footer">
+                <span>存貨: <span class="fs-14">最後</span><span>3</span><span class="fs-14">個</span></span>
+                <span>售價:600000元</span>
+            </div>
+        </div> -->
+
+        <!-- 少量存貨+打折 -->
+        <!-- <div class="card">
+            <div class="card-head">商品名稱</div>
+            <div class="card-body">
+                <img src="" alt="">
+            </div>
+            <div class="card-footer">
+                <div class="dicount_cover">85折優惠中</div>
+                <span>存貨: <span class="fs-14">最後</span><span>3</span><span class="fs-14">個</span></span>
+                <span>售價:600000元</span>
+            </div>
+        </div> -->
+
+        <!-- 暫無存貨 -->
+        <!-- <div class="card">
+            <div class="card-head">商品名稱</div>
+            <div class="card-body">
+                <img src="" alt="">
+            </div>
+            <div class="card-footer justify-content-center">
+                <span>暫無存貨</span>
+            </div>
+        </div> -->
+    </main>
+
+
+    <script>
+        // 資料網址
+        // https://run.mocky.io/v3/a1bd9f89-926c-46ac-930a-1d1cae8dd7e5
+
+        btns = document.querySelectorAll(".btn")
+        content = document.querySelector("#content")
+
+
+
+        btns.forEach(btn => {
+            btn.onclick = function () {
+                getProductInfo(btn.dataset.location)
+            }
+        });
+
+
+        function getProductInfo(locationNum) {
+            content.innerHTML = ``
+
+            fetch('https://run.mocky.io/v3/a1bd9f89-926c-46ac-930a-1d1cae8dd7e5')
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (product_list) {
+                    // console.log(product_list.records.product);
+                    product_arr = product_list.records.product
+
+                    product_arr.forEach(element => {
+                        const product_Name = element.productName //商品名稱
+                        const img = element.imageURL   //照片
+                        const amount = element.states.stock.location[locationNum].amount    //存量
+                        let price = (element.states.sale.price) * (element.states.sale.onsale) //價錢
+                        let discount = element.states.sale.onsale
+
+                        discount = discount.toString().replace("0.", "")
+
+                        // 正常狀態  amount>3
+                        // 有優惠    discount!=1
+                        // 少量存貨  0<amount && amount<=3
+                        // 少量存貨 + 有優惠  0<amount && amount<=3 && discount!=1
+                        // 沒有貨  amount==0
+
+                        // 宣告一個空的變數，裝入footer要替換的div
+                        let footerStyle
+
+                        if (amount > 3) {
+                            footerStyle = `
+                            <div class="card-footer">
+                                <span>存貨:${amount}個</span>
+                                <span>售價:${price}元</span>
+                            </div>
+                            `
+                        }
+
+                        if (discount != 1) {
+                            footerStyle = `
+                            <div class="card-footer">
+                                <div class="dicount_cover">${discount}折優惠中</div>
+                                <span>存貨:${amount}個</span>
+                                <span>售價:${price}元</span>
+                            </div>
+                            `
+                        }
+
+                        if (0 < amount && amount <= 3) {
+                            footerStyle = `
+                            <div class="card-footer">
+                                <span>存貨: <span class="fs-14">最後</span><span>${amount}</span><span class="fs-14">個</span></span>
+                                <span>售價:${price}元</span>
+                            </div>
+                            `
+                        }
+
+                        if (0 < amount && amount <= 3 && discount != 1) {
+                            footerStyle = `
+                            <div class="card-footer">
+                                <div class="dicount_cover">${discount}折優惠中</div>
+                                <span>存貨: <span class="fs-14">最後</span><span>${amount}</span><span class="fs-14">個</span></span>
+                                <span>售價:${price}元</span>
+                            </div>
+                            `
+                        }
+
+                        if (amount == 0) {
+                            footerStyle = `
+                            <div class="card-footer justify-content-center">
+                                <span>暫無存貨</span>
+                            </div>
+                            `
+                        }
+
+                        // 最後的footer是用上面判斷後的footerStyle帶入
+                        content.innerHTML += `
+                        <div class="card">
+                            <div class="card-head">${product_Name}</div>
+                            <div class="card-body">
+                                <img src="${img}" alt="">
+                            </div>                            
+                           ${footerStyle}
+                        </div>
+                        `
+                    });
+                })
+        }
+    </script>
+</body>
+
+</html>
