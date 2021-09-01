@@ -24,45 +24,77 @@
             flex-wrap: wrap;
         }
 
-        a{
+        a {
             text-decoration: none;
         }
 
-        .card{
+        .card {
             width: 300px;
             border: 1px solid black;
             color: black;
-            
+
             margin-bottom: 30px;
             display: flex;
-            flex-direction: column;            
+            flex-direction: column;
         }
 
-        .title{
+        .title {
             font-size: 24px;
             font-weight: bold;
             text-align: center;
         }
 
-        .time{
+        .time {
             border-bottom: 1px solid black;
             text-align: right;
             padding: 5px;
         }
 
-        .card img{
+        .card img {
             width: 100%;
             height: 300px;
         }
 
-        .text{
+        .text {
             padding: 10px;
+        }
+
+        .btn {
+            width: 100px;
+            /* height: 20px; */
+            background-color: grey;
+            text-align: center;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        form {
+            padding: 30px;
         }
     </style>
 
 </head>
 
 <body>
+    <form action="https://ajax-lesson.digipack-develop.com/news" method="post">
+        <div class="form-group">
+            標題：<input type="text" name="title" id="title">
+        </div>
+        <div class="form-group">
+            時間：<input type="date" name="date" id="date">
+        </div>
+        <div class="form-group">
+            內容：<textarea name="content" id="content"></textarea>
+        </div>
+        <div class="form-group">
+            超連結：<input type="text" name="href" id="href">
+        </div>
+        <div class="form-group">
+            圖片連結：<input type="text" name="image_url" id="image_url">
+        </div>
+        <div class="btn">送出</div>
+    </form>
+
     <div class="container">
         <!-- <a href="">
             <div class="card">
@@ -71,11 +103,69 @@
                 <img src="https://images.chinatimes.com/newsphoto/2020-07-18/656/20200718001909.jpg" alt="">
                 <div class="text">這是一隻吉娃娃，我很機掰XD</div>
             </div>
-        </a>         -->
+        </a> -->
     </div>
 
     <script>
-        let container = document.querySelector('.container')
+        let container = document.querySelector('.container');
+        // 若API後端有寫可以帶參數，則在網址的最後用「？」去指定鍵：值(key=value)，本案例接的是limit=20，用來限制抓取的筆數
+        // 因為在接取時就限制了資料筆數，因此可以直接用forEach，而不用for來限制筆數
+        fetch('https://ajax-lesson.digipack-develop.com/news?limit=20')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (postBoards) {
+                console.log(postBoards);
+                // for (let i = 0; i < 20; i++) {
+                //     container.innerHTML += `
+                //     <a href="${postBoard[i].href}">
+                //         <div class="card">
+                //             <div class="title">${postBoard[i].title}</div>
+                //             <div class="time">${postBoard[i].date}</div>
+                //             <img src="${postBoard[i].image_url}" alt="">
+                //             <div class="text">${postBoard[i].content}</div>
+                //             <div class="id">${postBoard[i].id}</div>
+                //         </div>
+                //     </a>`
+                // }
+                postBoards.forEach(card => {
+                    container.innerHTML += `
+                    <a href="${card.href}">
+                        <div class="card">
+                            <div class="title">${card.title}</div>
+                            <div class="time">${card.date}</div>
+                            <img src="${card.image_url}" alt="">
+                            <div class="text">${card.content}</div>
+                            <div class="id">${card.id}</div>
+                        </div>
+                    </a>`
+                });
+            });
+
+        let btn = document.querySelector('.btn');
+        let title = document.querySelector('#title');
+        let date = document.querySelector('#date');
+        let content = document.querySelector('#content');
+        let href = document.querySelector('#href');
+        let image_url = document.querySelector('#image_url');
+
+        btn.addEventListener('click', function () {
+            const url = 'https://ajax-lesson.digipack-develop.com/news';
+            
+            var formData = new FormData();
+            formData.append('title', title.value);
+            formData.append('date', date.value);
+            formData.append('content', content.value);
+            formData.append('href', href.value);
+            formData.append('image_url', image_url.value);
+            
+            fetch(url, {
+                method: 'POST',
+                body: formData,                
+            }).then(res => res.text())
+                .catch(error => console.error('錯誤:', error))
+                .then(response => console.log('結果:', response));
+        })
     </script>
 </body>
 
