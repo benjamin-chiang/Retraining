@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box::before{
+            content: '我是before';
+            color: red;
+        }
+        .box::after{
+            content: '我是after';
+            color: green;
+        }
+        .amos-list{
+            counter-reset: my-area;
+        }
+        .amos-list-item::before{
+            content: counter(my-area) '.';
+            counter-increment: my-area 1;
+        }
+        a::after{
+            content: attr(data-name);
+            color: #aaa;
+        }
+        a:focus{
+            border: 5px dotted blueviolet;
+        }
+        .BG-gray-T-yellow::selection{
+            background-color: gray;
+            color: yellow;
+        }
+        input[type="text"]:focus{
+            background-color: #ffa;
+            caret-color: red;            
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            background-color: lightseagreen;
+            margin: 20px;            
+        }
+        .box4:focus{
+            border: 5px solid blue;
+        }
+        .list input[type="checkbox"]:checked ~ span{
+            color: red;
+        }
+        div:empty{
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        我是文字內容
+    </div>
+
+    <div class="amos-list">
+        <div class="amos-list-item">list</div>
+        <div class="amos-list-item">list</div>
+        <div class="amos-list-item">list</div>
+        <div class="amos-list-item">list</div>
+        <div class="amos-list-item">list</div>
+        <div class="amos-list-item">list</div>
+        <div class="amos-list-item">list</div>
+    </div>
+
+    <a href="https://csscoke.com" target="_blank" data-name="此連結另開視窗">CSS可樂，阿莫斯的blog.</a>
+
+    <div class="selection">
+        <p>我沒有設定選取效果，反白的情況，由瀏覽器決定。</p>
+        <p class="BG-gray-T-yellow">
+            我選取的狀態下，呈現的效果由我決定。
+        </p>
+    </div>
+
+    <form action="">
+        <div class="box2">
+            <input type="text" name="" id="">
+        </div>
+        <div class="box2">
+            <input type="text" name="" id="">
+        </div>
+        <div class="box3">
+            <button>送出表單</button>
+        </div>
+    </form>
+
+    <div class="box4" tabindex="0"></div>
+
+    <form action="" class="list">
+        <h2>金魚教學系列清單</h2>
+        <div class="list-item">
+            <label for="">
+                <input type="checkbox" name="" id="">
+                <span>金魚都能懂的網頁設計入門</span>
+            </label>
+        </div>
+        <div class="list-item">
+            <label for="">
+                <input type="checkbox" name="" id="">
+                <span>金魚都能懂的CSS選取器</span>
+            </label>
+        </div>
+        <div class="list-item">
+            <label for="">
+                <input type="checkbox" name="" id="">
+                <span>金魚都能懂的這個網頁畫面怎麼切</span>
+            </label>
+        </div>
+        <div class="list-item">
+            <label for="">
+                <input type="checkbox" name="" id="">
+                <span>暴力網頁入門班</span>
+            </label>
+        </div>
+    </form>
+</body>
+</html>

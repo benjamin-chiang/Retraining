@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            padding: 0px;
+            margin: 0px;
+        }
+        .btn{
+            display: inline-block;
+            border: 1px solid #aaa;
+            background-color: #eee;
+            padding: 0px 1rem;
+            line-height: 1.5em;
+        }
+        a.btn{
+            background-color: transparent;
+            border: transparent;
+        }
+        h1{
+            font-size: 36px;
+        }
+        .news h1{
+            color: red;
+        }
+        .hot h1{
+            color: pink;
+        }
+        .color{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+        }
+        .color-box{
+            width: 100px;
+            height: 100px;
+            margin-top: 20px;
+            background-color: grey;
+        }
+        .R{
+            background-color: red;
+        }
+        .G{
+            background-color: green;            
+        }
+        .B{
+            background-color: blue;
+        }
+        .R:hover ~ .color-box{
+            background-color: red;
+        }
+        .G:hover ~ .color-box{
+            background-color: green;
+        }
+        .B:hover ~ .color-box{
+            background-color: blue;
+        }
+        label{
+            display: block;
+        }
+        .inside-label .checkbox:checked ~ span{
+            color:red;
+            font-weight: bold;
+        }
+        .amos{
+            padding: 30px;
+            background-color: gray;
+            border: 5px solid red;
+        }
+
+        .amos > div{
+            padding: 30px;
+            background-color: green;
+            border: 5px solid yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn">放入願望清單</button>
+    <a class="btn" href="">加入購物車</a>
+    <input class="btn" type="submit" value="送出">
+    <div class="news">
+        <h1>Amos</h1>
+    </div>
+    <div class="hot">
+        <h1>Alvee</h1>
+    </div>
+    <a href="" class="color R">R</a>
+    <a href="" class="color G">G</a>
+    <a href="" class="color B">B</a>
+    <div class="color-box"></div>
+
+    <form action="">
+        <label for="" class="inside-label">
+            <input type="checkbox" name="" id="" class="checkbox">
+            <span>暴力網頁入門班</span>
+        </label>
+        <label for="" class="inside-label">
+            <input type="checkbox" name="" id="" class="checkbox">
+            <span>RWD原來這樣子搬</span>
+        </label>
+        <label for="" class="inside-label">
+            <input type="checkbox" name="" id="" class="checkbox">
+            <span>金魚都懂的網頁入門</span>
+        </label>
+        <label for="" class="inside-label">
+            <input type="checkbox" name="" id="" class="checkbox">
+            <span>好想出去玩啊</span>
+        </label>
+    </form>
+
+    <div class="amos">
+        <div class="son-of-amos">
+            <div class="grandson-of-amos"></div>
+        </div>
+    </div>
+</body>
+</html>
