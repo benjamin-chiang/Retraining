@@ -51,6 +51,15 @@
         div:empty{
             background-color: yellow;
         }
+        input:not([type="submit"]){
+            color: green;
+        }
+        li:not(.handsome_amos){
+            background-color: grey;
+        }
+        ul :first-child{
+            color: red;
+        }
     </style>
 </head>
 
@@ -119,5 +128,19 @@
             </label>
         </div>
     </form>
+
+    <form action="">
+        <input type="text" name="" id="" class="input_text">
+        <input type="password" name="" id="" class="input_text">
+        <input type="submit" value="送出">
+    </form>
+
+    <ul>        
+        <li class="handsome_amos">handsome amos photo</li>
+        <li class="kevin">kevin</li>
+        <li class="gigi">gigi</li>
+        <li class="handsome_amos">handsome amos photo</li>
+        <li class="cherry">cherry</li>
+    </ul>
 </body>
 </html>

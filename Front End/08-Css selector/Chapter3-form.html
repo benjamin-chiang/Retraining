@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: #ffe;
+        }
+        .inputText{
+            width: 100%;
+            border: 1px solid #aaa;
+            font-size: 18px;
+            padding: 10px;
+        }
+        .inputText:focus{
+            box-shadow: none;
+            outline: none;
+        }
+        .loginForm{
+            width: 500px;
+            margin: auto;
+        }
+        .loginForm #email:valid{
+            color: #000;;
+        }
+        .loginForm #email:invalid{
+            background-color: #fcf;
+            border-color: red;
+        }
+        .number-form{
+            margin: 20px;
+        }
+        .pd-qua:in-range{
+            color: #333;
+        }
+        .pd-qua:out-of-range{
+            color: red;
+            border: 1px solid red;
+        }
+        .pd-qua:out-of-range ~ .tip{
+            display: block;
+        }
+        .tip{
+            display: none;
+            position: absolute;
+            color: red;
+        }
+        .input-txt:read-only{
+            border-color: transparent;
+        }
+        #txt::placeholder{
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <form action="">
+        <input type="text" name="" id="" placeholder="這個有作用" enabled>
+        <br>
+        <input type="text" name="" id="" placeholder="這個無作用" disabled>
+        <br>
+        <button disabled>送出</button>
+        <button enabled>重新設定</button>
+    </form>
+
+    <form action="" class="loginForm">
+        <label for="">
+            <span>帳號</span>
+            <input type="text" name="" id="userName" class="inputText">
+        </label>
+        <label for="">
+            <span>信箱</span>
+            <input type="email" name="" id="email" class="inputText">
+        </label>
+        <div class="btn-group">
+            <input type="submit" value="送出" class="btn">
+        </div>
+    </form>
+
+    <form action="" class="number-form">
+        <input type="number" name="" id="" class="pd-qua" min="5" max="100">
+        <span class="tip">最少買5個，最多100</span>
+    </form>
+
+    <form action="" class="my-form">
+        <div class="input-group">
+            <label for="user-id">帳號</label>
+            <input type="text" name="user-id" id="user-id" value="Amos" class="input-txt" readonly>
+        </div>
+    </form>
+
+    <form action="">
+        <label for="txt">姓名</label>
+        <input type="text" name="" id="txt" placeholder="輸入你的姓名">        
+    </form>
+</body>
+</html>
