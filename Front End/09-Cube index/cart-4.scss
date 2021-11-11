@@ -1,0 +1,62 @@
+.step>span{
+  @media(max-width: 768px){
+     font-size: 12px;
+  }
+}
+h2{
+  font-size: 40px;
+  font-weight: bolder;
+}
+h3{
+  font-size: 24px;
+}
+.item-name{
+&>:last-child{
+  font-size: 12px;
+  color: rgb(156,163,175);
+}
+}
+.item > img,
+.circle,
+.left-block > a > svg {
+  width: 40px;
+  height: 40px;
+}
+.icon>img{
+  width: 106px;
+}
+.circle{
+  background-color: white;
+}
+.actived{
+  color: white;
+  background-color: rgb(16,185,129);
+}
+.background{
+  background-color: rgb(209, 213, 219);
+}
+.main{
+  background-color: rgb(243, 244, 246);
+}
+
+.left-block{
+  max-width: 256px;
+}
+.progress{
+  height: 8px;
+}
+.progress-bar{
+  background-color: rgb(110, 231, 183);
+}
+.progress {
+  transform: translate(50%, -180%);
+  right: 0;
+}
+.svg-block>a>svg {
+  width: 20px;
+  height: 20px;
+}
+a > button {
+  width: 145px;
+  height: 50px;
+}

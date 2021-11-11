@@ -1,0 +1,76 @@
+@media (max-width: 768px) {
+  .step > span {
+    font-size: 12px;
+  }
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+.item-name > :last-child {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.item > img,
+.circle,
+.left-block > a > svg {
+  width: 40px;
+  height: 40px;
+}
+
+.icon > img {
+  width: 106px;
+}
+
+.circle {
+  background-color: white;
+}
+
+.actived {
+  color: white;
+  background-color: #10b981;
+}
+
+.background {
+  background-color: #d1d5db;
+}
+
+.main {
+  background-color: #f3f4f6;
+}
+
+.left-block {
+  max-width: 256px;
+}
+
+.progress {
+  height: 8px;
+}
+
+.progress-bar {
+  background-color: #6ee7b7;
+}
+
+.progress {
+  -webkit-transform: translate(50%, -180%);
+          transform: translate(50%, -180%);
+  right: 0;
+}
+
+.svg-block > a > svg {
+  width: 20px;
+  height: 20px;
+}
+
+a > button {
+  width: 145px;
+  height: 50px;
+}
+/*# sourceMappingURL=cart-4.css.map */
