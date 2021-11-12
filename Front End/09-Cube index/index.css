@@ -1,0 +1,193 @@
+.textarea-l {
+  text-align: center;
+}
+
+.color-a {
+  color: #6366f1;
+}
+
+.backgroundcolor-a {
+  background-color: #6366f1;
+  width: 100px;
+}
+
+.icon-a {
+  background-color: #e0e7ff;
+  width: 80px;
+  height: 80px;
+}
+
+.icon-a > svg {
+  width: 40px;
+  height: 40px;
+}
+
+.icon-b {
+  background-color: #e0e7ff;
+  min-width: 128px;
+  height: 128px;
+}
+
+.icon-b > svg {
+  width: 64px;
+  height: 64px;
+}
+
+.icon-a > .reviews,
+.ftw > a {
+  color: #4b5563;
+}
+
+.block-r > h2 {
+  font-size: 14px;
+}
+
+.block-r > h1 {
+  font-size: 30px;
+}
+
+.color-size > .color > :nth-child(2) {
+  width: 24px;
+  height: 24px;
+  background-color: #d1d5db;
+  padding: 0.5rem !important;
+}
+
+.color-size > .color > :nth-child(3) {
+  width: 24px;
+  height: 24px;
+  background-color: #374151;
+  padding: 0.5rem !important;
+}
+
+.color-size > .color > :nth-child(4) {
+  width: 24px;
+  height: 24px;
+  background-color: #6366f1;
+  padding: 0.5rem !important;
+}
+
+.textarea-l {
+  max-width: 620px;
+  word-wrap: break-word;
+}
+
+.total > span {
+  font-size: 24px;
+}
+
+.cards-l3 .card {
+  text-align: center;
+  border: initial;
+}
+
+.card-body > span {
+  font-size: 12px;
+}
+
+.icon > img {
+  width: 106px;
+}
+
+.circle {
+  background-color: white;
+}
+
+.actived {
+  color: white;
+  background-color: #10b981;
+}
+
+.background {
+  background-color: #d1d5db;
+}
+
+.main {
+  background-color: #f3f4f6;
+}
+
+.cards-r3 .card {
+  border-radius: 0;
+  border: initial;
+}
+
+.textarea-c > h1 {
+  font-size: 30px;
+}
+
+.card > .card-block {
+  background-color: #f3f4f6;
+}
+
+.cards-r3 .card:not(:nth-child(3)) {
+  border-bottom: 1px solid;
+}
+
+.card > a > svg,
+.under-table > a > svg,
+.card-r > a > svg,
+.svg-block > a > svg {
+  width: 20px;
+  height: 20px;
+}
+
+.size-a {
+  width: 122px;
+  height: 44px;
+}
+
+.card-r {
+  max-width: 520px;
+}
+
+.under-table > button {
+  width: 100px;
+  height: 40px;
+}
+
+.list-group-item {
+  border: initial !important;
+}
+
+.left-block > p {
+  max-width: 256px;
+}
+
+.left-block > a > svg {
+  width: 40px;
+  height: 40px;
+}
+
+.star > svg {
+  width: 16px;
+  height: 16px;
+}
+
+.ftw > a > svg {
+  width: 20px;
+  height: 20px;
+}
+
+.total > .heart {
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 992px) {
+  .big-img {
+    height: 256px;
+  }
+}
+
+.position-card > :nth-child(1) {
+  font-size: 18px;
+}
+
+.position-card > button {
+  background-color: #6366f1;
+}
+
+.position-card > p {
+  font-size: 12px;
+}
+/*# sourceMappingURL=index.css.map */

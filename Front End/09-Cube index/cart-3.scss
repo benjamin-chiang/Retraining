@@ -1,0 +1,58 @@
+.step > span {
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+input {
+  border-color: rgb(229, 231, 235);
+  border-style: solid;
+}
+.item > img,
+.circle,
+.left-block > a > svg {
+  width: 40px;
+  height: 40px;
+}
+.icon > img {
+  width: 106px;
+}
+.circle {
+  background-color: white;
+}
+.actived {
+  color: white;
+  background-color: rgb(16, 185, 129);
+}
+.background {
+  background-color: rgb(209, 213, 219);
+}
+
+.main {
+  background-color: rgb(243, 244, 246);
+}
+.progress {
+  height: 8px;
+}
+.progress-bar {
+  background-color: rgb(110, 231, 183);
+}
+.progress {
+  transform: translate(50%, -100%);
+  right: 0;
+}
+.buttons > a > button {
+  width: 145px;
+  height: 50px;
+}
+.city,
+.postal {
+  width: 49.5%;
+  margin-bottom: 1%;
+}
+.city {
+  margin-right: 1%;
+}
+.svg-block > a > svg {
+  width: 20px;
+  height: 20px;
+}

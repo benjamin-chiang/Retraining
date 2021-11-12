@@ -1,0 +1,68 @@
+.step > span {
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.item > img,
+.circle,
+.left-block > a > svg {
+  width: 40px;
+  height: 40px;
+}
+.mi,
+.pl {
+  cursor: pointer;
+}
+
+.icon > img {
+  width: 106px;
+}
+
+.circle {
+  background-color: white;
+  margin-bottom: 8px;
+}
+.actived {
+  color: white;
+  background-color: rgb(16, 185, 129);
+}
+.background {
+  background-color: rgb(209, 213, 219);
+}
+
+.main {
+  background-color: rgb(243, 244, 246);
+}
+.progress {
+  height: 8px;
+}
+.progress-bar {
+  background-color: rgb(110, 231, 183);
+}
+.progress {
+  transform: translate(50%, -180%);
+  right: 0;
+}
+.item-name {
+  &>:last-child{
+    font-size:12px ;
+  }
+}
+.count > input {
+  max-width: 30px;
+}
+
+.svg-block > a > svg {
+  width: 20px;
+  height: 20px;
+}
+.buttons > a > button {
+  width: 145px;
+  height: 50px;
+}

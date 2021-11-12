@@ -1,0 +1,73 @@
+@media (max-width: 768px) {
+  .step > span {
+    font-size: 12px;
+  }
+}
+
+input {
+  border-color: #e5e7eb;
+  border-style: solid;
+}
+
+.item > img,
+.circle,
+.left-block > a > svg {
+  width: 40px;
+  height: 40px;
+}
+
+.icon > img {
+  width: 106px;
+}
+
+.circle {
+  background-color: white;
+}
+
+.actived {
+  color: white;
+  background-color: #10b981;
+}
+
+.background {
+  background-color: #d1d5db;
+}
+
+.main {
+  background-color: #f3f4f6;
+}
+
+.progress {
+  height: 8px;
+}
+
+.progress-bar {
+  background-color: #6ee7b7;
+}
+
+.progress {
+  -webkit-transform: translate(50%, -100%);
+          transform: translate(50%, -100%);
+  right: 0;
+}
+
+.buttons > a > button {
+  width: 145px;
+  height: 50px;
+}
+
+.city,
+.postal {
+  width: 49.5%;
+  margin-bottom: 1%;
+}
+
+.city {
+  margin-right: 1%;
+}
+
+.svg-block > a > svg {
+  width: 20px;
+  height: 20px;
+}
+/*# sourceMappingURL=cart-3.css.map */
