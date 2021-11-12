@@ -3,7 +3,7 @@
 
 @section('css')
 {{-- 用asset引入外部css檔，css檔必須先放入public資料夾中 --}}
-<link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('/css/index.css') }}">
 @endsection
 
 @section('main')
@@ -19,17 +19,17 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="{{ asset('img/bar1.jpeg') }}"
+                    <img src="{{ asset('/img/bar1.jpeg') }}"
                         class="d-block w-100" alt="...">
 
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
-                    <img src="{{ asset('img/bar2.jpg') }}"
+                    <img src="{{ asset('/img/bar2.jpg') }}"
                         class="d-block w-100" alt="...">
 
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('img/bar3.jpg') }}"
+                    <img src="{{ asset('/img/bar3.jpg') }}"
                         class="d-block w-100" alt="...">
 
                 </div>

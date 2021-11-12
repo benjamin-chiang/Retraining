@@ -18,7 +18,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-light bg-light ">
             <div class="container-lg d-flex justify-content-between">
-                <a class="icon" href="">
+                <a class="icon" href="/">
                     <img class="" src="https://lesson-bootstrap.dev-hub.io/img/logo.svg">
                 </a>
                 <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNAV" class="navbar-toggler"
@@ -28,7 +28,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNAV">
                     <ul class="navbar-nav d-flex align-items-center">
                         <li class="nav-item ">
-                            <a class="nav-link active" href="#">Blog</a>
+                            <a class="nav-link active" href="/news">News</a>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link active" href="#">Portfolio</a>
