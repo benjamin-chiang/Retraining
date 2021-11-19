@@ -48,6 +48,7 @@
                     <figcaption><a href="/news/detail/{{$news->id}}">{{ $news->title }}</a></figcaption>
                     <span>{{ $news->date }}</span>
                     <div>{{ $news->content }}</div>
+                    <div>瀏覽人數：{{$news->views}}</div>
                 </div>
             </article>
             <hr>

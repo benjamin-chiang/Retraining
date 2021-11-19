@@ -19,6 +19,10 @@ Route::get('/', function () {
 
 Route::get('news', 'NewsController@index');
 Route::get('news/detail/{id}', 'NewsController@detail');
+// 新增資料頁面
 Route::get('news/create', 'NewsController@create');
+// 儲存資料
+Route::post('news/store', 'NewsController@store');
+
 Route::get('news/update/{id}', 'NewsController@update');
 Route::get('news/delete/{id}', 'NewsController@delete');
