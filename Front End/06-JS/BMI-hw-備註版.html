@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI計算</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        h1{
+            display: flex;
+            justify-content: center;
+            color: cadetblue;
+            font-size: 35px;
+        }
+
+        main {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        div{
+            font-size: 25px;
+        }
+
+        #height,#weight{
+            width: 100px;
+            height: 25px;
+            border-radius: 5px;
+            font-size: 20px;
+            margin: 10px;
+        }
+
+        #submit,#reset{
+            width: 160px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 5px;
+        }
+
+        #result-number {
+            padding: 20px;
+            background-color: lightgreen;
+        }
+
+        #result-text {
+            padding: 20px;
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="calc-bmi">
+            <h1>BMI 計算機</h1>
+            <div class="range-bmi">
+                身高：<input type="text" name="" id="height"> cm
+                <br>
+                體重：<input type="text" name="" id="weight"> kg
+                <br>
+                <button id="submit" type="submit">計算</button>
+                <button id="reset">重新計算</button>
+                <hr>
+            </div>
+            <section class="result">
+                <h2 class="result-title">你的BMI : </h2>
+                <p id="result-number"></p>
+                <p id="result-text"></p>
+            </section>
+        </section>
+    </main>
+
+
+    <script>
+        // 宣告計算及重新開始按鈕
+        var calc = document.querySelector('#submit')
+        var restBtn = document.querySelector('#reset');
+        // 宣告計算出來的bmi值標籤，方便後續innerHTML能寫入
+        var resNum = document.querySelector('#result-number');
+        // 宣告依bmi值判斷後的文字敘述標籤，方便後續innerHTML能寫入
+        var resText = document.querySelector('#result-text');
+
+        // 當按下bmi按鈕後發生的事
+        calc.addEventListener('click', function () {
+            // 取得身高input的值value，並由字串轉換成數值，且除以100由公分轉換為公尺
+            var height = Number(document.querySelector('#height').value) / 100;
+            // 取得體重input的值value，並由字串轉換成數值
+            var weight = Number(document.querySelector('#weight').value);
+            // 判斷身高或體重有任何一欄是否為空值，使用||(或)這的判斷子在條件式內，確保兩個input都有填
+            if (height == '' || weight == '') {
+                // 顯示警鈴提示
+                alert('不要亂玩，請填寫身高體重');
+                // 處理負數的判斷
+            } else if (height < 0 || weight < 0) {
+                alert('最好有人身高體重是負的')
+                // 身高體重的input都有填寫，並且不是負數，則執行下列的程式碼
+            } else {
+                // 計算bmi公式。Math.pow是指數運算，因此height逗點2，就是平方的意思。
+                // Math.round是四捨五入到整數位，故需乘100除100到小數第二位。
+                var bmi = Math.round(weight / Math.pow(height,2) * 100) / 100;
+                // 用innerHTML將計算的結果印到resNum這個div中
+                resNum.innerHTML = bmi;
+                // 用bmi數值判斷適合的文字敘述，並用innerHTML將文字印出在resText的div中
+                if (bmi >= 35) {
+                    resText.innerHTML = '過度肥胖，大胖子'
+                } else if (bmi >= 30) {
+                    resText.innerHTML = '中度的胖子，還是胖子'
+                } else if (bmi >= 27) {
+                    resText.innerHTML = '輕度肥胖，小胖子'
+                } else if (bmi >= 24) {
+                    resText.innerHTML = '過重了'
+                } else if (bmi >= 18.5) {
+                    resText.innerHTML = '恭喜，標準體。'
+                } else {
+                    resText.innerHTML = '令人羨慕的瘦子'
+                };
+            }
+        })
+
+        // 當按下重新計算按鈕(restBtn)時，在做的事情
+        restBtn.addEventListener('click', function () {
+            // 清空兩個input的欄位，直接等於空值
+            // 提問：除了重新宣告身高體重外，是否有方法抓取calc在click當中，宣告的變數？
+            var heightElm = document.querySelector('#height');
+            var weightElm = document.querySelector('#weight');
+            heightElm.value = '';
+            weightElm.value = '';
+            // 清空bmi數值及文字描述的div，用innerHTML = ''空值
+            resNum.innerHTML = '';
+            resText.innerHTML = '';
+        })
+    </script>
+</body>
+
+</html>
