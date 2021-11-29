@@ -2,8 +2,8 @@
 @extends('layouts.template')
 
 @section('css')
-{{-- 用asset引入外部css檔，css檔必須先放入public資料夾中 --}}
-<link rel="stylesheet" type="text/css" href="{{ asset('/css/index.css') }}">
+    {{-- 用asset引入外部css檔，css檔必須先放入public資料夾中 --}}
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/index.css') }}">
 @endsection
 
 @section('main')
@@ -19,28 +19,23 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="{{ asset('/img/bar1.jpeg') }}"
-                        class="d-block w-100" alt="...">
+                    <img src="{{ asset('/img/bar1.jpeg') }}" class="d-block w-100" alt="...">
 
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
-                    <img src="{{ asset('/img/bar2.jpg') }}"
-                        class="d-block w-100" alt="...">
+                    <img src="{{ asset('/img/bar2.jpg') }}" class="d-block w-100" alt="...">
 
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('/img/bar3.jpg') }}"
-                        class="d-block w-100" alt="...">
+                    <img src="{{ asset('/img/bar3.jpg') }}" class="d-block w-100" alt="...">
 
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
-                data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
@@ -56,7 +51,8 @@
             <div class="cards-l3 d-flex flex-column flex-md-row justify-content-center align-items-center mb-5">
                 <div class="card d-flex justify-content-center align-items-center mx-2">
                     <div class="icon-a rounded-circle d-flex align-items-center justify-content-center  color-a mb-3">
-                        <svg fill="none"  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
                             <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                         </svg>
                     </div>
@@ -65,15 +61,17 @@
                     <span>Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo
                         juice
                         poutine, ramps microdosing banh mi pug VHS try-hard.</span>
-                    <a href="" class=" color-a  text-decoration-none mt-3">Learn More <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <a href="" class=" color-a  text-decoration-none mt-3">Learn More <svg fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2"
+                            viewBox="0 0 24 24">
                             <path d="M5 12h14M12 5l7 7-7 7"></path>
                         </svg>
                     </a>
                 </div>
                 <div class="card  d-flex justify-content-center align-items-center mx-2 mt-3">
                     <div class="icon-a rounded-circle d-flex align-items-center justify-content-center  color-a mb-3">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
                             <circle cx="6" cy="6" r="3"></circle>
                             <circle cx="6" cy="18" r="3"></circle>
                             <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
@@ -84,14 +82,16 @@
                     <span>Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo
                         juice
                         poutine, ramps microdosing banh mi pug VHS try-hard.</span>
-                    <a href="" class=" color-a  text-decoration-none mt-3">Learn More <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <a href="" class=" color-a  text-decoration-none mt-3">Learn More <svg fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2"
+                            viewBox="0 0 24 24">
                             <path d="M5 12h14M12 5l7 7-7 7"></path>
                         </svg></a>
                 </div>
                 <div class="card  d-flex justify-content-center align-items-center mx-2 mt-3">
                     <div class="icon-a rounded-circle d-flex align-items-center justify-content-center  color-a mb-3">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
                             <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
                             <circle cx="12" cy="7" r="4"></circle>
                         </svg>
@@ -139,7 +139,8 @@
         <div class="container-lg  py-5 my-5 d-flex  flex-column justify-content-center align-items-center">
             <div class="textarea-l  mb-5">
                 <h1>Pricing</h1>
-                <span>Banh mi cornhole echo park skateboard authentic crucifix neutra tilde lyft biodiesel artisan direct trade mumblecore 3 wolf moon twee</span>
+                <span>Banh mi cornhole echo park skateboard authentic crucifix neutra tilde lyft biodiesel artisan direct
+                    trade mumblecore 3 wolf moon twee</span>
             </div>
             <div class="table-block w-75">
                 <table class="table">
@@ -184,8 +185,9 @@
                     </tbody>
                 </table>
                 <div class="under-table d-flex justify-content-between">
-                    <a href="" class=" text-decoration-none">Learn More <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <a href="" class=" text-decoration-none">Learn More <svg fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2"
+                            viewBox="0 0 24 24">
                             <path d="M5 12h14M12 5l7 7-7 7"></path>
                         </svg>
                     </a>
@@ -205,14 +207,15 @@
                 </p>
             </div>
             <div class="cards-4 d-flex row  justify-content-between">
-                
+
                 <div class="card   col-md-6 col-lg-3 border-0 mb-3">
                     <div class="card-block p-4 rounded">
                         <img src="https://dummyimage.com/720x400" class="card-img-top" alt="...">
                         <div class="card-body">
                             <span class="color-a ">SUBTITLE</span>
                             <h5 class="card-title">Chichen Itza</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of
                                 the card's content.</p>
                         </div>
                     </div>
@@ -223,7 +226,8 @@
                         <div class="card-body">
                             <span class="color-a ">SUBTITLE</span>
                             <h5 class="card-title">Chichen Itza</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of
                                 the card's content.</p>
                         </div>
                     </div>
@@ -234,7 +238,8 @@
                         <div class="card-body">
                             <span class="color-a ">SUBTITLE</span>
                             <h5 class="card-title">Chichen Itza</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of
                                 the card's content.</p>
                         </div>
                     </div>
@@ -245,7 +250,8 @@
                         <div class="card-body">
                             <span class="color-a ">SUBTITLE</span>
                             <h5 class="card-title">Chichen Itza</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of
                                 the card's content.</p>
                         </div>
                     </div>
@@ -258,18 +264,21 @@
             <div class="cards-r3 w-75 ">
                 <div class="card   d-flex flex-row justify-content-center align-items-center mx-2 py-4">
                     <div class="icon-b rounded-circle d-flex align-items-center justify-content-center  color-a mb-3 me-3">
-                        <svg fill="none"  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
                             <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                         </svg>
                     </div>
                     <div class="card-r d-flex flex-column ">
                         <p>Shooting Stars</p>
-                        <span class="mb-2">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy.
+                        <span class="mb-2">Blue bottle crucifix vinyl post-ironic four dollar toast vegan
+                            taxidermy.
                             Gastropub indxgo
                             juice
                             poutine, ramps microdosing banh mi pug VHS try-hard.</span>
-                        <a href="" class="color-a text-decoration-none">Learn More <svg fill="none" stroke="currentColor" stroke-linecap="round"
-                                stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                        <a href="" class="color-a text-decoration-none">Learn More <svg fill="none" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2"
+                                viewBox="0 0 24 24">
                                 <path d="M5 12h14M12 5l7 7-7 7"></path>
                             </svg></a>
                     </div>
@@ -279,17 +288,20 @@
 
                     <div class="card-r d-flex flex-column">
                         <p>The Catalyzer</p>
-                        <span class="mb-2">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy.
+                        <span class="mb-2">Blue bottle crucifix vinyl post-ironic four dollar toast vegan
+                            taxidermy.
                             Gastropub indxgo
                             juice
                             poutine, ramps microdosing banh mi pug VHS try-hard.</span>
-                        <a href="" class="color-a text-decoration-none">Learn More <svg fill="none" stroke="currentColor" stroke-linecap="round"
-                                stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                        <a href="" class="color-a text-decoration-none">Learn More <svg fill="none" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2"
+                                viewBox="0 0 24 24">
                                 <path d="M5 12h14M12 5l7 7-7 7"></path>
                             </svg></a>
                     </div>
                     <div class="icon-b rounded-circle d-flex align-items-center justify-content-center  color-a mb-3 ms-3">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
                             <circle cx="6" cy="6" r="3"></circle>
                             <circle cx="6" cy="18" r="3"></circle>
                             <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
@@ -297,15 +309,18 @@
                     </div>
                 </div>
                 <div class="card  d-flex flex-row justify-content-center align-items-center mx-2  mb-5 py-4">
-                    <div class="icon-b rounded-circle d-flex align-items-center justify-content-center  color-a mb-3  me-3">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
+                    <div
+                        class="icon-b rounded-circle d-flex align-items-center justify-content-center  color-a mb-3  me-3">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
                             <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
                             <circle cx="12" cy="7" r="4"></circle>
                         </svg>
                     </div>
                     <div class="card-r d-flex flex-column">
                         <p>Neptune</p>
-                        <span class="mb-2">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy.
+                        <span class="mb-2">Blue bottle crucifix vinyl post-ironic four dollar toast vegan
+                            taxidermy.
                             Gastropub indxgo
                             juice
                             poutine, ramps microdosing banh mi pug VHS try-hard.</span>
@@ -480,24 +495,37 @@
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d14566.398584717037!2d120.654491!3d24.11557075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgooglemap!5e0!3m2!1szh-TW!2stw!4v1631860947676!5m2!1szh-TW!2stw"
             width="100%" height="700" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        <div
-            class="position-card position-absolute top-50 end-0 translate-middle-y bg-white me-5 p-4 h-75 col-10  col-md-5  col-xl-3 rounded">
-            <span>Feedback</span>
-            <p>Post-ironic portland shabby chic echo park, banjo fashion axe</p>
-            <div class="email d-flex flex-wrap mb-3">
-                <span>Email</span>
-                <input type="email" class=" w-100 rounded">
+        <form action="/contact_us/store" method="post">
+            @csrf
+            <div
+                class="position-card position-absolute top-50 end-0 translate-middle-y bg-white me-5 p-4 h-80 col-10  col-md-5  col-xl-3 rounded">
+                <span>聯絡我們</span>
+                <div class="name d-flex flex-wrap mb-3">
+                    <span>姓名</span>
+                    <input type="text" class=" w-100 rounded" name="name">
+                </div>
+                <div class="email d-flex flex-wrap mb-3">
+                    <span>信箱</span>
+                    <input type="email" class=" w-100 rounded" name="email">
+                </div>
+                <div class="phone d-flex flex-wrap mb-3">
+                    <span>電話</span>
+                    <input type="text" class=" w-100 rounded" name="phone">
+                </div>
+                <div class="title d-flex flex-wrap mb-3">
+                    <span>主旨</span>
+                    <input type="text" class=" w-100 rounded" name="title">
+                </div>
+                <div class="message  d-flex flex-wrap h-25 mb-5">
+                    <span>內文</span>
+                    <textarea name="content" id="" cols="30" rows="5" class=" w-100 h-100 rounded"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mb-2">Button</button>
             </div>
-            <div class="message  d-flex flex-wrap h-25 mb-5">
-                <span>Message</span>
-                <input type="text" class=" w-100 h-100 rounded">
-            </div>
-            <button type="button" class="btn btn-primary w-100 mb-2">Button</button>
-            <p>Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p>
-        </div>
+        </form>
     </section>
 @endsection
 
 @section('js')
-    
+
 @endsection

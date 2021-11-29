@@ -19,6 +19,7 @@
                 <span>每頁筆數：<b>10</b></span>
                 <span>總頁數：<b>18</b></span>
                 <span>目前頁次：<b>1</b></span>
+                <a href="/news/create" class="btn btn-success">新增消息</a>
             </div>
         </div>
         <hr>
@@ -29,7 +30,7 @@
             </figure>
             <div>
                 <div class="article-tip">最新消息</div>
-                
+
                 <figcaption><a href="/news/detail">經典小鎮升級3.0正式開跑　小鎮逗鎮趣 集章抽好禮</a></figcaption>
                 <span>2021-05-03</span>
                 <div>
@@ -39,12 +40,16 @@
         </article> --}}
 
         {{-- 用foreach去資料庫render(渲染)出來的 --}}
-        @foreach ($newsData as $news)            
+        @foreach ($newsData as $news)
             <article>
                 <figure style="background-image: url({{ $news->img }});">
                 </figure>
                 <div>
                     <div class="article-tip">最新消息</div>
+                    <div style="padding: 5px 0px">
+                        <a class="btn btn-primary" href="/news/edit/{{$news->id}}">編輯</a>
+                        <button type="submit" class="delete btn btn-danger" data-id="{{$news->id}}">刪除</button>
+                    </div>
                     <figcaption><a href="/news/detail/{{$news->id}}">{{ $news->title }}</a></figcaption>
                     <span>{{ $news->date }}</span>
                     <div>{{ $news->content }}</div>
@@ -54,4 +59,18 @@
             <hr>
         @endforeach
     </main>
+@endsection
+
+@section('js')
+<script>
+    let delBtns = document.querySelectorAll('.delete');
+    delBtns.forEach(btn => {
+        btn.addEventListener('click',function () {
+            if (confirm('確定要刪除嗎？')) {
+                let id = this.getAttribute('data-id');
+                location.href='/news/delete/'+id;
+            }
+        })
+    });
+</script>
 @endsection
