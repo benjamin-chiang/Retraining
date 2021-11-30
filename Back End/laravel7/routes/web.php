@@ -1,29 +1,35 @@
 <?php
 
 use Illuminate\Routing\RouteGroup;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 // 首頁
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+// 最新消息相關-前端
+Route::prefix('news')->group(function () {
+    Route::get('/', 'FrontController@newsindex');
+    Route::get('/content/{id}', 'FrontController@newsContent');
 
-// prefix是前綴詞，表示整個群組內的網址，都需要從prefix(XXX)出發
-// middleware('auth')，需要經過登入才有辦法進入
-Route::prefix('news')->middleware('auth')->group(function () {
-    // 最新消息列表頁面
-    Route::get('', 'NewsController@index');
-    Route::get('/detail/{id}', 'NewsController@detail');
-    // 新增資料頁面
-    Route::get('/create', 'NewsController@create');
-    // 儲存資料
-    Route::post('/store', 'NewsController@store');
-    // 編輯頁面
-    Route::get('/edit/{id}', 'NewsController@edit');
-    // 更新資料
-    Route::post('/update/{id}', 'NewsController@update');
-    // 刪除資料
-    Route::get('/delete/{id}', 'NewsController@delete');
+});
+// 最新消息-後台頁面
+Route::prefix('admin')->middleware('auth')->group(function () {
+    Route::prefix('news')->group(function () {
+        // 後端最新消息管理列表頁面(讀取)
+        Route::get('/', 'NewsController@index');
+        // 後端新增一條最新消息頁面(讀取)
+        Route::get('/create', 'NewsController@create');// C增
+        // 新增一條最新消息，存入資料表(寫入)
+        Route::post('/store', 'NewsController@store');
+        // 編輯一條現有的最新消息(讀取)
+        Route::get('/edit/{id}', 'NewsController@edit');// R讀
+        // 將編輯後的最新消息更新(寫入)
+        Route::post('/update/{id}', 'NewsController@update');// U改
+        // 刪除一條最新消息
+        Route::get('/delete/{id}', 'NewsController@delete');// D刪
+    });
 });
 
 // 聯絡我們
