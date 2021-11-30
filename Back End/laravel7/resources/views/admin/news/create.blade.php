@@ -1,14 +1,15 @@
-@extends('layouts.template')
+@extends('layouts.app')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('/css/index.css') }}">        
+<link rel="stylesheet" href="{{ asset('/css/index.css') }}">
 @endsection
 
 @section('main')
     <div class="container p-5">
         {{-- 只要使用POST就必須有@csrf --}}
-        <form action="/news/store" method="POST" class="mx-auto">
+        <form action="/admin/news/store" method="POST" class="mx-auto">
             @csrf
+            <h1>新增最新消息</h1>
             <div class="form-group">
                 {{-- label跟input一組，id對for，name是資料表內欄位名稱 --}}
                 <label for="title">標題</label>
@@ -32,5 +33,5 @@
 @endsection
 
 @section('js')
-    
+
 @endsection

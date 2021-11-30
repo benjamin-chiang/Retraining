@@ -16,6 +16,7 @@ Route::prefix('news')->group(function () {
 });
 // 最新消息-後台頁面
 Route::prefix('admin')->middleware('auth')->group(function () {
+    Route::get('/', 'HomeController@index');
     Route::prefix('news')->group(function () {
         // 後端最新消息管理列表頁面(讀取)
         Route::get('/', 'NewsController@index');

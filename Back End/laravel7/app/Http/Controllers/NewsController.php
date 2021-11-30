@@ -18,21 +18,25 @@ class NewsController extends Controller
     {
         return view('admin.news.create');
     }
-    public function store()
+    public function store(Request $request)
     {
+        News::create($request->all());
         // redirect用「/」表示網址重新定向去的位置
         return redirect('/admin/news');
     }
     public function edit($id)
     {
-        return view('admin.news.edit');
+        $news = News::find($id);
+        return view('admin.news.edit',compact('news'));
     }
-    public function update($id)
+    public function update($id, Request $request)
     {
+        News::find($id)->update($request->all());
         return redirect('/admin/news');
     }
     public function delete($id)
     {
+        News::find($id)->delete();
         return redirect('/admin/news');
     }
 }
