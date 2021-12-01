@@ -99,7 +99,9 @@ class ProductController extends Controller
     public function delete($id)
     {
         //
-        Product::find($id)->delete();
+        $product = Product::find($id);
+        File::delete(public_path($product->img));
+        $product->delete();
         return redirect('admin/product');
     }
 }

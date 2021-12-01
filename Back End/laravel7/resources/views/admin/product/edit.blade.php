@@ -21,7 +21,7 @@
             </div>
             <div class="form-group">
                 <label for="description">簡介</label>
-                <textarea name="description" id="description" cols="30" rows="10">{{$product->description}}"</textarea>
+                <textarea name="description" id="description" cols="30" rows="10">{{$product->description}}</textarea>
             </div>
             <div class="form-group">
                 <img src="{{ asset($product->img) }}" alt="" width="200px">
