@@ -8,12 +8,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+// 聯絡我們
+Route::post('/contact_us/store', 'ContactUsController@store');
+
 // 最新消息相關-前端
 Route::prefix('news')->group(function () {
-    Route::get('/', 'FrontController@newsindex');
+    Route::get('/', 'FrontController@newsIndex');
     Route::get('/content/{id}', 'FrontController@newsContent');
 
 });
+
 // 最新消息-後台頁面
 Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/', 'HomeController@index');
@@ -33,8 +38,23 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     });
 });
 
-// 聯絡我們
-Route::post('/contact_us/store', 'ContactUsController@store');
+// 產品類別-前端
+Route::prefix('product')->group(function () {
+    Route::get('/', 'FrontController@productIndex');
+    Route::get('/content/{id}', 'FrontController@productContent');
+});
+
+// 產品類別-後端
+Route::prefix('admin')->middleware('auth')->group(function(){
+    Route::prefix('product')->group(function () {
+        Route::get('/', 'ProductController@index');
+        Route::get('/create', 'ProductController@create');// C增
+        Route::post('/store', 'ProductController@store');
+        Route::get('/edit/{id}', 'ProductController@edit');// R讀
+        Route::post('/update/{id}', 'ProductController@update');// U改
+        Route::get('/delete/{id}', 'ProductController@delete');// D刪
+    });
+});
 
 Auth::routes();
 

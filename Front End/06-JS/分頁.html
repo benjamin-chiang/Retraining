@@ -141,12 +141,13 @@
         // }
 
         // forEach寫法
-        btns.forEach((btn, index) => {            
+        btns.forEach((btn, index) => {
             btn.addEventListener('click', function () {
                 clearAllActive();
                 btn.classList.add('active');
                 // btns[index].classList.add('active');
                 contents[index].classList.add('active');
+                console.log(index);
             })
         });
 

@@ -7,30 +7,33 @@
 
 @section('main')
     <div class="container">
-        <a href="/admin/news/create" class="btn btn-primary" >新增最新消息</a>
+        <a href="/admin/product/create" class="btn btn-primary" >新增產品</a>
         <hr>
         <table id="myTable" class="display">
             <thead>
                 <tr>
-                    <th>標題</th>
-                    <th>日期</th>
+                    <th>類型</th>
+                    <th>名稱</th>
+                    <th>簡介</th>
                     <th>圖片</th>
-                    <th>內文</th>
+                    <th>價格</th>
                     <th width="100px" >操作</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($newsData as $news)
+                @foreach ($products as $product)
                 <tr>
-                    <td>{{$news->title}}</td>
-                    <td>{{$news->date}}</td>
-                    <td><img src="{{$news->img}}" alt="" width="200px"></td>
-                    <td>{{$news->content}}</td>
+                    <td>{{$product->type}}</td>
+                    <td>{{$product->name}}</td>
+                    <td>{{$product->description}}</td>
+                    <td><img src="{{$product->img}}" alt="" width="200px"></td>
+                    <td>{{$product->price}}</td>
                     <td>
-                        <a href="/admin/news/edit/{{$news->id}}" type="submit" class="btn btn-success btn-sm" >編輯</a>
+                        <a href="/admin/product/edit/{{$product->id}}" type="submit" class="btn btn-success btn-sm" >編輯</a>
 
-                        <button type="submit" class="btn btn-danger btn-sm delete-btn" data-id="#delete_{{$news->id}}">刪除</button>
-                        <form id="delete_{{$news->id}}" action="/admin/news/delete/{{$news->id}}" method="get"></form>
+                        <button type="submit" class="btn btn-danger btn-sm delete-btn" data-id="#delete_{{$product->id}}">刪除</button>
+                        <form id="delete_{{$product->id}}" action="/admin/product/delete/{{$product->id}}" method="get"></form>
+                        @csrf
                     </td>
                 </tr>
 

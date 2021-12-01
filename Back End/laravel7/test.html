@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="dog" name="fucq" src="https://upload.wikimedia.org/wikipedia/commons/0/0c/About_The_Dog.jpg" alt="" width="300px">
+
+    <script>
+        let dog = document.querySelector('#dog')
+        let dogSrc = 'https://upload.wikimedia.org/wikipedia/commons/0/0c/About_The_Dog.jpg'
+        let cat = 'https://upload.wikimedia.org/wikipedia/commons/a/a3/June_odd-eyed-cat.jpg'
+        dog.addEventListener('click',function () {
+            if (dog.src == dogSrc) {
+                dog.src = cat;
+            }else{
+                dog.src = dogSrc;
+            }
+        })
+
+
+    </script>
+
+</body>
+</html>
