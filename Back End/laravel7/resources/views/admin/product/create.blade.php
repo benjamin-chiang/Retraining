@@ -12,8 +12,13 @@
             <h1>新增產品</h1>
             <div class="form-group">
                 {{-- label跟input一組，id對for，name是資料表內欄位名稱 --}}
-                <label for="type">類型</label>
-                <input type="text" name="type" id="type">
+                <label for="type_id">類型</label>
+                {{-- <input type="text" name="type" id="type"> --}}
+                <select name="type_id" id="type_id">
+                    @foreach ($productTypes as $productType)
+                        <option value="{{$productType->id}}">{{$productType->name}}</option>
+                    @endforeach
+                </select>
             </div>
             <div class="form-group">
                 <label for="name">名稱</label>

@@ -7,32 +7,25 @@
 
 @section('main')
     <div class="container">
-        <a href="/admin/product/create" class="btn btn-primary" >新增產品</a>
+        <a href="/admin/product/type/create" class="btn btn-primary" >新增產品類別</a>
         <hr>
         <table id="myTable" class="display">
             <thead>
                 <tr>
-                    <th>類型</th>
-                    <th>名稱</th>
-                    <th>簡介</th>
-                    <th>圖片</th>
-                    <th>價格</th>
+                    <th width="100px">產品類別id</th>
+                    <th>類型名稱</th>
                     <th width="100px" >操作</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($products as $product)
+                @foreach ($productTypes as $productType)
                 <tr>
-                    <td>{{$product->type_id}}</td>
-                    <td>{{$product->name}}</td>
-                    <td>{{$product->description}}</td>
-                    <td><img src="{{$product->img}}" alt="" width="200px"></td>
-                    <td>{{$product->price}}</td>
+                    <td>{{$productType->id}}</td>
+                    <td>{{$productType->name}}</td>
                     <td>
-                        <a href="/admin/product/edit/{{$product->id}}" type="submit" class="btn btn-success btn-sm" >編輯</a>
-
-                        <button type="submit" class="btn btn-danger btn-sm delete-btn" data-id="#delete_{{$product->id}}">刪除</button>
-                        <form id="delete_{{$product->id}}" action="/admin/product/delete/{{$product->id}}" method="get"></form>
+                        <a href="/admin/product/type/edit/{{$productType->id}}" type="submit" class="btn btn-success btn-sm" >編輯</a>
+                        <button type="submit" class="btn btn-danger btn-sm delete-btn" data-id="#delete_{{$productType->id}}">刪除</button>
+                        <form id="delete_{{$productType->id}}" action="/admin/product/type/destroy/{{$productType->id}}" method="get"></form>
                         @csrf
                     </td>
                 </tr>
@@ -55,7 +48,7 @@
             delBtn.addEventListener('click', function () {
                 let id = this.getAttribute('data-id');
                 console.log(id);
-                if (confirm('是否刪除這篇文章？')) {
+                if (confirm('是否刪除這個產品類別？')) {
                     document.querySelector(id).submit();
                 }
             })

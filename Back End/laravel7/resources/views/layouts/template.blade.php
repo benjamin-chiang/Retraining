@@ -8,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>index</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     @yield('css')
@@ -31,17 +31,17 @@
                             <a class="nav-link active" href="/news">News</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link active" href="#">Portfolio</a>
+                            <a class="nav-link active" href="/product">Product</a>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link active" href="#">About</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link active" href="#">Contact</a>
+                            <a class="nav-link active" href="#contact-us">Contact</a>
                         </li>
                         <li class="nav-item  d-flex">
                             <a class="nav-link active px-2" href="cart-1.html"><i class="fas fa-shopping-cart fa-2x"></i></a>
-                            <a class="nav-link active px-2" href="#"><i class="fas fa-user-circle fa-2x "></i></a>
+                            <a class="nav-link active px-2" href="/admin"><i class="fas fa-user-circle fa-2x "></i></a>
                         </li>
                     </ul>
                 </div>

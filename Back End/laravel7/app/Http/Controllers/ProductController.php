@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\ProductType;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
@@ -29,7 +30,8 @@ class ProductController extends Controller
     public function create()
     {
         //
-        return view('admin.product.create');
+        $productTypes = ProductType::get();
+        return view('admin.product.create', compact('productTypes'));
     }
 
     /**
@@ -65,7 +67,8 @@ class ProductController extends Controller
     {
         //
         $product = Product::find($id);
-        return view('.admin.product.edit', compact('product'));
+        $productTypes = ProductType::get();
+        return view('.admin.product.edit', compact('product', 'productTypes'));
     }
 
     /**

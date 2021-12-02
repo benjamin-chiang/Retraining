@@ -19,7 +19,6 @@
                 <span>每頁筆數：<b>10</b></span>
                 <span>總頁數：<b>18</b></span>
                 <span>目前頁次：<b>1</b></span>
-                <a href="/news/create" class="btn btn-success">新增消息</a>
             </div>
         </div>
         <hr>
@@ -46,11 +45,11 @@
                 </figure>
                 <div>
                     <div class="article-tip">最新消息</div>
-                    <div style="padding: 5px 0px">
+                    {{-- <div style="padding: 5px 0px">
                         <a class="btn btn-primary" href="/news/edit/{{$news->id}}">編輯</a>
                         <button type="submit" class="delete btn btn-danger" data-id="{{$news->id}}">刪除</button>
-                    </div>
-                    <figcaption><a href="/news/detail/{{$news->id}}">{{ $news->title }}</a></figcaption>
+                    </div> --}}
+                    <figcaption><a href="/news/content/{{$news->id}}">{{ $news->title }}</a></figcaption>
                     <span>{{ $news->date }}</span>
                     <div>{{ $news->content }}</div>
                     <div>瀏覽人數：{{$news->views}}</div>

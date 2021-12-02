@@ -497,7 +497,7 @@
             width="100%" height="700" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         <form action="/contact_us/store" method="post">
             @csrf
-            <div
+            <div id="contact-us"
                 class="position-card position-absolute top-50 end-0 translate-middle-y bg-white me-5 p-4 h-80 col-10  col-md-5  col-xl-3 rounded">
                 <span>聯絡我們</span>
                 <div class="name d-flex flex-wrap mb-3">

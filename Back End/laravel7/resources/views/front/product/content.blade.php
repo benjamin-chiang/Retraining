@@ -1,7 +1,10 @@
 @extends('layouts.template')
 
 @section('css')
+
+<link rel="stylesheet" href="{{ asset('/css/index.css') }}">
 <style>
+
   main img{
     height: 400px;
   }
