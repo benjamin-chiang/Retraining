@@ -130,10 +130,19 @@ class ProductController extends Controller
      */
     public function delete($id)
     {
-        //
-        $product = Product::find($id);
+        // 抓到產品的資料，含關聯的類型、其他圖片
+        $product = Product::with('productType', 'productImgs')->find($id);
+
+        // 刪除主要圖片
         File::delete(public_path($product->img));
         $product->delete();
+
+        // 刪除每一張的其他圖片
+        foreach ($product->productImgs as $subImg ) {
+            File::delete(public_path($subImg->img));
+            $subImg->delete();
+        }
+
         return redirect('admin/product');
     }
 
