@@ -23,7 +23,7 @@
             <tbody>
                 @foreach ($products as $product)
                 <tr>
-                    <td>{{$product->type_id}}</td>
+                    <td>{{$product->productType->name}}</td>
                     <td>{{$product->name}}</td>
                     <td>{{$product->description}}</td>
                     <td><img src="{{$product->img}}" alt="" width="200px"></td>

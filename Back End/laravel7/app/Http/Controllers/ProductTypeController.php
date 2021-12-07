@@ -15,7 +15,7 @@ class ProductTypeController extends Controller
     public function index()
     {
         //
-        $productTypes = ProductType::get();
+        $productTypes = ProductType::with('products')->get();
         return view('admin.product.type.index', compact('productTypes'));
     }
 
@@ -47,7 +47,7 @@ class ProductTypeController extends Controller
     public function edit($id)
     {
         //
-        $productType = ProductType::find($id);
+        $productType = ProductType::with('products')->find($id);
         return view('admin.product.type.edit', compact('productType'));
     }
 

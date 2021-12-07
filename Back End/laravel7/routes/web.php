@@ -52,6 +52,7 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         Route::get('/edit/{id}', 'ProductController@edit'); // R讀
         Route::post('/update/{id}', 'ProductController@update'); // U改
         Route::get('/delete/{id}', 'ProductController@delete'); // D刪
+        Route::post('/delete_img', 'ProductController@delete_img');// 刪除多圖檔中的單一圖檔
 
         // 產品類別
         Route::prefix('type')->group(function () {

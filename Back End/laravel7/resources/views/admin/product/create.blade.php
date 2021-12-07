@@ -29,8 +29,12 @@
                 <textarea name="description" id="description" cols="30" rows="10"></textarea>
             </div>
             <div class="form-group">
-                <label for="img">圖片</label>
+                <label for="img">主要圖片</label>
                 <input type="file" accept="image/*" name="img" id="img">
+            </div>
+            <div class="form-group">
+                <label for="imgs">其他圖片</label>
+                <input type="file" accept="image/*" name="imgs[]" id="imgs" multiple>
             </div>
             <div class="form-group">
                 <label for="price">價格</label>
