@@ -50,10 +50,10 @@ var SY_goodgoodEat_Products = [
         tag1: 'drink'
     }
 ]
-
+console.log(SY_goodgoodEat_Products);
 let contentView = document.querySelector('.content')
 
-function innerAll() {    
+function innerAll() {
     SY_goodgoodEat_Products.forEach(product => {
         contentView.innerHTML +=
         `<div class="card">
@@ -65,13 +65,13 @@ function innerAll() {
                 <p>${product.content}</p>
                 <p>售價：${product.price}</p>
             </div>
-        </div>`        
-    });    
+        </div>`
+    });
 }
 
 innerAll()
 
-// * 寫好onclick要用到的function，但onclick在html上控制 
+// * 寫好onclick要用到的function，但onclick在html上控制
 // function foodList(item) {
 //     contentView.innerHTML = ''
 //     if (item === 'all') {
@@ -89,17 +89,17 @@ innerAll()
 //                         <p>${product.content}</p>
 //                         <p>售價：${product.price}</p>
 //                     </div>
-//                 </div>`        
-//             }; 
+//                 </div>`
+//             };
 //         });
 //     }
 // }
 
 let navBtns = document.querySelectorAll('li')
 
-navBtns.forEach(btn => {            
+navBtns.forEach(btn => {
     let type = btn.getAttribute('data-type');
-        
+
     btn.addEventListener('click', function () {
         contentView.innerHTML = ''
         if (type === 'all') {
@@ -117,21 +117,19 @@ navBtns.forEach(btn => {
                             <p>${product.content}</p>
                             <p>售價：${product.price}</p>
                         </div>
-                    </div>`        
-                }; 
+                    </div>`
+                };
             });
         }
-        
-        clear()        
-        btn.classList.add('active')        
+
+        clear()
+        btn.classList.add('active')
 
     })
 });
 
 function clear() {
-    navBtns.forEach(btn => {        
+    navBtns.forEach(btn => {
         btn.classList.remove('active')
     });
 }
-
-
