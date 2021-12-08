@@ -1,14 +1,15 @@
 function weatherData(index) {
-    
+
     fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-B5282D9D-8FDD-40E9-AD48-B1DF3270465D')
     .then(function (response) {
         return response.json();
     })
     .then(function (weather) {
-        console.log(weather.records);
+        console.log(weather);
         let content = document.querySelector('.container')
         content.innerHTML = '';
         let locations = weather.records.location
+
         locations.forEach(location => {
             let city = location.locationName;
             let weatherDescrip = location.weatherElement[0].time[index].parameter.parameterName;
@@ -16,7 +17,7 @@ function weatherData(index) {
             let minTemp = location.weatherElement[2].time[index].parameter.parameterName;
             let maxTemp = location.weatherElement[4].time[index].parameter.parameterName;
             let comfort = location.weatherElement[3].time[index].parameter.parameterName;
-            
+
             let svg
             if (rain >= 85) {
                 svg = `<svg class="rainy_thunder" viewBox="0 10 100 100">
@@ -133,13 +134,13 @@ function weatherData(index) {
                 svg = `<svg class="sunny" viewBox="15 15 70 70">
                 <circle id="sun" cx="50" cy="50" r="20">
                     <animateTransform dur="5s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,50,50" to="360,50,50"></animateTransform>
-                </circle>        
+                </circle>
             </svg>`
             }
 
             content.innerHTML += `
             <div class="card">
-                <div class="img">                    
+                <div class="img">
                     ${svg}
                 </div>
                 <div class="textbox">
@@ -149,8 +150,13 @@ function weatherData(index) {
                     <p>最高低溫：${minTemp}度 ～ ${maxTemp}度</p>
                     <p>舒適度：${comfort}</p>
                 </div>
-            </div>`
+            </div>
+            `
         });
+        content.innerHTML += `
+        <div class="card-hiden"></div>
+        <div class="card-hiden"></div>
+        `
     })
 }
 
@@ -159,8 +165,8 @@ btns.forEach(btn => {
     btn.addEventListener('click', function () {
         clearActive();
         btn.classList.add('active');
-        
-        let type = btn.getAttribute('data-type');        
+
+        let type = btn.getAttribute('data-type');
         if (type === 'today') {
             weatherData(0);
         } else if( type === 'tomorrow'){
@@ -168,7 +174,7 @@ btns.forEach(btn => {
         } else {
             weatherData(2);
         }
-        
+
     })
 });
 

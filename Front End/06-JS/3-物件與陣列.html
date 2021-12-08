@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let a = ["aaa", 123, true]
+        console.log(a);
+        console.log(a[2]);
+
+        let b = {
+            "name":"benjamin",
+            "age":36,
+            "single":false,
+            "class":{
+                "student":50,
+                "male":30,
+                "female":20,
+            }
+        }
+
+        console.log(b);
+        console.log(b.name);
+        console.log(b['name']);
+        console.log(b.class.male);
+        console.log(b['class']['student']);
+
+        let c = {};
+        c['name'] = 'Allen';
+        c['age'] = 999;
+        c['okok'] = {};
+        c['okok'] ['xxx'] = 'this is a book'
+        console.log(c);
+        console.log(c['okok']['xxx']);
+
+    </script>
+</body>
+</html>

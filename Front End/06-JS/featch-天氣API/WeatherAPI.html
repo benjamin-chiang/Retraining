@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>    
+    <title>Document</title>
     <link rel="stylesheet" href="./WeatherAPI.css">
+    <style>
+        .card-hiden{
+            width: 23%;
+            height: 10px;
+
+        }
+    </style>
 </head>
 
 <body>
@@ -14,14 +21,14 @@
             <h1>台灣天氣概況</h1>
             <div class="btn" data-type="today">今日天氣</div>
             <div class="btn" data-type="tomorrow">明日白天</div>
-            <div class="btn" data-type="tom-night">明日晚上</div>            
+            <div class="btn" data-type="tom-night">明日晚上</div>
         </div>
     </header>
 
     <main>
         <div class="container">
             <!-- <div class="card">
-                <div class="img">                    
+                <div class="img">
                     <svg class="sunny" viewbox="15 15 70 70">
                         <circle id="sun" cx="50" cy="50" r="20">
                             <animateTransform dur="5s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,50,50"
@@ -37,10 +44,10 @@
                     <p>舒適度：${comfort}</p>
                 </div>
             </div>             -->
-        </div>            
     </main>
-    
-    
+
+
+
     <script src="./WeatherAPI.js"></script>
 </body>
 </html>

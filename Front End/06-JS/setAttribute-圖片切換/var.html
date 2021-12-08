@@ -25,14 +25,14 @@
         img{
             height: 300px;
         }
-        
+
     </style>
 </head>
 
 <body>
     <div class="box"></div>
     <img id='img-dog' src="./dog.jpg" alt="">
-    
+
     <script>
         let boxBtn = document.querySelector('.box');
         boxBtn.addEventListener('click',function () {
@@ -41,26 +41,24 @@
 
             // 增加div class的類別
             boxBtn.classList.add('change');
-
             boxBtn.innerHTML = 'Hello world!';
-            
-            // 提問：為甚麼style、innerHTML用的是等號賦值，而classList.add用的是括號，什麼時候該用等號？什麼時候應該用括號？
+
         });
-        
+
         let imgDog = document.querySelector('#img-dog');
-        let imgCat = './cat.jpg'        
-        imgDog.addEventListener('click',function () {            
+        let imgCat = './cat.jpg'
+        imgDog.addEventListener('click',function () {
             if (imgDog.getAttribute('src') === './dog.jpg') {
                 console.log(imgDog.getAttribute('src'));
                 console.log(imgDog.src);
-                imgDog.src = imgCat                                
-            } else {                
+                imgDog.src = imgCat
+            } else {
                 // imgDog.src = './dog.jpg'
-                imgDog.setAttribute('src', './dog.jpg')                
+                imgDog.setAttribute('src', './dog.jpg')
             }
         })
 
     </script>
-    
+
 </body>
 </html>
