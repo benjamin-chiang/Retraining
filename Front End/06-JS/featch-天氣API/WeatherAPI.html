@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./WeatherAPI.css">
     <style>
-        .card-hiden{
+        .card-hiden {
             width: 23%;
             height: 10px;
 
@@ -49,5 +50,17 @@
 
 
     <script src="./WeatherAPI.js"></script>
+    
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".card"), {
+            max: 25,
+            speed: 400
+        });
+
+        //It also supports NodeList
+        VanillaTilt.init(document.querySelectorAll(".card"));
+    </script>
 </body>
+
 </html>
