@@ -22,10 +22,21 @@ class FrontController extends Controller
         return view('front.news.content', compact('newsDetail'));
     }
 
-    public function productIndex()
-    {
-        $products = Product::with('ProductType')->get();                
-        return view('front.product.index', compact('products'));
+    public function productIndex(Request $request)
+    {        
+        $typeId = $request->typeId;
+        $productTypes = ProductType::get();
+        // 如果請求的資料帶有typeId，
+        if ($typeId) {
+            // 則用where找到products資料表中，所有相同type_id欄位的值，並取出來
+            $products = Product::where('type_id',$typeId)->get();
+
+            // 如果請求的資料沒有typeID，則取出所有資料
+        } else {
+            $products = Product::get();
+        }
+
+        return view('front.product.index', compact('products', 'productTypes'));
     }
 
     public function productContent($id)

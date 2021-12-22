@@ -148,6 +148,7 @@ class ProductController extends Controller
         
         // 刪除整筆資料
         $product->delete();
+        
         return redirect('admin/product');
     }
 

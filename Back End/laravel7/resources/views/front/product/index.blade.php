@@ -14,8 +14,10 @@
 </section>
 <section class="container">
   <a href="/product" class="btn btn-success">全部</a>
-  
-  <a href="/product" class="btn btn-success">123</a>
+  @foreach ($productTypes as $type)
+  <a href="/product?typeId={{$type->id}}" class="btn btn-success">{{$type->name}}</a>
+  @endforeach
+
 
   <ul style="list-style-type:none">
     @foreach ($products as $product)
@@ -32,7 +34,7 @@
     </li>
     @endforeach
   </ul>
-  </section>
+</section>
 
 @endsection
 
