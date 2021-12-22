@@ -55,15 +55,18 @@ class ProductController extends Controller
         $product = Product::create($requestData);
 
         $imgs = $request->file('imgs');
-        foreach ($imgs as $img) {
-            // 將檔案儲存到myfile內的路徑
-            $path = Storage::disk('myfile')->putFile('product', $img);
-            // 取得檔案在public內的路徑
-            $publicPath = Storage::disk('myfile')->url($path);
-            ProductImg::create([
-                'product_id'=>$product->id,
-                'img'=>$publicPath
-            ]);
+        
+        if ($imgs) {            
+            foreach ($imgs as $img) {
+                // 將檔案儲存到myfile內的路徑
+                $path = Storage::disk('myfile')->putFile('product', $img);
+                // 取得檔案在public內的路徑
+                $publicPath = Storage::disk('myfile')->url($path);
+                ProductImg::create([
+                    'product_id'=>$product->id,
+                    'img'=>$publicPath
+                ]);
+            }
         }
 
         return redirect('/admin/product');
@@ -135,14 +138,15 @@ class ProductController extends Controller
 
         // 刪除主要圖片
         File::delete(public_path($product->img));
-        $product->delete();
-
+        
         // 刪除每一張的其他圖片
         foreach ($product->productImgs as $subImg ) {
             File::delete(public_path($subImg->img));
             $subImg->delete();
         }
-
+        
+        // 刪除整筆資料
+        $product->delete();
         return redirect('admin/product');
     }
 
