@@ -41,6 +41,8 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 Route::prefix('product')->group(function () {
     Route::get('/', 'FrontController@productIndex');
     Route::get('/content/{id}', 'FrontController@productContent');
+    // 可帶可不帶的參數後面加?，用斜線接資料的話，需要放最下面，放前面的話，會執行到那列就停止，content之類的就吃不到資料
+    // Route::get('/{typeId?}', 'FrontController@productIndex');
 });
 
 // 產品列表-後端
