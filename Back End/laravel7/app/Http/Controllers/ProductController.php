@@ -54,8 +54,8 @@ class ProductController extends Controller
         }
         $product = Product::create($requestData);
 
-        $imgs = $request->file('imgs');
-        
+        $imgs = $request->file('imgs');        
+        // foreach在null下無法運行，所以加入if判斷，若imgs有檔案才跑forceach，若無檔案則不跑
         if ($imgs) {            
             foreach ($imgs as $img) {
                 // 將檔案儲存到myfile內的路徑
@@ -111,7 +111,8 @@ class ProductController extends Controller
         Product::find($id)->update($requestUpdate);
 
         $imgs = $request->file('imgs');
-        foreach ($imgs as $img) {
+        // 另一種不使用if判斷的方式，直接用??設一個空陣列跑foreach
+        foreach ($imgs??[] as $img) {
             // 將檔案儲存到myfile內的路徑
             $path = Storage::disk('myfile')->putFile('product', $img);
             // 取得檔案在public內的路徑

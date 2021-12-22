@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\News;
 use App\Product;
+use App\ProductType;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
@@ -23,7 +24,7 @@ class FrontController extends Controller
 
     public function productIndex()
     {
-        $products = Product::get();
+        $products = Product::with('ProductType')->get();                
         return view('front.product.index', compact('products'));
     }
 

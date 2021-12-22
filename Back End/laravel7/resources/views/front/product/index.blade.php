@@ -12,7 +12,11 @@
   <i class="far fa-tshirt d-flex justify-content-center mb-3"></i>
   <h2 class="text-center">最新商品</h2>
 </section>
-<section>
+<section class="container">
+  <a href="/product" class="btn btn-success">全部</a>
+  
+  <a href="/product" class="btn btn-success">123</a>
+
   <ul style="list-style-type:none">
     @foreach ($products as $product)
     <li>
