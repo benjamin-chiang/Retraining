@@ -1,4 +1,4 @@
- <?php
+<?php
 
 namespace App\Http\Controllers;
 
@@ -54,29 +54,8 @@ class ProductController extends Controller
         }
         $product = Product::create($requestData);
 
-<<<<<<< HEAD
         $imgs = $request->file('imgs');
-        // 因沒有上傳其他圖片，所以imgs會是null，而foreach在null狀態是無法跑的，故在imgs後面用??帶入條件，若imgs為null，則執行後面預設值給予一個陣列
-        foreach ($imgs ??[] as $img) {
-=======
-        $imgs = $request->file('imgs');        
-        // 用if判斷其他圖片是否有檔案，若沒有變更檔案dd($imgs)會出現null，而null是沒有辦法跑foreach
-        // if ($request->imgs) {
-        //     foreach ($imgs as $img) {
-        //         // 將檔案儲存到myfile內的路徑
-        //         $path = Storage::disk('myfile')->putFile('product', $img);
-        //         // 取得檔案在public內的路徑
-        //         $publicPath = Storage::disk('myfile')->url($path);
-        //         ProductImg::create([
-        //             'product_id'=>$product->id,
-        //             'img'=>$publicPath
-        //         ]);
-        //     }            
-        // }
-        
-        // php ?? 前先執行，若前沒有，則執行??後面的預設值
-        foreach ($imgs ?? [] as $img) {
->>>>>>> 2c249d05fc6cb3ddac3247901f45143510c804d0
+        foreach ($imgs as $img) {
             // 將檔案儲存到myfile內的路徑
             $path = Storage::disk('myfile')->putFile('product', $img);
             // 取得檔案在public內的路徑
@@ -85,7 +64,7 @@ class ProductController extends Controller
                 'product_id'=>$product->id,
                 'img'=>$publicPath
             ]);
-        } 
+        }
 
         return redirect('/admin/product');
     }
@@ -123,31 +102,24 @@ class ProductController extends Controller
             File::delete(public_path($product->img));
             $file = $request->file('img');
             $path = Storage::disk('myfile')->putFile('product', $file);
-            $requestUpdate['img'] = Storage::disk('myfile')->url($path);            
-        }        
+            $requestUpdate['img'] = Storage::disk('myfile')->url($path);
+            // dd($requestUpdate);
+        }
         Product::find($id)->update($requestUpdate);
 
-<<<<<<< HEAD
         $imgs = $request->file('imgs');
-        if ($request->imgs) {
-            foreach ($imgs as $img) {
-=======
-        $imgs = $request->file('imgs');        
-        if ($request->imgs) {
-            foreach ($imgs as $img) {            
->>>>>>> 2c249d05fc6cb3ddac3247901f45143510c804d0
-                // 將檔案儲存到myfile內的路徑
-                $path = Storage::disk('myfile')->putFile('product', $img);
-                // 取得檔案在public內的路徑
-                $publicPath = Storage::disk('myfile')->url($path);
-                ProductImg::create([
-                    'product_id'=>$product->id,
-                    'img'=>$publicPath
-                ]);
-            }            
+        foreach ($imgs as $img) {
+            // 將檔案儲存到myfile內的路徑
+            $path = Storage::disk('myfile')->putFile('product', $img);
+            // 取得檔案在public內的路徑
+            $publicPath = Storage::disk('myfile')->url($path);
+            ProductImg::create([
+                'product_id'=>$product->id,
+                'img'=>$publicPath
+            ]);
         }
 
-        return redirect('/admin/product');
+        return redirect('admin/product');
     }
 
     /**
@@ -163,19 +135,15 @@ class ProductController extends Controller
 
         // 刪除主要圖片
         File::delete(public_path($product->img));
-        
+        $product->delete();
+
         // 刪除每一張的其他圖片
         foreach ($product->productImgs as $subImg ) {
             File::delete(public_path($subImg->img));
             $subImg->delete();
         }
-        // 刪除整筆資料
-        $product->delete();
-<<<<<<< HEAD
+
         return redirect('admin/product');
-=======
-        return redirect('/admin/product');
->>>>>>> 2c249d05fc6cb3ddac3247901f45143510c804d0
     }
 
     public function delete_img(Request $request)

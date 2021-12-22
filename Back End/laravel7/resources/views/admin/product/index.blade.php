@@ -32,9 +32,8 @@
                         <a href="/admin/product/edit/{{$product->id}}" type="submit" class="btn btn-success btn-sm" >編輯</a>
 
                         <button type="submit" class="btn btn-danger btn-sm delete-btn" data-id="#delete_{{$product->id}}">刪除</button>
-                        <form id="delete_{{$product->id}}" action="/admin/product/delete/{{$product->id}}" method="get">
-                            @csrf
-                        </form>
+                        <form id="delete_{{$product->id}}" action="/admin/product/delete/{{$product->id}}" method="get"></form>
+                        @csrf
                     </td>
                 </tr>
 
