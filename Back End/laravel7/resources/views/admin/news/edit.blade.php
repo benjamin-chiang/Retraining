@@ -2,6 +2,7 @@
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('/css/index.css') }}">
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 @endsection
 
 @section('main')
@@ -28,7 +29,7 @@
             </div>
             <div class="form-group">
                 <label for="content">內容</label>
-                <textarea name="content" id="content" cols="30" rows="10">{{$news->content}}</textarea>
+                <textarea name="content" id="content" cols="30" rows="50">{{$news->content}}</textarea>
             </div>
             <button type="submit">修改</button>
         </form>
@@ -36,5 +37,10 @@
 @endsection
 
 @section('js')
-
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#content').summernote();
+        });
+    </script>
 @endsection

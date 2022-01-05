@@ -33,7 +33,7 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         // 將編輯後的最新消息更新(寫入)
         Route::post('/update/{id}', 'NewsController@update'); // U改
         // 刪除一條最新消息
-        Route::get('/delete/{id}', 'NewsController@delete'); // D刪
+        Route::post('/delete/{id}', 'NewsController@delete'); // D刪
     });
 });
 
@@ -51,7 +51,7 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         Route::post('/store', 'ProductController@store'); // C增
         Route::get('/edit/{id}', 'ProductController@edit'); // R讀
         Route::post('/update/{id}', 'ProductController@update'); // U改
-        Route::get('/delete/{id}', 'ProductController@delete'); // D刪
+        Route::post('/delete/{id}', 'ProductController@delete'); // D刪
         Route::post('/delete_img', 'ProductController@delete_img');// 刪除多圖檔中的單一圖檔
 
         // 產品類別

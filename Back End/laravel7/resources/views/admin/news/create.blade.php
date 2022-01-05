@@ -1,13 +1,15 @@
 @extends('layouts.app')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('/css/index.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/index.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+
 @endsection
 
 @section('main')
     <div class="container p-5">
         {{-- 只要使用POST就必須有@csrf --}}
-        <form action="/admin/news/store" method="POST" class="mx-auto" enctype="multipart/form-data" >
+        <form action="/admin/news/store" method="POST" class="mx-auto" enctype="multipart/form-data">
             @csrf
             <h1>新增最新消息</h1>
             <div class="form-group">
@@ -25,7 +27,7 @@
             </div>
             <div class="form-group">
                 <label for="content">內容</label>
-                <textarea name="content" id="content" cols="30" rows="10"></textarea>
+                <textarea name="content" id="content" cols="20" rows="30"></textarea>
             </div>
             <button type="submit">送出</button>
         </form>
@@ -33,5 +35,10 @@
 @endsection
 
 @section('js')
-
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#content').summernote();
+        });
+    </script>
 @endsection

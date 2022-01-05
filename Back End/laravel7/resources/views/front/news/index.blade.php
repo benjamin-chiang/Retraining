@@ -50,8 +50,8 @@
                         <button type="submit" class="delete btn btn-danger" data-id="{{$news->id}}">刪除</button>
                     </div> --}}
                     <figcaption><a href="/news/content/{{$news->id}}">{{ $news->title }}</a></figcaption>
-                    <span>{{ $news->date }}</span>
-                    <div>{{ $news->content }}</div>
+                    <span>{{$news->date}}</span>
+                    <div>{!!$news->content!!}</div>
                     <div>瀏覽人數：{{$news->views}}</div>
                 </div>
             </article>

@@ -25,12 +25,14 @@
                     <td>{{$news->title}}</td>
                     <td>{{$news->date}}</td>
                     <td><img src="{{$news->img}}" alt="" width="200px"></td>
-                    <td>{{$news->content}}</td>
+                    <td>{!!$news->content!!}</td>
                     <td>
                         <a href="/admin/news/edit/{{$news->id}}" type="submit" class="btn btn-success btn-sm" >編輯</a>
 
                         <button type="submit" class="btn btn-danger btn-sm delete-btn" data-id="#delete_{{$news->id}}">刪除</button>
-                        <form id="delete_{{$news->id}}" action="/admin/news/delete/{{$news->id}}" method="get"></form>
+                        <form id="delete_{{$news->id}}" action="/admin/news/delete/{{$news->id}}" method="post">
+                            @csrf
+                        </form>
                     </td>
                 </tr>
 
