@@ -12,6 +12,7 @@
         <table id="myTable" class="display">
             <thead>
                 <tr>
+                    <th>資料表id</th>
                     <th>標題</th>
                     <th>日期</th>
                     <th>圖片</th>
@@ -22,6 +23,7 @@
             <tbody>
                 @foreach ($newsData as $news)
                 <tr>
+                    <td class="text-center" width="60px">{{$news->id}}</td>
                     <td>{{$news->title}}</td>
                     <td>{{$news->date}}</td>
                     <td><img src="{{$news->img}}" alt="" width="200px"></td>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-TW">
 
 <head>
     <!-- Required meta tags -->
@@ -41,8 +41,35 @@
                         </li>
                         <li class="nav-item  d-flex">
                             <a class="nav-link active px-2" href="cart-1.html"><i class="fas fa-shopping-cart fa-2x"></i></a>
-                            <a class="nav-link active px-2" href="/admin"><i class="fas fa-user-circle fa-2x "></i></a>
+                            {{-- <a class="nav-link active px-2" href="/admin"><i class="fas fa-user-circle fa-2x "></i></a> --}}
                         </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}"><i class="fas fa-user-circle fa-2x "></i></a>
+                            </li>                           
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                            document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                        class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
                     </ul>
                 </div>
             </div>
@@ -68,6 +95,7 @@
                                 .cls-2 {
                                     fill: #fff;
                                 }
+
                             </style>
                         </defs>
                         <title>資產 2</title>
@@ -87,58 +115,74 @@
             <div
                 class="right-block d-flex  flex-wrap align-items-center justify-content-center col-12 col-md-8  col-lg-8 ">
                 <ul class="list-group col-12 mb-4 col-md-6 col-lg-3 align-items-center">CATEGORIES
-                    <li class="list-group-item border-0 ps-0 py-0"><a href="" class="text-decoration-none text-dark">First
+                    <li class="list-group-item border-0 ps-0 py-0"><a href=""
+                            class="text-decoration-none text-dark">First
                             Link</a>
                     </li>
-                    <li class="list-group-item border-0 ps-0 py-0"><a href="" class="text-decoration-none text-dark">Second
+                    <li class="list-group-item border-0 ps-0 py-0"><a href=""
+                            class="text-decoration-none text-dark">Second
                             Link</a>
                     </li>
-                    <li class="list-group-item border-0 ps-0 py-0"><a href="" class="text-decoration-none text-dark">Third
+                    <li class="list-group-item border-0 ps-0 py-0"><a href=""
+                            class="text-decoration-none text-dark">Third
                             Link</a>
                     </li>
-                    <li class="list-group-item border-0 ps-0 py-0"><a href="" class="text-decoration-none text-dark">Fourth
-                            Link</a>
-                    </li>
-                </ul>
-                <ul class="list-group col-12 mb-4 col-md-6 col-lg-3 align-items-center">CATEGORIES
-                    <li class="list-group-item border-0 ps-0 py-0"><a href="" class="text-decoration-none text-dark">First
-                            Link</a>
-                    </li>
-                    <li class="list-group-item border-0 ps-0 py-0"><a href="" class="text-decoration-none text-dark">Second
-                            Link</a>
-                    </li>
-                    <li class="list-group-item border-0 ps-0 py-0"><a href="" class="text-decoration-none text-dark">Third
-                            Link</a>
-                    </li>
-                    <li class="list-group-item border-0 ps-0 py-0"><a href="" class="text-decoration-none text-dark">Fourth
+                    <li class="list-group-item border-0 ps-0 py-0"><a href=""
+                            class="text-decoration-none text-dark">Fourth
                             Link</a>
                     </li>
                 </ul>
                 <ul class="list-group col-12 mb-4 col-md-6 col-lg-3 align-items-center">CATEGORIES
-                    <li class="list-group-item border-0 ps-0 py-0"><a href="" class="text-decoration-none text-dark">First
+                    <li class="list-group-item border-0 ps-0 py-0"><a href=""
+                            class="text-decoration-none text-dark">First
                             Link</a>
                     </li>
-                    <li class="list-group-item border-0 ps-0 py-0"><a href="" class="text-decoration-none text-dark">Second
+                    <li class="list-group-item border-0 ps-0 py-0"><a href=""
+                            class="text-decoration-none text-dark">Second
                             Link</a>
                     </li>
-                    <li class="list-group-item border-0 ps-0 py-0"><a href="" class="text-decoration-none text-dark">Third
+                    <li class="list-group-item border-0 ps-0 py-0"><a href=""
+                            class="text-decoration-none text-dark">Third
                             Link</a>
                     </li>
-                    <li class="list-group-item border-0 ps-0 py-0"><a href="" class="text-decoration-none text-dark">Fourth
+                    <li class="list-group-item border-0 ps-0 py-0"><a href=""
+                            class="text-decoration-none text-dark">Fourth
+                            Link</a>
+                    </li>
+                </ul>
+                <ul class="list-group col-12 mb-4 col-md-6 col-lg-3 align-items-center">CATEGORIES
+                    <li class="list-group-item border-0 ps-0 py-0"><a href=""
+                            class="text-decoration-none text-dark">First
+                            Link</a>
+                    </li>
+                    <li class="list-group-item border-0 ps-0 py-0"><a href=""
+                            class="text-decoration-none text-dark">Second
+                            Link</a>
+                    </li>
+                    <li class="list-group-item border-0 ps-0 py-0"><a href=""
+                            class="text-decoration-none text-dark">Third
+                            Link</a>
+                    </li>
+                    <li class="list-group-item border-0 ps-0 py-0"><a href=""
+                            class="text-decoration-none text-dark">Fourth
                             Link</a>
                     </li>
                 </ul>
                 <ul class="list-group col-12  mb-4 col-md-6 col-lg-3 align-items-center">CATEGORIES
-                    <li class="list-group-item border-0 ps-0 py-0"><a href="" class="text-decoration-none text-dark">First
+                    <li class="list-group-item border-0 ps-0 py-0"><a href=""
+                            class="text-decoration-none text-dark">First
                             Link</a>
                     </li>
-                    <li class="list-group-item border-0 ps-0 py-0"><a href="" class="text-decoration-none text-dark">Second
+                    <li class="list-group-item border-0 ps-0 py-0"><a href=""
+                            class="text-decoration-none text-dark">Second
                             Link</a>
                     </li>
-                    <li class="list-group-item border-0 ps-0 py-0"><a href="" class="text-decoration-none text-dark">Third
+                    <li class="list-group-item border-0 ps-0 py-0"><a href=""
+                            class="text-decoration-none text-dark">Third
                             Link</a>
                     </li>
-                    <li class="list-group-item border-0 ps-0 py-0"><a href="" class="text-decoration-none text-dark">Fourth
+                    <li class="list-group-item border-0 ps-0 py-0"><a href=""
+                            class="text-decoration-none text-dark">Fourth
                             Link</a>
                     </li>
                 </ul>
@@ -147,7 +191,8 @@
         <div class="full d-flex bg-light">
             <div class="container-lg">
                 <div class="under-footer d-flex  w-100 m-3 flex-column  flex-sm-row align-items-center">
-                    <p class="m-0">© 2020 Tailblocks —<a href="" class="text-decoration-none text-dark"> @knyttneve</a>
+                    <p class="m-0">© 2020 Tailblocks —<a href="" class="text-decoration-none text-dark">
+                            @knyttneve</a>
                     </p>
                     <div class="svg-block ms-sm-auto ">
                         <a href="" class="text-decoration-none text-dark">
@@ -188,14 +233,21 @@
     <!-- Optional JavaScript; choose one of the two! -->
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
+    </script>
     -->
+    <script src="{{ asset('js/app.js') }}"></script>
     @yield('js')
 </body>
 
