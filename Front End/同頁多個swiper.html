@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .swiper1 {
+            width: 100%;
+            height: 300px;
+            background-color: grey;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .swiper2 {
+            width: 100%;
+            height: 300px;
+            background-color: darkgreen;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            position: relative;
+        }
+        .note{
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row py-3">
+            <div class="note">
+                <h2>同頁多個swiper使用及pagination、navigation的控制</h2>
+                <ol>
+                    <h3>HTML</h3>
+                    <li>
+                        分別將第一個swiper的class改成：swiper1、swiper2。
+                    </li>
+                    <li class="mb-3">
+                        為了易於辨識，可以先將第二組的navigation用inline style的方式改成其他顏色
+                    </li>
+                    <h3>CSS</h3>
+                    <li class="mb-3">
+                        CSS中 .swier1及 .swiper2中，除了寬高、顏色之外，需要設定一個<span style="color: red;">position: relative</span>。<br>
+                        因為pagination、navigation在js中會自動找到重新選取的swiper區塊，但css的設定不會，<br>
+                        若在Chrome中檢查pagination及navigation，就會發現他們預設了一個position: absolute的屬性，<br>
+                        所以並非是js的設定有問題，而是兩個區塊的button重疊在一起了，導致點選到的都是最後一個區塊的上下頁按鈕。
+                    </li>
+                    <h3>JS</h3>
+                    <li>
+                        修改初始化const swiper的部分，分別命名為<br>
+                        const swiper1 = new Swiper('.swiper1',...<br>
+                        const swiper2 = new Swiper('.swiper2',...
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mb-5">
+            <div class="swiper1">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide d-flex justify-content-center align-items-center"><span>Slide 1</span>
+                    </div>
+                    <div class="swiper-slide d-flex justify-content-center align-items-center"><span>Slide 2</span>
+                    </div>
+                    <div class="swiper-slide d-flex justify-content-center align-items-center"><span>Slide 3</span>
+                    </div>
+                    <div class="swiper-slide d-flex justify-content-center align-items-center"><span>Slide 4</span>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="swiper2">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide d-flex justify-content-center align-items-center"><span>Slide 1</span>
+                    </div>
+                    <div class="swiper-slide d-flex justify-content-center align-items-center"><span>Slide 2</span>
+                    </div>
+                    <div class="swiper-slide d-flex justify-content-center align-items-center"><span>Slide 3</span>
+                    </div>
+                    <div class="swiper-slide d-flex justify-content-center align-items-center"><span>Slide 4</span>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev" style="color: yellow;"></div>
+                <div class="swiper-button-next" style="color: yellow;"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        const swiper1 = new Swiper('.swiper1', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+        const swiper2 = new Swiper('.swiper2', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            cubeEffect: {
+                shadow: true,
+                slideShadows: true,
+                shadowOffset: 20,
+                shadowScale: 0.94,
+            },
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+</body>
+
+</html>

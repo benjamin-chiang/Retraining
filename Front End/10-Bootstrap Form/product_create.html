@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+
+<body>
+    <main class="container my-3">
+        <div class="row">
+            <div class="col-8 mx-auto">
+                <form action="" method="post">
+                    <div class="form-group">
+                        <label for="name">商品名稱</label>
+                        <input type="text" class="form-control" id="name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">商品描述</label>
+                        <textarea name="description" id="description" class="form-control" rows="5"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="img">主要圖片</label>
+                        <input type="file" class="form-control-file" id="img" name="img">
+                    </div>                    
+                    <div class="form-group">
+                        <label for="price">價格</label>
+                        <input type="text" class="form-control" id="price" name="price">
+                    </div>
+                    <div class="form-group">
+                        <label for="count">數量</label>
+                        <input type="text" class="form-control" id="count" name="count">
+                    </div>
+                    <button type="submit" class="btn btn-primary">送出</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
