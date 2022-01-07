@@ -16,7 +16,7 @@ class RoleType
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::user()->name == 'Benjamin') {
+        if (Auth::user()->name == 'benjamin') {
             return $next($request);
         }
         // 強制登出

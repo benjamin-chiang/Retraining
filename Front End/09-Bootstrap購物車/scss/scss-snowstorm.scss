@@ -1,0 +1,47 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #002041;
+}
+
+@for $i from 1 through 30 {
+    // through 包含終值 1 ~ 30，總共執行 30 次     而 to 不包含終值 1 ~ 29
+	// 在 css 選擇器上變數的使用方式 #{$變數名稱}
+    .snow-#{$i}{
+        position: absolute;
+        // 在寫 scss 時可以省略 calc() 直接寫計算式
+        top: random(150) * 1px;         //random裡面填數字就是 1~那個數字亂數  沒填就是從0 ~ 0.99999取亂數
+        left: 30px * $i;
+        width: random(5) *1px;
+        height: random(5) *1px;
+        border-radius: 50%;
+        // background-color: rgb(224, 236, 245);
+        background-color: lighten(rgb(224, 236, 245), 15%);
+        animation-name: drop-#{$i};
+        animation-duration: random() * 3s;
+        animation-iteration-count: infinite;
+        animation-delay: random()* 3s;
+        
+    }
+}
+
+@for $i from 1 through 30 {
+
+    @keyframes drop-#{$i} {
+        0%{
+            opacity: 0;
+            transform: translate(0, 0);
+        }
+        50%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+            transform: translate(500px,300+random()*300px);
+        }
+    }
+
+    
+}
