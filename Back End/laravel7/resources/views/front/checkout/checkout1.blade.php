@@ -112,7 +112,7 @@
                     <div class="d-flex justify-content-between mt-4 pt-4">
                         <a href="/product" class="btn px-5 backToShop_btn"><i
                                 class="fas fa-arrow-left"></i> 返回購物</a>
-                        <a href="/shoppingCart/payment" class="btn btn-lg px-5 nextStep_btn">下一步</a>
+                        <a href="/checkout/payment" class="btn btn-lg px-5 nextStep_btn">下一步</a>
                     </div>
                 </div>
             </div>

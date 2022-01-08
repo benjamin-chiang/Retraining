@@ -490,38 +490,45 @@
         </div>
     </div>
 </section>
-<section class="position-relative mb-3">
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d14566.398584717037!2d120.654491!3d24.11557075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgooglemap!5e0!3m2!1szh-TW!2stw!4v1631860947676!5m2!1szh-TW!2stw"
-        width="100%" height="700" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    <form action="/contact_us/store" method="post">
-        @csrf
-        <div id="contact-us"
-            class="position-card position-absolute top-50 end-0 translate-middle-y bg-white me-5 p-4 h-80 col-10  col-md-5  col-xl-3 rounded">
-            <h4 class="">聯絡我們</h4>
-            <div class="name d-flex flex-wrap mb-3">
-                <label for="name" class="form-label">姓名</label>
-                <input type="text" class="form-control" name="name" id="name">
+<section class="mb-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d14566.398584717037!2d120.654491!3d24.11557075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgooglemap!5e0!3m2!1szh-TW!2stw!4v1631860947676!5m2!1szh-TW!2stw"
+                    width="100%" height="600px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
-            <div class="email d-flex flex-wrap mb-3">
-                <label for="email" class="form-label">信箱</label>
-                <input type="email" class="form-control" name="email" id="email">
+            <div class="col-4 ">
+                <form action="/contact_us/store" method="post">
+                    @csrf
+                    <div id="contact-us">
+                        <h4 class="">聯絡我們</h4>
+                        <div class="name d-flex flex-wrap mb-3">
+                            <label for="name" class="form-label">姓名</label>
+                            <input type="text" class="form-control" name="name" id="name">
+                        </div>
+                        <div class="email d-flex flex-wrap mb-3">
+                            <label for="email" class="form-label">信箱</label>
+                            <input type="email" class="form-control" name="email" id="email">
+                        </div>
+                        <div class="phone d-flex flex-wrap mb-3">
+                            <label for="phone" class="form-label">電話</label>
+                            <input type="tel" class="form-control" name="phone" id="phone">
+                        </div>
+                        <div class="title d-flex flex-wrap mb-3">
+                            <label for="title" class="form-label">主旨</label>
+                            <input type="text" class="form-control" name="title" id="title">
+                        </div>
+                        <div class="message  d-flex flex-wrap h-25 mb-3">
+                            <label for="content" class="form-label">內文</label>
+                            <textarea class="form-control" id="content" name="content" rows="5"></textarea>                
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 mb-2">Button</button>
+                    </div>
+                </form>
             </div>
-            <div class="phone d-flex flex-wrap mb-3">
-                <label for="phone" class="form-label">電話</label>
-                <input type="tel" class="form-control" name="phone" id="phone">
-            </div>
-            <div class="title d-flex flex-wrap mb-3">
-                <label for="title" class="form-label">主旨</label>
-                <input type="text" class="form-control" name="title" id="title">
-            </div>
-            <div class="message  d-flex flex-wrap h-25 mb-3">
-                <label for="content" class="form-label">內文</label>
-                <textarea class="form-control" id="content" name="content" rows="5"></textarea>                
-            </div>
-            <button type="submit" class="btn btn-primary w-100 mb-2">Button</button>
         </div>
-    </form>
+    </div>
 </section>
 @endsection
 

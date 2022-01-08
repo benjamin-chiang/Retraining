@@ -109,8 +109,8 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-between mt-4 pt-4">
-                        <a href="/shoppingCart" class="btn btn-lg px-5 backStep_btn">上一步</a>
-                        <a href="/shoppingCart/information" class="btn btn-lg px-5 nextStep_btn">下一步</a>
+                        <a href="/checkout" class="btn btn-lg px-5 backStep_btn">上一步</a>
+                        <a href="/checkout/information" class="btn btn-lg px-5 nextStep_btn">下一步</a>
                     </div>
                 </div>
             </div>

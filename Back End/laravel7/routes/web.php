@@ -25,30 +25,37 @@ Route::prefix('product')->group(function () {
     Route::get('/content/{id}', 'FrontController@productContent');
 });
 
-// 前台-購物車
-Route::prefix('shoppingCart')->group(function ()
+// 前台-將商品存入購物車套件
+Route::prefix('shopping_cart')->group(function ()
+{
+    Route::post('/add', 'ShoppingCartController@add');
+    Route::get('/content', 'ShoppingCartController@content');
+});
+
+// 前台-結帳流程
+Route::prefix('checkout')->group(function ()
 {
     Route::get('/', function ()
     {
-        return view('front.shopping_cart.checkout1');
+        return view('front.checkout.checkout1');
     });
     Route::get('/payment', function ()
     {
-        return view('front.shopping_cart.checkout2');
+        return view('front.checkout.checkout2');
     });
     Route::get('/information', function ()
     {
-        return view('front.shopping_cart.checkout3');
+        return view('front.checkout.checkout3');
     });
     Route::get('/finish', function ()
     {
-        return view('front.shopping_cart.checkout4');
+        return view('front.checkout.checkout4');
     });
 });
 
 // 後台登入經過 middleware
 Auth::routes();
-// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 
 // 後台-最新消息
 Route::prefix('admin')->middleware('auth')->group(function () {
