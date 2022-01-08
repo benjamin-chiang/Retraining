@@ -9,8 +9,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>index</title>
+    <title>職訓課程練習前台頁面</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/index.css') }}">
     @yield('css')
 </head>
 
@@ -34,13 +35,13 @@
                             <a class="nav-link active" href="/product">Product</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link active" href="#">About</a>
+                            <a class="nav-link active" href="/#about_us">About</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link active" href="#contact-us">Contact</a>
+                            <a class="nav-link active" href="/#contact-us">Contact</a>
                         </li>
                         <li class="nav-item  d-flex">
-                            <a class="nav-link active px-2" href="cart-1.html"><i class="fas fa-shopping-cart fa-2x"></i></a>
+                            <a class="nav-link active px-2" href="/shoppingCart"><i class="fas fa-shopping-cart fa-2x"></i></a>
                             {{-- <a class="nav-link active px-2" href="/admin"><i class="fas fa-user-circle fa-2x "></i></a> --}}
                         </li>
                     </ul>
@@ -58,6 +59,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/admin">回後台</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                             document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
@@ -81,7 +83,7 @@
     </main>
 
     <footer>
-        <div class="container-xl d-flex py-5  mb-5 flex-wrap">
+        <div class="container-xl d-flex py-5  flex-wrap">
             <div
                 class="left-block mb-3 mb-md-0 d-flex flex-column align-items-center align-items-md-start justify-content-md-center mb-5 col-12 col-md-4 col-lg-4 text-center text-md-start">
                 <a class="text-decoration-none fs-3 mb-3" href="">
@@ -229,24 +231,12 @@
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- Optional JavaScript; choose one of the two! -->
+    </footer>    
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
-        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
-    </script>
-    -->
+    
     <script src="{{ asset('js/app.js') }}"></script>
     @yield('js')
 </body>

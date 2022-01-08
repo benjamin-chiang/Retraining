@@ -4,6 +4,7 @@ use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
+
 // 前台首頁
 Route::get('/', function () {
     return view('index');
@@ -24,9 +25,30 @@ Route::prefix('product')->group(function () {
     Route::get('/content/{id}', 'FrontController@productContent');
 });
 
-// 後台middle & 後台登入頁面
+// 前台-購物車
+Route::prefix('shoppingCart')->group(function ()
+{
+    Route::get('/', function ()
+    {
+        return view('front.shopping_cart.checkout1');
+    });
+    Route::get('/payment', function ()
+    {
+        return view('front.shopping_cart.checkout2');
+    });
+    Route::get('/information', function ()
+    {
+        return view('front.shopping_cart.checkout3');
+    });
+    Route::get('/finish', function ()
+    {
+        return view('front.shopping_cart.checkout4');
+    });
+});
+
+// 後台登入經過 middleware
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
 // 後台-最新消息
 Route::prefix('admin')->middleware('auth')->group(function () {

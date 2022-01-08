@@ -24,7 +24,7 @@
     <div class="px-3 pt-5 border-left">
       <h2 class="h1">{{$productDetail->name}}</h2>
       <p class="my-5 h3">Price：$ {{$productDetail->price}}</p>
-      <p class="content">{{$productDetail->content}}</p>
+      <p class="content">{{$productDetail->description}}</p>
     </div>
   </div>
 </section>

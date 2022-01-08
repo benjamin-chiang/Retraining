@@ -4,10 +4,11 @@
 <link rel="stylesheet" href="{{asset('css/products_list.css')}}">
 <link rel="stylesheet" href="{{ asset('css/index.css') }}">
 <style>
-  a{
+  a {
     color: gray;
     text-decoration: none;
   }
+
 </style>
 @endsection
 
@@ -23,19 +24,17 @@
   @endforeach
   <div class="row row-cols-lg-4 py-3">
     @foreach ($products as $product)
-    <div class="col-12 col-lg-3">
-      <div class="card h-100 p-3">
-        <a href="/product/content/{{$product->id}}">
-          <div class="pic mb-3">
-            <img src="{{asset($product->img)}}" class="w-100" max-height="259px">
-          </div>
-          <div class="text">
-            <p>{{$product->name}}</h2>
+    <div class="col-12 col-lg-3 card-group">
+      <a href="/product/content/{{$product->id}}">
+        <div class="card">
+          <img src="{{asset($product->img)}}" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">{{$product->name}}</h5>
             <p>${{$product->price}}</p>
+            <a href="" class="btn btn-primary">加入購物車</a>
           </div>
-        </a>
-        <div class="btn btn-primary">加入購物車</div>
-      </div>
+        </div>
+      </a>
     </div>
     @endforeach
   </div>
@@ -56,7 +55,6 @@
     @endforeach
   </ul> --}}
 </section>
-
 
 @endsection
 
