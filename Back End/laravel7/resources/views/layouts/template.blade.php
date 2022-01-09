@@ -40,8 +40,8 @@
                         <li class="nav-item ">
                             <a class="nav-link active" href="/#contact-us">Contact</a>
                         </li>
-                        <li class="nav-item  d-flex">
-                            <a class="nav-link active px-2" href="/checkout"><i class="fas fa-shopping-cart fa-2x"></i></a>
+                        <li class="nav-item  d-flex ">
+                            <a class="nav-link active px-2 " href="/shopping_cart/list"><i class="fas fa-shopping-cart fa-2x"></i></a>                           
                             {{-- <a class="nav-link active px-2" href="/admin"><i class="fas fa-user-circle fa-2x "></i></a> --}}
                         </li>
                         <li class="nav-item  d-flex">
@@ -82,6 +82,7 @@
     </header>
 
     <main>
+        <div id="app"></div>
         @yield('main')
     </main>
 

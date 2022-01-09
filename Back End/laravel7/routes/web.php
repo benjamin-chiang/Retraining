@@ -28,29 +28,9 @@ Route::prefix('product')->group(function () {
 // 前台-將商品存入購物車套件
 Route::prefix('shopping_cart')->group(function ()
 {
-    Route::post('/add', 'ShoppingCartController@add');
-    Route::get('/content', 'ShoppingCartController@content');
-});
-
-// 前台-結帳流程
-Route::prefix('checkout')->group(function ()
-{
-    Route::get('/', function ()
-    {
-        return view('front.checkout.checkout1');
-    });
-    Route::get('/payment', function ()
-    {
-        return view('front.checkout.checkout2');
-    });
-    Route::get('/information', function ()
-    {
-        return view('front.checkout.checkout3');
-    });
-    Route::get('/finish', function ()
-    {
-        return view('front.checkout.checkout4');
-    });
+    Route::get('/list', 'ShoppingCartController@list'); // index
+    Route::post('/add', 'ShoppingCartController@add'); // create
+    Route::post('/delete', 'ShoppingCartController@delete'); //destroy
 });
 
 // 後台登入經過 middleware
