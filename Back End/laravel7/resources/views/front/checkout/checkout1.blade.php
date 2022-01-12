@@ -46,7 +46,7 @@
                 </div>
                 <!-- 訂單明細 -->
                 <div class="mt-4 pt-4">
-                    <h3 class="mb-4">訂單明細</h3>
+                    <h3 class="mb-4">訂單明細</h3>                    
                     @foreach ($cartCollection as $product)
                     <div class="d-flex justify-content-between align-items-center mt-4 pt-4 order-item">
                         <div class="d-flex align-items-center order-item-info">

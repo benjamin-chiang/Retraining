@@ -9,7 +9,12 @@ use Illuminate\Http\Request;
 
 class FrontController extends Controller
 {
-    //
+    public function index()
+    {            
+        $newsDatas = News::get();
+        $productDatas = Product::get();
+        return view('index', compact('newsDatas', 'productDatas'));        
+    }
     public function newsIndex()
     {
         $newsData = News::get();

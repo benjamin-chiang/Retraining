@@ -6,9 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 
 // 前台首頁
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'FrontController@index');
 
 // 前台-聯絡我們
 Route::post('/contact_us/store', 'ContactUsController@store');
