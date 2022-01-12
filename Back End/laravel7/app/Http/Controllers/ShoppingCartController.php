@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 
 class ShoppingCartController extends Controller
@@ -43,8 +44,7 @@ class ShoppingCartController extends Controller
     }
 
     public function delete(Request $request)
-    {   
-        // 
+    {           
         if ($request->fetchProductId) {
             \Cart::remove($request->fetchProductId);
             return 'success';
@@ -52,4 +52,5 @@ class ShoppingCartController extends Controller
             return 'fail';
         }
     }    
+    
 }

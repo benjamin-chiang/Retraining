@@ -26,9 +26,26 @@ Route::prefix('product')->group(function () {
 // 前台-將商品存入購物車套件
 Route::prefix('shopping_cart')->group(function ()
 {
-    Route::get('/list', 'ShoppingCartController@list'); // index
-    Route::post('/add', 'ShoppingCartController@add'); // create
-    Route::post('/delete', 'ShoppingCartController@delete'); //destroy
+    // 去checkout01頁面，將放入購物車的商品，列表出來
+    Route::get('/list', 'ShoppingCartController@list'); 
+    // 在checkout01頁面，加減試算
+    Route::post('/add', 'ShoppingCartController@add');
+    // 刪除checkout01頁面上，購物車內的商品
+    Route::post('/delete', 'ShoppingCartController@delete'); 
+});
+
+// 前台-付款流程
+Route::prefix('checkout')->group(function ()
+{
+    // 查看目前session內所有的東西
+    Route::get('/', 'CheckoutController@sessionAll');
+    // 將checkout01頁面上的資料存入session，並return checkout02頁面
+    Route::post('/calc', 'CheckoutController@calc');
+    Route::get('/payway', 'CheckoutController@payway');
+    Route::get('/info', 'CheckoutController@info');
+
+
+    
 });
 
 // 後台登入經過 middleware
