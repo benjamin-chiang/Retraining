@@ -41,8 +41,9 @@ Route::prefix('checkout')->group(function ()
     Route::get('/', 'CheckoutController@sessionAll');
     // 將checkout01頁面上的資料存入session，並return checkout02頁面
     Route::post('/calc', 'CheckoutController@calc');
-    Route::get('/payway', 'CheckoutController@payway');
-    Route::get('/info', 'CheckoutController@info');
+    Route::post('/payway', 'CheckoutController@payway');
+    Route::post('/info', 'CheckoutController@info');
+    Route::post('/finish', 'CheckoutController@finish');
 
 
     

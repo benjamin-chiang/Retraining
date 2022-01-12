@@ -10,19 +10,21 @@ class CheckoutController extends Controller
     {   
         dd(session()->all());
     }
-    public function calc(Request $request)
+
+    public function payway(Request $request)
     {
         $qty = $request->all();        
         session(['productQty'=>$qty]);
-        return view('front.checkout.checkout2');
+        return view('front.checkout.checkout2');        
     }
-
-    public function payway()
+    
+    public function info(Request $request)
     {
+        dd($request->all());
         return view('front.checkout.checkout3');
     }
 
-    public function info()
+    public function finish()
     {
         return view('front.checkout.checkout4');
     }

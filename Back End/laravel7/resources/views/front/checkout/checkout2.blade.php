@@ -45,74 +45,75 @@
                     </div>
                 </div>
                 <!-- 付款方式 -->
-                <div class="mt-4 pt-4">
-                    <form action="" class="paymentMethod_form-group">
+                <form action="/checkout/info" method="POST" class="paymentMethod_form-group">
+                @csrf
+                    <div class="mt-4 pt-4">
                         <fieldset>
                             <legend>付款方式</legend>
                             <div class="form-check py-3 creditEardPayment ml-4">
                                 <label class="form-check-label d-flex align-items-center">
-                                    <input class="form-check-input" type="radio" name="paymentMethod" value="option1"
+                                    <input class="form-check-input" type="radio" name="paymentMethod" value="creditCard"
                                         checked>
                                     <span>信用卡付款</span>
                                 </label>
                             </div>
                             <div class="form-check py-3 networkATM ml-4">
                                 <label class="form-check-label d-flex align-items-center">
-                                    <input class="form-check-input" type="radio" name="paymentMethod" value="option2">
+                                    <input class="form-check-input" type="radio" name="paymentMethod"
+                                        value="internetATM">
                                     <span>網路 ATM</span>
                                 </label>
                             </div>
                             <div class="form-check py-3 convenienceStoreCode ml-4">
                                 <label class="form-check-label d-flex align-items-center">
-                                    <input class="form-check-input" type="radio" name="paymentMethod" value="option3">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" value="storeCode">
                                     <span>超商代碼</span>
                                 </label>
                             </div>
                         </fieldset>
-                    </form>
-                </div>
-                <!-- 運送方式 -->
-                <div class="mt-4 pt-4">
-                    <form action="" class="transportMethod_form-group">
+                    </div>
+                    <!-- 運送方式 -->
+                    <div class="mt-4 pt-4">
                         <fieldset>
                             <legend>運送方式</legend>
                             <div class="form-check py-3 deliveryService ml-4">
                                 <label class="form-check-label d-flex align-items-center">
-                                    <input class="form-check-input" type="radio" name="transportMethod" value="option1"
+                                    <input class="form-check-input" type="radio" name="transportMethod" value="cat"
                                         checked>
                                     <span>黑貓宅配</span>
                                 </label>
                             </div>
                             <div class="form-check py-3 toTheConvenienceStore ml-4">
                                 <label class="form-check-label d-flex align-items-center">
-                                    <input class="form-check-input" type="radio" name="transportMethod" value="option2">
+                                    <input class="form-check-input" type="radio" name="transportMethod" value="store">
                                     <span>超商店到店</span>
                                 </label>
                             </div>
                         </fieldset>
-                    </form>
-                </div>
-                <!-- 購物車的footer -->
-                <div class="cart-footer">
-                    <div class="d-flex flex-column  align-items-end mt-4 pt-4">
-                        <div class="w-25 d-flex justify-content-between align-items-center">
-                            <span class="count">數量:</span><span class="count_price">3</span>
+                    </div>
+
+                    <!-- 購物車的footer -->
+                    <div class="cart-footer">
+                        <div class="d-flex flex-column  align-items-end mt-4 pt-4">
+                            <div class="w-25 d-flex justify-content-between align-items-center">
+                                <span class="count">數量:</span><span class="count_price">3</span>
+                            </div>
+                            <div class="w-25 d-flex justify-content-between align-items-center">
+                                <span class="subtotal">小計:</span><span class="subtotal_price">$24.90</span>
+                            </div>
+                            <div class="w-25 d-flex justify-content-between align-items-center">
+                                <span class="freight">運費:</span><span class="freight_fee">$24.90</span>
+                            </div>
+                            <div class="w-25 d-flex justify-content-between align-items-center">
+                                <span class="total">總計:</span><span class="total_price">$24.90</span>
+                            </div>
                         </div>
-                        <div class="w-25 d-flex justify-content-between align-items-center">
-                            <span class="subtotal">小計:</span><span class="subtotal_price">$24.90</span>
-                        </div>
-                        <div class="w-25 d-flex justify-content-between align-items-center">
-                            <span class="freight">運費:</span><span class="freight_fee">$24.90</span>
-                        </div>
-                        <div class="w-25 d-flex justify-content-between align-items-center">
-                            <span class="total">總計:</span><span class="total_price">$24.90</span>
+                        <div class="d-flex justify-content-between mt-4 pt-4">
+                            <a href="/shopping_cart/list" class="btn btn-lg px-5 backStep_btn">上一步</a>
+                            <button type="submit" class="btn btn-lg px-5 nextStep_btn">下一步</button>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-between mt-4 pt-4">
-                        <a href="/checkout" class="btn btn-lg px-5 backStep_btn">上一步</a>
-                        <a href="/checkout/information" class="btn btn-lg px-5 nextStep_btn">下一步</a>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
