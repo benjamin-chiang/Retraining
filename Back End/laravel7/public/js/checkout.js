@@ -30,7 +30,7 @@ delBtns.forEach(delBtn => {
                     icon: 'success',
                     title: '成功刪除',
                     showConfirmButton: false,
-                    timer: 800,
+                    timer: 500,
                 })
             }
         })
