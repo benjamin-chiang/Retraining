@@ -61,7 +61,7 @@
                                             width="50px" height="50px">
                                         <div>
                                             <p>{{ $product->name }}</p>
-                                            <span>訂單編號</span>
+                                            <span>商品編號:{{ $product->id }}</span>
                                         </div>
                                     </div>
                                     <div class="order-item-price">

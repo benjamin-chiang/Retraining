@@ -25,10 +25,10 @@ class CheckoutController extends Controller
         }
         
         session()->put('totalCalc',[
-            '總數量'=>$allData['totalQty'],
-            '小計'=>$allData['subPrice'],
-            '運費'=>$allData['shipmentPrice'],
-            '總價'=>$allData['totalPrice'],
+            'totalQty'=>$allData['totalQty'],
+            'subPrice'=>$allData['subPrice'],
+            'shipmentPrice'=>$allData['shipmentPrice'],
+            'totalPrice'=>$allData['totalPrice'],
         ]);
         
         return view('front.checkout.checkout2');
@@ -44,8 +44,11 @@ class CheckoutController extends Controller
         return view('front.checkout.checkout3');
     }
 
-    public function finish()
+    public function finish(Request $request)
     {
-        return view('front.checkout.checkout4');
+        $buyerInfo = $request->all();
+        session()->put('buyerInfo', $buyerInfo);        
+        $cartCollection = \Cart::getContent();
+        return view('front.checkout.checkout4', compact('cartCollection'));
     }
 }

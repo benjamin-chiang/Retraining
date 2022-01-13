@@ -95,21 +95,21 @@
                     <!-- 購物車的footer -->
                     @php
                         // dump(session()->all());
-                        $totalCount = session()->get('totalCalc')['總數量'];
-                        $subPrice = session()->get('totalCalc')['小計'];
-                        $transFee = session()->get('totalCalc')['運費'];
-                        $totalPrice = session()->get('totalCalc')['總價'];
+                        $totalQty = session()->get('totalCalc')['totalQty'];
+                        $subPrice = session()->get('totalCalc')['subPrice'];
+                        $shipmentPrice = session()->get('totalCalc')['shipmentPrice'];
+                        $totalPrice = session()->get('totalCalc')['totalPrice'];
                     @endphp
                     <div class="cart-footer">
                         <div class="d-flex flex-column  align-items-end mt-4 pt-4">
                             <div class="w-25 d-flex justify-content-between align-items-center">
-                                <span class="count">數量:</span><span class="count_price">{{$totalCount}}</span>
+                                <span class="count">數量:</span><span class="count_price">{{$totalQty}}</span>
                             </div>
                             <div class="w-25 d-flex justify-content-between align-items-center">
                                 <span class="subtotal">小計:</span><span class="subtotal_price">{{$subPrice}}</span>
                             </div>
                             <div class="w-25 d-flex justify-content-between align-items-center">
-                                <span class="freight">運費:</span><span class="freight_fee">{{$transFee}}</span>
+                                <span class="freight">運費:</span><span class="freight_fee">{{$shipmentPrice}}</span>
                             </div>
                             <div class="w-25 d-flex justify-content-between align-items-center">
                                 <span class="total">總計:</span><span class="total_price">{{$totalPrice}}</span>

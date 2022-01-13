@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "sweetalert2": "^11.3.4"
+        "sweetalert2": "^11.3.4",
+        "tw-city-selector": "^2.1.1"
     }
 }
