@@ -51,6 +51,8 @@ var SY_goodgoodEat_Products = [
     }
 ]
 console.log(SY_goodgoodEat_Products);
+console.table(SY_goodgoodEat_Products);
+
 let contentView = document.querySelector('.content')
 
 function innerAll() {
@@ -96,7 +98,6 @@ innerAll()
 // }
 
 let navBtns = document.querySelectorAll('li')
-
 navBtns.forEach(btn => {
     let type = btn.getAttribute('data-type');
 

@@ -6,6 +6,7 @@ function weatherData(index) {
     })
     .then(function (weather) {
         console.log(weather);
+        console.table(weather['records']['location']);
         let content = document.querySelector('.container')
         content.innerHTML = '';
         let locations = weather.records.location
