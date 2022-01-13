@@ -93,19 +93,26 @@
                     </div>
 
                     <!-- 購物車的footer -->
+                    @php
+                        // dump(session()->all());
+                        $totalCount = session()->get('totalCalc')['總數量'];
+                        $subPrice = session()->get('totalCalc')['小計'];
+                        $transFee = session()->get('totalCalc')['運費'];
+                        $totalPrice = session()->get('totalCalc')['總價'];
+                    @endphp
                     <div class="cart-footer">
                         <div class="d-flex flex-column  align-items-end mt-4 pt-4">
                             <div class="w-25 d-flex justify-content-between align-items-center">
-                                <span class="count">數量:</span><span class="count_price">3</span>
+                                <span class="count">數量:</span><span class="count_price">{{$totalCount}}</span>
                             </div>
                             <div class="w-25 d-flex justify-content-between align-items-center">
-                                <span class="subtotal">小計:</span><span class="subtotal_price">$24.90</span>
+                                <span class="subtotal">小計:</span><span class="subtotal_price">{{$subPrice}}</span>
                             </div>
                             <div class="w-25 d-flex justify-content-between align-items-center">
-                                <span class="freight">運費:</span><span class="freight_fee">$24.90</span>
+                                <span class="freight">運費:</span><span class="freight_fee">{{$transFee}}</span>
                             </div>
                             <div class="w-25 d-flex justify-content-between align-items-center">
-                                <span class="total">總計:</span><span class="total_price">$24.90</span>
+                                <span class="total">總計:</span><span class="total_price">{{$totalPrice}}</span>
                             </div>
                         </div>
                         <div class="d-flex justify-content-between mt-4 pt-4">
