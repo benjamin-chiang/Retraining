@@ -1,5 +1,6 @@
 <?php
 
+use GuzzleHttp\Psr7\Request;
 use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -43,9 +44,13 @@ Route::prefix('checkout')->group(function ()
     Route::post('/payway', 'CheckoutController@payway');
     Route::post('/info', 'CheckoutController@info');
     Route::post('/finish', 'CheckoutController@finish');
-
-
     
+});
+
+// 測試session用的
+Route::prefix('student')->group(function (){
+    Route::get('/', 'StudentController@index');
+    Route::post('/store', 'StudentController@store');
 });
 
 // 後台登入經過 middleware

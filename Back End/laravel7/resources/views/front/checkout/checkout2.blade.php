@@ -95,10 +95,10 @@
                     <!-- 購物車的footer -->
                     @php
                         // dump(session()->all());
-                        $totalQty = session()->get('totalCalc')['totalQty'];
-                        $subPrice = session()->get('totalCalc')['subPrice'];
-                        $shipmentPrice = session()->get('totalCalc')['shipmentPrice'];
-                        $totalPrice = session()->get('totalCalc')['totalPrice'];
+                        $totalQty = session()->get('productInCart')['totalQty'];
+                        $subPrice = session()->get('productInCart')['subPrice'];
+                        $shipmentPrice = session()->get('productInCart')['shipmentPrice'];
+                        $totalPrice = session()->get('productInCart')['totalPrice'];
                     @endphp
                     <div class="cart-footer">
                         <div class="d-flex flex-column  align-items-end mt-4 pt-4">

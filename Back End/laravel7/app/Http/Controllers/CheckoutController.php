@@ -14,23 +14,9 @@ class CheckoutController extends Controller
 
     public function payway(Request $request)
     {
-        $allData = $request->all();           
-        $cartCollection = \Cart::getContent();        
-        session()->forget('productQty');
-        foreach ($cartCollection as $product) {
-            $productName = $product->name;            
-            session()->push('productQty', [
-                $productName => $allData[$productName],
-            ]);            
-        }
-        
-        session()->put('totalCalc',[
-            'totalQty'=>$allData['totalQty'],
-            'subPrice'=>$allData['subPrice'],
-            'shipmentPrice'=>$allData['shipmentPrice'],
-            'totalPrice'=>$allData['totalPrice'],
-        ]);
-        
+        $allDatas = $request->all();           
+        session()->put('productInCart', $allDatas);  
+        dd(session()->get('productInCart'));
         return view('front.checkout.checkout2');
     }
 
@@ -46,9 +32,9 @@ class CheckoutController extends Controller
 
     public function finish(Request $request)
     {
-        $buyerInfo = $request->all();
+        $buyerInfo = $request->all();        
         session()->put('buyerInfo', $buyerInfo);        
         $cartCollection = \Cart::getContent();
-        return view('front.checkout.checkout4', compact('cartCollection'));
+        return view('front.checkout.checkout4', compact('cartCollection'));        
     }
 }

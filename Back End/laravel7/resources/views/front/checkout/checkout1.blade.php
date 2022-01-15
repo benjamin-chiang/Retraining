@@ -67,7 +67,7 @@
                                     <div class="order-item-price">
                                         <button type="button" class="minus btn btn-secondary">-</button>
                                         <input type="number" class="qty text-center" value="{{ $product->quantity }}"
-                                            name="{{ $product->name }}">
+                                            name="{{$product->name}}">
                                         {{-- {{ $product->id . '-' . $product->name }} --}}
                                         <button type="button" class="plus btn btn-secondary">+</button>
                                         <span class="price" style="font-size: 16px;font-weight:bold;"
