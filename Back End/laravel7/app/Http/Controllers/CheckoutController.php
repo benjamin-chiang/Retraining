@@ -38,4 +38,11 @@ class CheckoutController extends Controller
         $cartCollection = \Cart::getContent();
         return view('front.checkout.checkout4', compact('cartCollection'));        
     }
+
+    public function order(Request $request)
+    {
+        $orderDatas = $request->all();
+        dd($orderDatas);
+        return redirect('/');
+    }
 }

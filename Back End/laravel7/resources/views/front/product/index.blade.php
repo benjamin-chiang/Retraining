@@ -19,6 +19,7 @@
 <section class="container">
   <a href="/product" class="btn btn-success">全部</a>
   @foreach ($productTypes as $type)
+  {{-- 用問號帶typeId這個鍵值，再用a標籤送去後端controller --}}
   <a href="/product?typeId={{$type->id}}" class="btn btn-success">{{$type->name}}</a>
   @endforeach
 

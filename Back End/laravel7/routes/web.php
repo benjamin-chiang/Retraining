@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CheckoutController;
 use GuzzleHttp\Psr7\Request;
 use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Auth;
@@ -43,8 +44,8 @@ Route::prefix('checkout')->group(function ()
     // 將checkout01頁面上的資料存入session，並return checkout02頁面    
     Route::post('/payway', 'CheckoutController@payway');
     Route::post('/info', 'CheckoutController@info');
-    Route::post('/finish', 'CheckoutController@finish');
-    
+    Route::post('/finish', 'CheckoutController@finish'); 
+    Route::post('/order', 'CheckoutController@order');
 });
 
 // 測試session用的
