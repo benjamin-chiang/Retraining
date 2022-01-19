@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+</head>
+<body>
+    <div id="app">
+        {{text}}
+        {{name}}
+        {{num}}
+
+        <!-- 指令(v-) -->
+        <input type="number" name="" id="" v-model="num">
+        <hr>
+        {{person.name}}
+        <img :src="person.image" :alt="person.name" width="100">
+        <span style="font-size: 32px;" v-if="person.gender === 'male'"><i class="bi bi-gender-male" ></i></span>
+        <span style="font-size: 32px;" v-else><i class="bi bi-gender-female" ></i></span>
+        {{person.cash}}
+        <button type="button" @click="clickAlert" >增加</button>
+
+    </div>
+
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        // 把資料拉出來
+        Vue.createApp({
+            // data 函式
+            data: function () {
+                return {
+                    text: 'this is a book',
+                    name: '公鯊小',
+                    // 變數num、數值0
+                    num: 0,
+                    person: {
+                        name: '小明、小※ぁああざい華',
+                        image: 'https://picsum.photos/300',
+                        cash: 1000,
+                        gender: 'female',
+                    }
+
+                };
+            },
+
+            // methods 物件
+            methods: {
+                clickAlert: function () {
+                    alert('我被點到了');
+                },
+            },
+
+            //  mounted 函式
+            mounted: function () {
+
+            },
+        }).mount('#app');
+    </script>
+</body>
+</html>
