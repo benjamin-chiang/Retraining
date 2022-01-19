@@ -36,11 +36,18 @@ class StudentController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        session()->put('classmate', $data);
-        $sessionData = session()->get('classmate');
-        // dd($sessionData);
-        Student::create($sessionData);
-        return redirect('/student');
+        // session()->put('classmate', $data);
+        // $sessionData = session()->get('classmate');
+        // Student::create($sessionData);
+        session()->put('name', $data['name']);
+        session()->put('sid', $data['classId']);
+        session()->put('major', $data['major']);
+                
+        Student::create([
+            "name"=>session()->get("name"),
+            "classId"=>session()->get("sid"),
+            "major"=>session()->get("major"),
+        ]);
     }
 
     /**
