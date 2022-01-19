@@ -46,7 +46,7 @@
                         </div>
                     </div>
                     <!-- 完成訂購 -->
-                    <form action="/checkout/order" method="post">
+                    <form action="/checkout/order" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="mt-4 pt-4">
                             <h1 class="text-center font-weight-bold">訂單成立</h1>
@@ -60,7 +60,7 @@
                                 }else if ($index != '_token'){
                                     dump($index, $productData);
                                 }
-                            };                            
+                            };
                         @endphp --}}
                             @foreach ($cartCollection as $product)
                                 <div class="order_detail">
@@ -71,9 +71,9 @@
                                             <div>
                                                 <p>商品名稱:{{ $product->name }}</p>
                                                 <span>商品編號:{{ $product->id }}</span>
-                                                <input type="text" name="orderProductName" id=""
+                                                <input type="text" name="orderProductName[]" id=""
                                                     value="{{ $product->name }}" hidden>
-                                                <input type="text" name="orderProductId" id="" value="{{ $product->id }}"
+                                                <input type="text" name="orderProductId[]" id="" value="{{ $product->id }}"
                                                     hidden>
                                             </div>
                                         </div>
@@ -88,7 +88,7 @@
                                                     }
                                                 @endphp
                                                 商品數量:{{ $productInCartQty }}
-                                                <input type="text" name="orderProductQty" id=""
+                                                <input type="text" name="orderProductQty[]" id=""
                                                     value="{{ $productInCartQty }}" hidden>
                                             </h6>
                                             <span>商品價格:{{ number_format($product->price * $productInCartQty) }}</span>
@@ -119,7 +119,6 @@
                                     <label class="phoneNumber" style="width: 100px">電話：</label>
                                     <div class="checkout4_phoneNumber infor_text">{{ $buyerPhone }}</div>
                                     <input type="text" name="orderBuyerPhone" id="" value="{{ $buyerPhone }}" hidden>
-
                                 </div>
                                 <div class="d-flex ml-2 mt-2 pt-3">
                                     <label class="email" style="width: 100px">Email：</label>
@@ -131,7 +130,6 @@
                                         {{ $buyerZipcode . $buyerCounty . $buyerDis . $buyerAddress }}</div>
                                     <input type="text" name="orderBuyerAddress" id="" value="{{ $buyerZipcode . $buyerCounty . $buyerDis . $buyerAddress }}" hidden>
                                 </div>
-
                             </div>
                         </div>
 
