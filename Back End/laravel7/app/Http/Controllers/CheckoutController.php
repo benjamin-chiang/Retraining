@@ -10,13 +10,14 @@ class CheckoutController extends Controller
     {
         // dd(session()->get('paywayTransportArray'));
         dd(session()->all());
+        
+
     }
 
     public function payway(Request $request)
     {
         $allDatas = $request->all();           
         session()->put('productInCart', $allDatas);  
-        dd(session()->get('productInCart'));
         return view('front.checkout.checkout2');
     }
 
